@@ -1,5 +1,5 @@
 # sale-temps
-sale-temps.netlify.com
+[sale-temps.netlify.com](https://sale-temps.netlify.com/)
 
 ## Group members
 
