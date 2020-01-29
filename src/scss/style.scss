@@ -1,0 +1,22 @@
+//importing abstracts folder
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+//importing base folder
+@import "base/reset";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+@import "base/base";
+
+//importing pages folder
+@import "pages/home";
+
+//importing components folder
+@import "components/button";
+
+//importing components layout
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/navigation";
