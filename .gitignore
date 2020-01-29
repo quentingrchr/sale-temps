@@ -1,0 +1,6 @@
+/node_modules
+/dist
+/script.sh
+/.cache
+**/.DS_Store
+
