@@ -1,0 +1,46 @@
+.card {
+    margin: 5% auto 10% 30%;
+    width: 150px;
+    height: 250px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
+    background-color: #ccc2c2;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      width: 40%;
+      height: 10%;
+      border: 10px solid red;
+      top: -10px;
+      left: -10px;
+      border-bottom-color: transparent;
+      border-right: transparent;
+      transition: all 1s;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 0%;
+      border: 10px solid white;
+      bottom: -10px;
+      right: -10px;
+      border-top-color: transparent;
+      border-left: transparent;
+      transition: all 1s;
+    }
+    &:hover::before {
+      width: 104.9%;
+      height: 100%;
+    }
+    &:hover::after {
+      width: 104.9%;
+      height: 100%;
+      border-color: red;
+      border-top-color: transparent;
+      border-left: transparent;
+    }
+  }
