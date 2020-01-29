@@ -1,0 +1,32 @@
+// <div class="section-heading">
+//         <p class="section-heading_title"></p>
+//         <p class="section-heading_subtitle"></p>
+//       </div>
+
+.section-heading {
+  color: $color-neutral-dark;
+  &__title {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 100%;
+    margin-bottom: 0.3rem;
+
+    &::after {
+      margin-left: 1.6rem;
+      content: "";
+      display: inline-block;
+      background-color: $color-primary;
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.6rem;
+    line-height: 100.5%;
+    font-family: "Cedarville Cursive";
+  }
+}
