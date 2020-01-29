@@ -5,10 +5,11 @@
 
 //importing base folder
 @import "base/reset";
+@import "base/base";
+
 @import "base/animations";
 @import "base/typography";
 @import "base/utilities";
-@import "base/base";
 
 //importing pages folder
 @import "pages/home";
@@ -16,6 +17,7 @@
 //importing components folder
 @import "components/button";
 @import "components/card";
+@import "components/cards";
 @import "components/link";
 @import "components/_section-heading";
 

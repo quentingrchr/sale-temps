@@ -6,3 +6,112 @@
   display: flex;
   flex-direction: column;
 }
+
+@mixin card($color-card) {
+  margin: 5% auto 10% 30%;
+  width: 15rem;
+  height: 25rem;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 20px;
+  background-color: $color-neutral-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__icon {
+    width: 5.6rem;
+    & svg path {
+      transition: fill 0.1s ease;
+    }
+  }
+  &__text {
+    font-family: "Poppins";
+    color: $color-neutral;
+    display: flex;
+    flex-direction: column;
+    transition: color 0.3s ease;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 132.76%;
+    margin-bottom: 3rem;
+  }
+
+  &__paragraph {
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 138.76%;
+
+    text-align: center;
+  }
+
+  &__btn {
+    color: $color-card;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    border: 2px solid $color-card;
+    font-size: 1.5rem;
+    line-height: 138.76%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover {
+    & .card__icon svg path {
+      fill: $color-neutral-dark;
+    }
+
+    & .card__text {
+      color: $color-neutral-dark;
+    }
+    & .card__btn {
+      color: $color-neutral-light;
+      background-color: $color-card;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 10%;
+    border: 10px solid $color-card;
+    top: -10px;
+    left: -10px;
+    border-bottom-color: transparent;
+    border-right: transparent;
+    transition: all 1s;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    border: 10px solid white;
+    bottom: -10px;
+    right: -10px;
+    border-top-color: transparent;
+    border-left: transparent;
+    transition: all 1s;
+  }
+  &:hover::before {
+    width: 104.9%;
+    height: 100%;
+  }
+  &:hover::after {
+    width: 104.9%;
+    height: 100%;
+    border-color: $color-card;
+    border-top-color: transparent;
+    border-left: transparent;
+  }
+}
