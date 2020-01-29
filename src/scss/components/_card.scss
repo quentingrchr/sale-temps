@@ -1,46 +1,90 @@
 .card {
-    margin: 5% auto 10% 30%;
-    width: 150px;
-    height: 250px;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    padding: 20px;
-    background-color: #ccc2c2;
-  
-    &::before {
-      content: "";
-      position: absolute;
-      width: 40%;
-      height: 10%;
-      border: 10px solid red;
-      top: -10px;
-      left: -10px;
-      border-bottom-color: transparent;
-      border-right: transparent;
-      transition: all 1s;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 0%;
-      border: 10px solid white;
-      bottom: -10px;
-      right: -10px;
-      border-top-color: transparent;
-      border-left: transparent;
-      transition: all 1s;
-    }
-    &:hover::before {
-      width: 104.9%;
-      height: 100%;
-    }
-    &:hover::after {
-      width: 104.9%;
-      height: 100%;
-      border-color: red;
-      border-top-color: transparent;
-      border-left: transparent;
+  margin: 5% auto 10% 30%;
+  width: 15rem;
+  height: 25rem;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 20px;
+  background-color: $color-neutral-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__icon {
+    width: 5.6rem;
+    & svg path {
+      transition: fill 0.1s ease;
     }
   }
+  &__text {
+    font-family: "Poppins";
+    color: $color-neutral;
+    display: flex;
+    flex-direction: column;
+    transition: color 0.3s ease;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 132.76%;
+    margin-bottom: 3rem;
+  }
+
+  &__paragraph {
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 138.76%;
+
+    text-align: center;
+  }
+
+  &:hover {
+    & > .card__icon svg path {
+      fill: $color-neutral-dark;
+    }
+
+    & > .card__text {
+      color: $color-neutral-dark;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 10%;
+    border: 10px solid $color-primary;
+    top: -10px;
+    left: -10px;
+    border-bottom-color: transparent;
+    border-right: transparent;
+    transition: all 1s;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    border: 10px solid white;
+    bottom: -10px;
+    right: -10px;
+    border-top-color: transparent;
+    border-left: transparent;
+    transition: all 1s;
+  }
+  &:hover::before {
+    width: 104.9%;
+    height: 100%;
+  }
+  &:hover::after {
+    width: 104.9%;
+    height: 100%;
+    border-color: $color-primary;
+    border-top-color: transparent;
+    border-left: transparent;
+  }
+}
