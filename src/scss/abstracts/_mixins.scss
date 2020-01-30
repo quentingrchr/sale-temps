@@ -8,18 +8,19 @@
 }
 
 @mixin card($color-card) {
-  width: 150px;
+  box-shadow: 0px 4px 10px rgba(137, 137, 137, 0.25);
+  width: 200px;
   height: 250px;
   border: none;
   cursor: pointer;
   position: relative;
-  padding: 20px;
   background-color: $color-neutral-light;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   font-family: "Poppins";
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &__icon {
     width: 56px;
@@ -32,14 +33,17 @@
     display: flex;
     flex-direction: column;
     transition: color 0.3s ease;
+    margin: 0px 20px;
   }
 
   &__title {
+    display: flex;
+    justify-content: center;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 15px;
     line-height: 132.76%;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 
   &__paragraph {
@@ -58,7 +62,7 @@
     position: absolute;
     overflow: hidden;
     background-color: $color-card;
-    transition: height 0.2s ease;
+    transition: height 0.5s cubic-bezier(0.93, 0, 0.83, 0.67);
     height: 0%;
     z-index: 3;
     color: $color-neutral-light;
@@ -66,6 +70,8 @@
   }
 
   &__btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
     color: $color-card;
     width: 32px;
     height: 32px;
@@ -96,10 +102,12 @@
       position: absolute;
       height: 10px;
       width: 2px;
+      transition: transform 0.2s 0.2s cubic-bezier(0.93, 0, 0.74, 1.51);
     }
   }
 
   &:hover {
+    box-shadow: 0px 15px 10px rgba(137, 137, 137, 0.25);
     & .card__icon svg path {
       fill: $color-neutral-dark;
     }
@@ -136,7 +144,7 @@
     position: absolute;
     width: 0%;
     height: 0%;
-    border: 10px solid white;
+    border: 10px solid transparent;
     bottom: -10px;
     right: -10px;
     border-top-color: transparent;
@@ -153,6 +161,22 @@
     border-color: $color-card;
     border-top-color: transparent;
     border-left: transparent;
+  }
+
+  &.opened {
+    .card__more {
+      height: 100%;
+    }
+
+    .card__btn {
+      &::before,
+      &::after {
+        background-color: $color-neutral-light;
+      }
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
   }
 }
 

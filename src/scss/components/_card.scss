@@ -8,18 +8,3 @@
 .card--tertiary.card {
   @include card($color-tertiary);
 }
-
-.opened {
-  & .card__more {
-    height: 100%;
-  }
-  .card__btn {
-    &::before,
-    &::after {
-      background-color: $color-neutral-light;
-    }
-    &::after {
-      opacity: 0;
-    }
-  }
-}

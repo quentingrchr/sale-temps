@@ -18,169 +18,255 @@
     <title>sale-temps.</title>
   </head>
   <body>
-    <section>
-      <div class="section-heading section-heading--primary">
-        <p class="section-heading__title section-heading--primary">
-          Nos liquides végétaux
-        </p>
-        <p class="section-heading__subtitle section-heading--primary">
-          pimp ta veste
-        </p>
+    <header class="header">
+      <div class="header__logo">
+        <img src="./assets/logo.png" alt="logo" />
       </div>
-      <div class="cards">
-        <a href="#" class="card card--primary">
-          <div class="card__icon card--primary">
-            <svg
-              width="56"
-              height="56"
-              viewBox="0 0 56 56"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0)">
+      <div class="header__nav nav">
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a href="" class="nav__item--primary">Recyclage</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__item--secondary">Nos Produits</a>
+          </li>
+        </ul>
+        <ul class="nav__infos">
+          <li class="nav__info nav__info--tertiary">
+            <a href="">
+              <svg
+                width="25"
+                height="26"
+                viewBox="0 0 25 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M55.4156 45.6472C53.6061 46.2737 50.0326 47.5722 45.9236 40.6212C41.8146 33.6772 36.3826 35.2907 36.3826 35.2907C36.0781 35.3432 35.8191 35.4447 35.5496 35.5357C29.4176 26.8032 12.1731 7.78423 10.6541 6.26173C8.47359 4.08473 4.81259 2.04073 1.75009 5.25023C-1.13041 8.26723 0.346591 12.2047 2.52709 14.3852C4.06009 15.9182 23.1841 33.2502 31.9131 39.3612C31.7692 39.7399 31.6796 40.137 31.6471 40.5407C31.6471 53.3017 44.6986 52.6262 47.3971 52.1327C52.2096 51.2612 57.2251 45.0277 55.4156 45.6472Z"
-                  fill="#C4C4C4"
+                  d="M4.7396 18.1895V22.6452L9.16669 21.5443L12.5 24.8992L15.8334 21.5443L20.2604 22.6452V18.1895L24.7396 17.0363L22.5 12.5806L24.7396 8.12499L20.2604 6.97176V2.51612L15.8334 3.61692L12.5 0.262085L9.16669 3.61692L4.7396 2.51612V6.97176L0.260437 8.12499L2.50002 12.5806L0.260437 17.0363L4.7396 18.1895ZM4.47919 11.5847L3.4896 9.54031L5.26044 9.12096C5.78127 9.01612 6.18926 8.76276 6.48439 8.36088C6.77953 7.95899 6.9271 7.49596 6.9271 6.97176V5.39918L8.59377 5.87096H9.16669C9.75696 5.87096 10.2778 5.64381 10.7292 5.1895L12.5 3.40725L14.2709 5.1895C14.7222 5.64381 15.2431 5.87096 15.8334 5.87096C16.0417 5.87096 16.2327 5.83601 16.4063 5.76612L18.0729 5.39918V6.97176C18.0729 7.49596 18.2205 7.95899 18.5156 8.36088C18.8108 8.76276 19.2188 9.01612 19.7396 9.12096L21.5104 9.54031L20.5209 11.5847C20.1736 12.2486 20.1736 12.9126 20.5209 13.5766L21.5104 15.621L19.7396 16.0403C19.2188 16.1451 18.8108 16.3985 18.5156 16.8004C18.2205 17.2023 18.0729 17.6653 18.0729 18.1895V19.7621L16.4063 19.2903H15.8334C15.2431 19.2903 14.7222 19.5175 14.2709 19.9718L12.5 21.754L10.7292 19.9718C10.2778 19.5175 9.75696 19.2903 9.16669 19.2903C8.95835 19.2903 8.76738 19.3253 8.59377 19.3951L6.9271 19.7621V18.1895C6.9271 17.6653 6.77953 17.2023 6.48439 16.8004C6.18926 16.3985 5.78127 16.1451 5.26044 16.0403L3.4896 15.621L4.47919 13.5766C4.82641 12.9126 4.82641 12.2486 4.47919 11.5847ZM11.4063 16.4072L16.6146 11.1129C17.1007 10.6236 17.1007 10.0995 16.6146 9.54031C16.0938 9.08601 15.5729 9.08601 15.0521 9.54031L11.4063 13.2621L9.94794 11.7943C9.4271 11.34 8.90627 11.34 8.38544 11.7943C7.93405 12.3185 7.93405 12.8427 8.38544 13.3669L11.4063 16.4072Z"
+                  fill="#1D1D1D"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="nav__info nav__info--secondary">
+            <a href="">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.08817 14.2228H7.08917C7.09001 14.2228 7.09085 14.2227 7.09169 14.2227H18.7773C19.065 14.2227 19.318 14.0318 19.397 13.7552L21.9752 4.73177C22.0307 4.53723 21.9918 4.32809 21.8701 4.16663C21.7482 4.00516 21.5577 3.91016 21.3555 3.91016H5.60172L5.14098 1.83675C5.07535 1.54184 4.81384 1.33203 4.51172 1.33203H0.644531C0.288528 1.33203 0 1.62056 0 1.97656C0 2.33257 0.288528 2.62109 0.644531 2.62109H3.99475C4.07632 2.98851 6.19958 12.5433 6.32178 13.093C5.6368 13.3908 5.15625 14.0738 5.15625 14.8672C5.15625 15.9333 6.02368 16.8008 7.08984 16.8008H18.7773C19.1333 16.8008 19.4219 16.5123 19.4219 16.1562C19.4219 15.8002 19.1333 15.5117 18.7773 15.5117H7.08984C6.73451 15.5117 6.44531 15.2225 6.44531 14.8672C6.44531 14.5124 6.73351 14.2237 7.08817 14.2228V14.2228ZM20.501 5.19922L18.2911 12.9336H7.60681L5.88806 5.19922H20.501Z"
+                  fill="black"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M19.6455 37.5551L18.851 40.1871L20.552 41.8881L7.21348 47.6841L4.58848 45.1676L10.612 32.4731L10.549 34.9441L14.042 34.8951L17.0275 31.9376C15.1725 30.3626 13.3245 28.7666 11.5605 27.2231L8.64148 30.1456C8.64148 30.1456 0.549475 48.7656 -2.46614e-05 50.2706C-0.437525 51.4606 1.07098 52.9691 2.11398 52.4581C3.79398 51.6286 22.204 43.6381 22.204 43.6381L26.292 39.5361C24.6852 38.2835 23.0972 37.007 21.5285 35.7071L19.6455 37.5551Z"
-                  fill="#C4C4C4"
+                  d="M15.5547 18.7344C15.5547 19.8005 16.4221 20.668 17.4883 20.668C18.5544 20.668 19.4219 19.8005 19.4219 18.7344C19.4219 17.6682 18.5544 16.8008 17.4883 16.8008C16.4221 16.8008 15.5547 17.6682 15.5547 18.7344ZM17.4883 18.0898C17.8436 18.0898 18.1328 18.379 18.1328 18.7344C18.1328 19.0897 17.8436 19.3789 17.4883 19.3789C17.1329 19.3789 16.8438 19.0897 16.8438 18.7344C16.8438 18.379 17.1329 18.0898 17.4883 18.0898Z"
+                  fill="black"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M42.5144 6.72013L46.9209 11.0461L32.1159 25.4206C33.4389 27.0306 34.6849 28.5776 35.7944 30.0091L50.7079 15.0466C52.4649 13.2896 52.5629 10.7556 50.6799 8.87613L43.6624 1.91113C41.7759 0.0316318 38.8219 -0.0663682 37.0684 1.68713L23.4849 15.2951C25.0459 17.0801 26.6664 18.9526 28.2589 20.8286L42.5144 6.72013Z"
-                  fill="#C4C4C4"
+                  d="M6.44531 18.7344C6.44531 19.8005 7.31274 20.668 8.37891 20.668C9.44507 20.668 10.3125 19.8005 10.3125 18.7344C10.3125 17.6682 9.44507 16.8008 8.37891 16.8008C7.31274 16.8008 6.44531 17.6682 6.44531 18.7344ZM8.37891 18.0898C8.73424 18.0898 9.02344 18.379 9.02344 18.7344C9.02344 19.0897 8.73424 19.3789 8.37891 19.3789C8.02357 19.3789 7.73438 19.0897 7.73438 18.7344C7.73438 18.379 8.02357 18.0898 8.37891 18.0898Z"
+                  fill="black"
                 />
-              </g>
-              <defs>
-                <clipPath id="clip0">
-                  <rect width="56" height="56" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-          <div class="card__text card--primary">
-            <h1 class="card__title card--primary">Personnalisation</h1>
-            <p class="card__paragraph card--primary">
-              Choisis le type de koloro de ton choix et personnalise ta
-              kolorable à volonté avec le feutre sale temps.
-            </p>
-          </div>
-          <div class="card__btn card--primary"></div>
-          <div class="card__more card--primary">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
-            veritatis quasi facilis reprehenderit a debitis esse quam,
-            accusantium natus corrupti, quaerat aliquam laudantium amet
-            doloremque officiis! Doloribus dignissimos iusto dolorum!
-          </div>
+              </svg>
+            </a>
+          </li>
+          <li class="nav__info nav__info--primary">
+            <a href="">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.0711 12.9289C15.9819 11.8398 14.6855 11.0335 13.2711 10.5454C14.786 9.50199 15.7812 7.75578 15.7812 5.78125C15.7812 2.59348 13.1878 0 10 0C6.81223 0 4.21875 2.59348 4.21875 5.78125C4.21875 7.75578 5.21402 9.50199 6.72898 10.5454C5.31453 11.0335 4.01813 11.8398 2.92895 12.9289C1.0402 14.8177 0 17.3289 0 20H1.5625C1.5625 15.3475 5.34754 11.5625 10 11.5625C14.6525 11.5625 18.4375 15.3475 18.4375 20H20C20 17.3289 18.9598 14.8177 17.0711 12.9289ZM10 10C7.67379 10 5.78125 8.1075 5.78125 5.78125C5.78125 3.455 7.67379 1.5625 10 1.5625C12.3262 1.5625 14.2188 3.455 14.2188 5.78125C14.2188 8.1075 12.3262 10 10 10Z"
+                  fill="#1D1D1D"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__left hero-left">
+        <h2 class="hero-left__subtitle">
+          ECO-RESPONSABLE • 70% de réduction max’
+        </h2>
+        <h1 class="hero-left__title">Kolorable.</h1>
+        <p class="hero-left__text">
+          Découvre notre nouvelle veste imperméable fabriquée en France à partir
+          de matières recyclées et personnalise là dès maintenant à prix réduit
+          avec l’offre Starter pack !
+        </p>
+        <a class="hero-left__btn btn">
+          <p class="btn__text">Découvrir l'offre</p>
+          <svg
+            class="btn__svg"
+            width="20"
+            height="15"
+            viewBox="0 0 20 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.4678 0.680002C13.1953 0.398007 12.7418 0.398007 12.4598 0.680002C12.1874 0.952469 12.1874 1.40595 12.4598 1.67778L17.5707 6.78861H0.705621C0.31248 6.78924 0 7.10172 0 7.49486C0 7.888 0.31248 8.21065 0.705621 8.21065H17.5707L12.4598 13.3119C12.1874 13.5939 12.1874 14.0481 12.4598 14.3199C12.7418 14.6019 13.1959 14.6019 13.4678 14.3199L19.7885 7.99915C20.0705 7.72668 20.0705 7.27321 19.7885 7.00137L13.4678 0.680002Z"
+              fill="#FBFBFB"
+            />
+          </svg>
         </a>
-        <a href="#" class="card card--secondary">
-          <div class="card__icon card--secondary">
-            <svg
-              width="56"
-              height="56"
-              viewBox="0 0 56 56"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0)">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M55.4156 45.6472C53.6061 46.2737 50.0326 47.5722 45.9236 40.6212C41.8146 33.6772 36.3826 35.2907 36.3826 35.2907C36.0781 35.3432 35.8191 35.4447 35.5496 35.5357C29.4176 26.8032 12.1731 7.78423 10.6541 6.26173C8.47359 4.08473 4.81259 2.04073 1.75009 5.25023C-1.13041 8.26723 0.346591 12.2047 2.52709 14.3852C4.06009 15.9182 23.1841 33.2502 31.9131 39.3612C31.7692 39.7399 31.6796 40.137 31.6471 40.5407C31.6471 53.3017 44.6986 52.6262 47.3971 52.1327C52.2096 51.2612 57.2251 45.0277 55.4156 45.6472Z"
-                  fill="#C4C4C4"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M19.6455 37.5551L18.851 40.1871L20.552 41.8881L7.21348 47.6841L4.58848 45.1676L10.612 32.4731L10.549 34.9441L14.042 34.8951L17.0275 31.9376C15.1725 30.3626 13.3245 28.7666 11.5605 27.2231L8.64148 30.1456C8.64148 30.1456 0.549475 48.7656 -2.46614e-05 50.2706C-0.437525 51.4606 1.07098 52.9691 2.11398 52.4581C3.79398 51.6286 22.204 43.6381 22.204 43.6381L26.292 39.5361C24.6852 38.2835 23.0972 37.007 21.5285 35.7071L19.6455 37.5551Z"
-                  fill="#C4C4C4"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M42.5144 6.72013L46.9209 11.0461L32.1159 25.4206C33.4389 27.0306 34.6849 28.5776 35.7944 30.0091L50.7079 15.0466C52.4649 13.2896 52.5629 10.7556 50.6799 8.87613L43.6624 1.91113C41.7759 0.0316318 38.8219 -0.0663682 37.0684 1.68713L23.4849 15.2951C25.0459 17.0801 26.6664 18.9526 28.2589 20.8286L42.5144 6.72013Z"
-                  fill="#C4C4C4"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0">
-                  <rect width="56" height="56" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-          <div class="card__text card--secondary">
-            <h1 class="card__title card--secondary">Personnalisation</h1>
-            <p class="card__paragraph card--secondary">
-              Choisis le type de koloro de ton choix et personnalise ta
-              kolorable à volonté avec le feutre sale temps.
-            </p>
-          </div>
-          <div class="card__btn card--secondary"></div>
-          <div class="card__more card--secondary">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
-            veritatis quasi facilis reprehenderit a debitis esse quam,
-            accusantium natus corrupti, quaerat aliquam laudantium amet
-            doloremque officiis! Doloribus dignissimos iusto dolorum!
-          </div>
-        </a>
-        <a href="#" class="card card--tertiary">
-          <div class="card__icon card--tertiary">
-            <svg
-              width="56"
-              height="56"
-              viewBox="0 0 56 56"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0)">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M55.4156 45.6472C53.6061 46.2737 50.0326 47.5722 45.9236 40.6212C41.8146 33.6772 36.3826 35.2907 36.3826 35.2907C36.0781 35.3432 35.8191 35.4447 35.5496 35.5357C29.4176 26.8032 12.1731 7.78423 10.6541 6.26173C8.47359 4.08473 4.81259 2.04073 1.75009 5.25023C-1.13041 8.26723 0.346591 12.2047 2.52709 14.3852C4.06009 15.9182 23.1841 33.2502 31.9131 39.3612C31.7692 39.7399 31.6796 40.137 31.6471 40.5407C31.6471 53.3017 44.6986 52.6262 47.3971 52.1327C52.2096 51.2612 57.2251 45.0277 55.4156 45.6472Z"
-                  fill="#C4C4C4"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M19.6455 37.5551L18.851 40.1871L20.552 41.8881L7.21348 47.6841L4.58848 45.1676L10.612 32.4731L10.549 34.9441L14.042 34.8951L17.0275 31.9376C15.1725 30.3626 13.3245 28.7666 11.5605 27.2231L8.64148 30.1456C8.64148 30.1456 0.549475 48.7656 -2.46614e-05 50.2706C-0.437525 51.4606 1.07098 52.9691 2.11398 52.4581C3.79398 51.6286 22.204 43.6381 22.204 43.6381L26.292 39.5361C24.6852 38.2835 23.0972 37.007 21.5285 35.7071L19.6455 37.5551Z"
-                  fill="#C4C4C4"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M42.5144 6.72013L46.9209 11.0461L32.1159 25.4206C33.4389 27.0306 34.6849 28.5776 35.7944 30.0091L50.7079 15.0466C52.4649 13.2896 52.5629 10.7556 50.6799 8.87613L43.6624 1.91113C41.7759 0.0316318 38.8219 -0.0663682 37.0684 1.68713L23.4849 15.2951C25.0459 17.0801 26.6664 18.9526 28.2589 20.8286L42.5144 6.72013Z"
-                  fill="#C4C4C4"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0">
-                  <rect width="56" height="56" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-          <div class="card__text card--tertiary">
-            <h1 class="card__title card--tertiary">Personnalisation</h1>
-            <p class="card__paragraph card--tertiary">
-              Choisis le type de koloro de ton choix et personnalise ta
-              kolorable à volonté avec le feutre sale temps.
-            </p>
-          </div>
-          <div class="card__btn card--tertiary"></div>
-          <div class="card__more card--tertiary">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
-            veritatis quasi facilis reprehenderit a debitis esse quam,
-            accusantium natus corrupti, quaerat aliquam laudantium amet
-            doloremque officiis! Doloribus dignissimos iusto dolorum!
-          </div>
-        </a>
+        <div class="hero-left__link">
+          <a href="" class="link">Je veux mon éco-réduc !</a>
+        </div>
+      </div>
+      <div class="hero__right hero-right"></div>
+    </section>
+    <section class="cards">
+      <div class="card card--primary">
+        <div class="card__icon card--primary">
+          <svg
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M55.4156 45.6472C53.6061 46.2737 50.0326 47.5722 45.9236 40.6212C41.8146 33.6772 36.3826 35.2907 36.3826 35.2907C36.0781 35.3432 35.8191 35.4447 35.5496 35.5357C29.4176 26.8032 12.1731 7.78423 10.6541 6.26173C8.47359 4.08473 4.81259 2.04073 1.75009 5.25023C-1.13041 8.26723 0.346591 12.2047 2.52709 14.3852C4.06009 15.9182 23.1841 33.2502 31.9131 39.3612C31.7692 39.7399 31.6796 40.137 31.6471 40.5407C31.6471 53.3017 44.6986 52.6262 47.3971 52.1327C52.2096 51.2612 57.2251 45.0277 55.4156 45.6472Z"
+                fill="#C4C4C4"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M19.6455 37.5551L18.851 40.1871L20.552 41.8881L7.21348 47.6841L4.58848 45.1676L10.612 32.4731L10.549 34.9441L14.042 34.8951L17.0275 31.9376C15.1725 30.3626 13.3245 28.7666 11.5605 27.2231L8.64148 30.1456C8.64148 30.1456 0.549475 48.7656 -2.46614e-05 50.2706C-0.437525 51.4606 1.07098 52.9691 2.11398 52.4581C3.79398 51.6286 22.204 43.6381 22.204 43.6381L26.292 39.5361C24.6852 38.2835 23.0972 37.007 21.5285 35.7071L19.6455 37.5551Z"
+                fill="#C4C4C4"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M42.5144 6.72013L46.9209 11.0461L32.1159 25.4206C33.4389 27.0306 34.6849 28.5776 35.7944 30.0091L50.7079 15.0466C52.4649 13.2896 52.5629 10.7556 50.6799 8.87613L43.6624 1.91113C41.7759 0.0316318 38.8219 -0.0663682 37.0684 1.68713L23.4849 15.2951C25.0459 17.0801 26.6664 18.9526 28.2589 20.8286L42.5144 6.72013Z"
+                fill="#C4C4C4"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <rect width="56" height="56" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="card__text card--primary">
+          <h1 class="card__title card--primary">Personnalisation</h1>
+          <p class="card__paragraph card--primary">
+            Découvre comment personnaliser ta veste à volonté avec nos
+            différentes encre koloro et notre feutre.
+          </p>
+        </div>
+        <div class="card__btn card--primary"></div>
+        <div class="card__more card--primary">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
+          veritatis quasi facilis reprehenderit a debitis esse quam, accusantium
+          natus corrupti, quaerat aliquam laudantium amet doloremque officiis!
+          Doloribus dignissimos iusto dolorum!
+        </div>
+      </div>
+      <div class="card card--secondary">
+        <div class="card__icon card--secondary">
+          <svg
+            width="65"
+            height="65"
+            viewBox="0 0 65 65"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M32.4995 12.5938L38.187 21.5312L31.687 26L36.9683 27.2188L48.3433 29.6562L50.7808 18.6875L52.4058 13L45.0933 17.4688L36.9683 4.0625H28.0308L17.4683 21.5312L24.3745 25.5938L32.4995 12.5938Z"
+              fill="#C4C4C4"
+            />
+            <path
+              d="M65 48.7499L54.0312 31.2811L47.125 35.3436L55.25 48.7499H44.6875V40.6249L32.5 52.8124L44.6875 64.9999V56.8749H59.7188L65 48.7499Z"
+              fill="#C4C4C4"
+            />
+            <path
+              d="M9.75 48.75L15.4375 39.4062L22.3438 43.875L18.6875 26.8125L7.3125 29.6563L2.03125 30.875L8.53125 34.9375L0 48.75L5.28125 56.875H28.4375V48.75H9.75Z"
+              fill="#C4C4C4"
+            />
+          </svg>
+        </div>
+        <div class="card__text card--secondary">
+          <h1 class="card__title card--secondary">Recyclage</h1>
+          <p class="card__paragraph card--secondary">
+            La kolo est 100% recyclée. Envoie nous tes déchets et reçois une
+            réduction.
+          </p>
+        </div>
+        <div class="card__btn card--secondary"></div>
+        <div class="card__more card--secondary">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
+          veritatis quasi facilis reprehenderit a debitis esse quam, accusantium
+          natus corrupti, quaerat aliquam laudantium amet doloremque officiis!
+          Doloribus dignissimos iusto dolorum!
+        </div>
+      </div>
+      <div class="card card--tertiary">
+        <div class="card__icon card--tertiary">
+          <svg
+            width="67"
+            height="67"
+            viewBox="0 0 67 67"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M34.6787 47.0874C31.5894 44.6136 26.5801 44.6136 23.4908 47.0874C20.4046 49.5622 20.4046 53.5728 23.4908 56.0476C26.5791 58.5224 31.5884 58.5224 34.6787 56.0476C37.766 53.5728 37.766 49.5622 34.6787 47.0874Z"
+              fill="#C4C4C4"
+            />
+            <path
+              d="M22.8072 43.5186C25.2014 40.5444 24.3911 36.7871 20.9992 35.1289C17.6063 33.4717 12.9173 34.5385 10.5231 37.5126C8.13207 40.4868 8.94026 44.244 12.3311 45.9023C15.7251 47.5616 20.4151 46.4938 22.8072 43.5186Z"
+              fill="#C4C4C4"
+            />
+            <path
+              d="M19.5587 29.3314C21.8503 26.7707 21.2965 23.3506 18.3202 21.6923C15.345 20.033 11.0769 20.7637 8.78426 23.3244C6.4916 25.8851 7.04645 29.3041 10.0217 30.9624C12.9969 32.6217 17.2671 31.891 19.5587 29.3314Z"
+              fill="#C4C4C4"
+            />
+            <path
+              d="M21.6703 20.213C24.5157 21.8692 28.6519 21.239 30.9069 18.8092C33.1629 16.3783 32.6865 13.0671 29.8422 11.412C26.9978 9.7558 22.8616 10.385 20.6067 12.8148C18.3496 15.2456 18.8259 18.5569 21.6703 20.213Z"
+              fill="#C4C4C4"
+            />
+            <path
+              d="M45.6919 15.9869C48.2254 14.6919 48.507 12.148 46.3201 10.3023C44.1352 8.45668 40.3047 8.00967 37.7702 9.3036C35.2347 10.5975 34.9542 13.1425 37.1411 14.9881C39.328 16.8338 43.1585 17.2808 45.6919 15.9869Z"
+              fill="#C4C4C4"
+            />
+            <path
+              d="M54.9348 34.7552C52.6694 34.0894 50.7149 33.5136 50.1778 32.1809C49.8669 31.4083 49.9884 30.2735 50.516 28.809C56.1335 23.5536 64.5378 15.0855 64.3012 11.6444C64.207 10.2688 62.0149 8.29858 60.5775 8.29858L60.4644 8.30277C58.9088 8.40955 56.5313 10.4677 53.9916 13.2545C53.7786 12.6153 53.5048 11.9979 53.174 11.4109C50.5097 6.82039 44.6524 4.1875 37.1055 4.1875C31.2378 4.1875 24.7042 5.80492 18.2147 8.86494C9.88467 12.7928 3.66309 20.9836 2.36497 29.7333C1.39975 36.2303 2.5534 46.0562 13.5226 55.9837C18.3863 60.3879 26.0453 62.8125 35.085 62.8125H35.0882C42.3451 62.8125 49.6973 61.1972 55.2625 58.3842C61.482 55.2384 64.9063 50.8876 64.9063 46.1316C64.9063 37.6875 59.1422 35.9926 54.9348 34.7552ZM60.5775 9.86889C61.2381 9.86889 62.6995 11.2403 62.7341 11.7512C62.934 14.6646 52.5553 24.991 45.6177 31.1487L44.4347 30.1196L43.661 29.4444C48.8242 21.7415 57.6536 10.0678 60.5775 9.86889ZM41.1067 32.5159L42.7 30.6891L44.5122 32.2699L42.922 34.0957L41.1067 32.5159ZM54.3182 56.5145C49.0357 59.1861 42.0279 60.7188 35.0882 60.7188H35.0861C26.5645 60.7188 19.406 58.4858 14.9275 54.4312C4.64297 45.1255 3.5448 36.0313 4.43359 30.0401C5.63331 21.9645 11.3932 14.3966 19.1097 10.7587C25.3208 7.82958 31.5445 6.28125 37.1055 6.28125C43.7877 6.28125 49.1163 8.5917 51.3619 12.462C51.8455 13.2943 52.17 14.1841 52.3585 15.1158C47.6706 20.6465 42.9094 27.7338 41.9997 29.101L39.0925 32.4343C37.5661 32.4186 36.0377 33.0854 35.5666 34.6966C33.8309 40.6167 29.9648 44.288 29.9648 44.288C29.9648 44.288 39.7646 42.3513 41.6395 40.1508C42.655 38.9595 43.147 37.5357 43.1355 36.2376L46.1798 32.7473C46.586 32.3903 47.1901 31.8533 47.9344 31.1812C47.9302 31.8344 48.0202 32.4311 48.2338 32.963C49.1498 35.2368 51.6717 35.978 54.3423 36.7631C58.5057 37.988 62.8115 39.2536 62.8115 46.1316C62.8126 50.0574 59.7944 53.7445 54.3182 56.5145Z"
+              fill="#C4C4C4"
+            />
+            <path
+              d="M56.6579 41.673C53.5696 39.1992 48.5592 39.1992 45.471 41.673C42.3827 44.1467 42.3837 48.1583 45.471 50.6332C48.5582 53.108 53.5685 53.1069 56.6579 50.6332C59.7472 48.1594 59.7461 44.1467 56.6579 41.673ZM55.1368 49.4135C52.8891 51.2152 49.2397 51.2152 46.9931 49.4135C44.7455 47.6119 44.7455 44.6921 46.9931 42.8915C49.2397 41.0898 52.8891 41.0898 55.1368 42.8915C57.3844 44.6932 57.3844 47.6119 55.1368 49.4135Z"
+              fill="#C4C4C4"
+            />
+          </svg>
+        </div>
+        <div class="card__text card--tertiary">
+          <h1 class="card__title card--tertiary">Kollab' artist</h1>
+          <p class="card__paragraph card--tertiary">
+            Découvre les modèles signature d’artistes qui portent la kolo et
+            partage toi meme ta création sur le hashtag #kolo
+          </p>
+        </div>
+        <div class="card__btn card--tertiary"></div>
+        <div class="card__more card--tertiary">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
+          veritatis quasi facilis reprehenderit a debitis esse quam, accusantium
+          natus corrupti, quaerat aliquam laudantium amet doloremque officiis!
+          Doloribus dignissimos iusto dolorum!
+        </div>
       </div>
     </section>
   </body>

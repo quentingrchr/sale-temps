@@ -1,7 +1,11 @@
-// <div class="section-heading">
-//         <p class="section-heading_title"></p>
-//         <p class="section-heading_subtitle"></p>
-//       </div>
+// <div class="section-heading section-heading--primary">
+// <p class="section-heading__title section-heading--primary">
+//   Nos liquides végétaux
+// </p>
+// <p class="section-heading__subtitle section-heading--primary">
+//   pimp ta veste
+// </p>
+// </div>
 
 .section-heading--primary.section-heading {
   @include section-heading($color-primary);
