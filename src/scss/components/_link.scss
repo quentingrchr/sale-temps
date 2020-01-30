@@ -5,5 +5,11 @@
   font-size: 16px;
   align-items: center;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
-  border-bottom: 1px solid #000;
+  border: 1px solid transparent;
+  border-bottom: 1px solid $color-neutral-dark;
+
+  &:hover {
+    color: $color-primary;
+    border-bottom: 1px solid $color-primary;
+  }
 }
