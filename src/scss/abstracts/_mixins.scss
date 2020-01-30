@@ -19,6 +19,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  font-family: "Poppins";
 
   &__icon {
     width: 56px;
@@ -27,7 +28,6 @@
     }
   }
   &__text {
-    font-family: "Poppins";
     color: $color-neutral;
     display: flex;
     flex-direction: column;
@@ -50,6 +50,21 @@
     text-align: center;
   }
 
+  &__more {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 138.76%;
+    text-align: center;
+    position: absolute;
+    overflow: hidden;
+    background-color: $color-card;
+    transition: height 0.2s ease;
+    height: 0%;
+    z-index: 3;
+    color: $color-neutral-light;
+    bottom: 0;
+  }
+
   &__btn {
     color: $color-card;
     width: 32px;
@@ -62,6 +77,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 4;
+
+    &::after,
+    &::before {
+      content: "";
+      display: inline-block;
+      background-color: $color-card;
+    }
+
+    &::before {
+      height: 10px;
+      width: 2px;
+      position: absolute;
+      transform: rotate(90deg);
+    }
+    &::after {
+      position: absolute;
+      height: 10px;
+      width: 2px;
+    }
   }
 
   &:hover {
@@ -75,6 +110,12 @@
     & .card__btn {
       color: $color-neutral-light;
       background-color: $color-card;
+      transition: background-color 0.2s ease;
+
+      &::after,
+      &::before {
+        background-color: $color-neutral-light;
+      }
     }
   }
 
@@ -118,7 +159,6 @@
 @mixin section-heading($color-heading) {
   color: $color-neutral-dark;
   &__title {
-    font-family: "Poppins";
     font-weight: 500;
     font-size: 24px;
     line-height: 100%;
