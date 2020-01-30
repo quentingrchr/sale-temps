@@ -12,7 +12,7 @@
   width: 200px;
   height: 250px;
   border: none;
-  cursor: pointer;
+
   position: relative;
   background-color: $color-neutral-light;
   display: flex;
@@ -70,6 +70,7 @@
   }
 
   &__btn {
+    cursor: pointer;
     margin-top: 5px;
     margin-bottom: 5px;
     color: $color-card;
