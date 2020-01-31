@@ -10,3 +10,11 @@
 .section-heading--primary.section-heading {
   @include section-heading($color-primary);
 }
+
+.section-heading--secondary.section-heading {
+  @include section-heading($color-secondary);
+}
+
+.section-heading--tertiary.section-heading {
+  @include section-heading($color-tertiary);
+}
