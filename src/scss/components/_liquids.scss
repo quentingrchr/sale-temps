@@ -4,16 +4,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: red;
   .section-heading {
   }
 
   &__content {
-    width: 1053px;
+    width: 100%;
     height: 318px;
 
     &__types {
       width: 25%;
-
       height: 100%;
       display: flex;
       flex-direction: column;
