@@ -12,6 +12,7 @@
   align-items: center;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
   border: solid 2px $color-primary;
+  overflow: hidden;
 
   &__text {
     margin-left: 20px;
@@ -20,6 +21,7 @@
   }
 
   &__svg {
+    overflow: hidden;
     margin-right: 20px;
     transition: transform 0.3s cubic-bezier(0.93, 0, 0.74, 0.79);
   }
@@ -32,7 +34,7 @@
     box-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.3);
     transform: translateY(0px);
     & svg {
-      transform: translateX(50px);
+      transform: translateX(100px);
     }
   }
 }
