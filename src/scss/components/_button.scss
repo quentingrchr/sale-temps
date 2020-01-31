@@ -16,6 +16,7 @@
 // </a>
 
 .btn {
+  cursor: pointer;
   width: 210px;
   height: 51px;
   background: $color-primary;
@@ -37,6 +38,7 @@
 
   &__svg {
     margin-right: 20px;
+    transition: transform 0.3s cubic-bezier(0.93, 0, 0.74, 0.79);
   }
 
   &:hover {
@@ -46,6 +48,9 @@
   &:active {
     box-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.3);
     transform: translateY(0px);
+    & svg {
+      transform: translateX(50px);
+    }
   }
 }
 
