@@ -23,7 +23,7 @@
   &__svg {
     overflow: hidden;
     margin-right: 20px;
-    transition: transform 0.3s cubic-bezier(0.93, 0, 0.74, 0.79);
+    transition: transform 0.2s cubic-bezier(0.93, 0, 0.74, 0.79);
   }
 
   &:hover {
@@ -42,7 +42,7 @@
 .btn--light {
   background: $color-neutral-light;
   border: solid 2px $color-neutral-dark;
-  color: $color-neutral-dark;
+  // color: $color-neutral-dark; dark-mode
 
   & svg path {
     fill: $color-neutral-dark;

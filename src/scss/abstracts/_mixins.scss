@@ -12,7 +12,6 @@
   width: 222px;
   height: 310px;
   border: none;
-
   position: relative;
   background-color: $color-neutral-light;
   display: flex;
@@ -72,6 +71,7 @@
     justify-content: flex-start;
 
     & .card__more__text {
+      font-size: 12px;
       margin-left: 10%;
       margin-right: 10%;
       margin-top: 10%;
@@ -81,6 +81,14 @@
       justify-content: space-between;
       & p {
         text-align: left;
+
+        & a.link {
+          text-align: center;
+          font-size: 12px;
+        }
+        & em {
+          font-weight: bold;
+        }
       }
     }
   }
@@ -199,7 +207,6 @@
 }
 
 @mixin section-heading($color-heading) {
-  color: $color-neutral-dark;
   &__title {
     font-weight: 500;
     font-size: 24px;
@@ -222,5 +229,66 @@
     font-size: 26px;
     line-height: 100.5%;
     font-family: "Cedarville Cursive";
+  }
+}
+
+@mixin typeHoverOrVisible {
+  opacity: 1;
+  &.liquids__content__type--fluo {
+    text-shadow: 0 0 15px rgba($color-neutral-light, 0.5);
+    & svg {
+      filter: drop-shadow(0 0 2px rgba($color-neutral-light, 0.5));
+    }
+  }
+}
+
+@mixin wavingAnimation {
+  span:nth-child(1) {
+    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
+  }
+  span:nth-child(2) {
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+  }
+  span:nth-child(3) {
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+  }
+  span:nth-child(4) {
+    animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+  }
+  span:nth-child(5) {
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+  }
+  span:nth-child(6) {
+    animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+  }
+  span:nth-child(7) {
+    animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s;
+  }
+  span:nth-child(8) {
+    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+  }
+  span:nth-child(9) {
+    animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s;
+  }
+  span:nth-child(10) {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+  }
+  span:nth-child(11) {
+    animation-delay: 1.1s;
+    -webkit-animation-delay: 1.1s;
+  }
+  span:nth-child(12) {
+    animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
   }
 }

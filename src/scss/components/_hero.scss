@@ -37,9 +37,6 @@
   margin: auto;
   height: 510px;
 
-  &__right {
-  }
-
   &__left {
     width: 35%;
     height: 80%;
@@ -52,7 +49,7 @@
   justify-content: space-around;
   align-items: flex-start;
   font-family: "Poppins";
-  color: $color-neutral-dark;
+  // color: $color-neutral-dark; dark-mode
   font-family: "Poppins";
 
   &__uptitle {

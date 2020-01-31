@@ -1,6 +1,51 @@
 body {
-  background-color: $color-neutral-light;
   width: 100vw;
+  background-color: $color-neutral-light;
+  color: $color-neutral-dark;
+
+  .logo--dark-mode {
+    display: none;
+  }
+
+  &.dark-mode {
+    background-color: $color-neutral-dark;
+    color: $color-neutral-light;
+
+    & .logo--dark-mode {
+      display: block;
+    }
+    & .logo--light-mode {
+      display: none;
+    }
+
+    & .header {
+      svg path {
+        fill: $color-neutral-light;
+      }
+    }
+
+    & .card {
+      background-color: $color-neutral-dark;
+      &:hover {
+        .card__icon svg path {
+          fill: $color-neutral-light;
+        }
+        .card__text {
+          color: $color-neutral-light;
+        }
+      }
+    }
+
+    & .liquids {
+      background-color: $color-neutral-dark;
+      &__content__type__icon {
+        border: 1px solid $color-neutral-light;
+        & svg path {
+          fill: $color-neutral-light;
+        }
+      }
+    }
+  }
 }
 
 section {
