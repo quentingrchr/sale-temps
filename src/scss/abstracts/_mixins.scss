@@ -169,11 +169,11 @@
     transition: all 1s;
   }
   &:hover::before {
-    width: 104.9%;
+    width: 104%;
     height: 100%;
   }
   &:hover::after {
-    width: 104.9%;
+    width: 104%;
     height: 100%;
     border-color: $color-card;
     border-top-color: transparent;
