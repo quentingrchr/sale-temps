@@ -1,7 +1,11 @@
 .hero__right {
   background: url("../assets/veste+rond.png");
+  background-size: contain;
   background-repeat: no-repeat;
+  width: 40%;
+  height: 100%;
   position: relative;
+  display: flex;
   .right__product {
     width: 110px;
     height: 55px;
@@ -33,7 +37,6 @@
   height: 510px;
 
   &__right {
-    margin-right: -150px;
   }
 
   &__left {
