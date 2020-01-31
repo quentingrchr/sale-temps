@@ -4,15 +4,20 @@
 
 .header-custom {
   display: flex;
-
-  justify-content: space-between;
+  justify-content: center;
   margin: 20px 0px 20px 30px;
-  width: 55vw;
+  width: 100vw;
   &__title {
     font-size: 36px;
     font-weight: 600;
   }
 }
+.custom__logo {
+  position: absolute;
+  top: 25px;
+  left: 50px;
+}
+
 .steper {
   display: flex;
   justify-content: center;
@@ -42,38 +47,38 @@
 }
 
 .section-custom {
-  border: solid red 1px;
   display: flex;
   justify-content: space-between;
   width: 70%;
   margin: 200px auto;
   &__image {
-    border: solid 1px blue;
     width: 318px;
   }
   &__choice {
-    border: solid 1px rebeccapurple;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 280px;
     p {
       font-size: 24px;
-      font-weight: 500;
+      font-weight: 400;
       color: $color-neutral-dark;
+      .dots_three {
+        margin-left: 10px;
+      }
     }
   }
 }
 
 .choice--color {
-  border: solid black 1px;
   display: flex;
   flex-direction: column;
 }
 
 .color__circle {
   display: flex;
-  border: solid 1px black;
   width: 150px;
-  margin-top: 20px;
+  margin: 20px 0px 20px 0px;
   justify-content: space-between;
 }
 
@@ -81,7 +86,7 @@
   width: 60px;
   height: 60px;
   border-radius: 70px;
-  border: black solid 1px;
+  border: 0.5px solid black;
 }
 
 .circle--black {
@@ -89,4 +94,20 @@
   height: 60px;
   border-radius: 70px;
   background-color: black;
+}
+.size__circle {
+  display: flex;
+  justify-content: space-between;
+  div {
+    margin: 20px 0px 20px 0px;
+    font-size: 16px;
+    font-weight: 300;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border-radius: 70px;
+    border: 1px solid black;
+  }
 }
