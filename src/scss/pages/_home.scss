@@ -3,22 +3,8 @@ body {
   width: 100vw;
 }
 
-svg path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 5s linear forwards;
-}
-
-@keyframes dash {
-  from {
-    stroke-dashoffset: 822;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
 section {
   margin: auto;
   width: 90%;
 }
+

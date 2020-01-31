@@ -1,0 +1,37 @@
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 0%;
+  }
+}
+.draw-svg {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation-name: draw;
+  animation-direction: alternate-reverse;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-timing-function: cubic-bezier(0.14, 0.15, 0.1, 0.05);
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 100%;
+  }
+  100% {
+    offset-distance: 0%;
+  }
+}
+
+.float {
+  animation-name: move;
+  animation-direction: alternate-reverse;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-timing-function: cubic-bezier(0.14, 0.15, 0.1, 0.05);
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  transform: rotate(90deg);
+  image-orientation: 90deg flip;
+}
