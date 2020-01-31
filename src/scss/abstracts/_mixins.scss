@@ -9,8 +9,8 @@
 
 @mixin card($color-card) {
   box-shadow: 0px 4px 10px rgba(137, 137, 137, 0.25);
-  width: 200px;
-  height: 250px;
+  width: 222px;
+  height: 310px;
   border: none;
 
   position: relative;
@@ -67,6 +67,22 @@
     z-index: 3;
     color: $color-neutral-light;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    & .card__more__text {
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 10%;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      & p {
+        text-align: left;
+      }
+    }
   }
 
   &__btn {
@@ -170,9 +186,10 @@
     }
 
     .card__btn {
+      background-color: $color-neutral-light;
       &::before,
       &::after {
-        background-color: $color-neutral-light;
+        background-color: $color-card;
       }
       &::after {
         transform: rotate(90deg);
