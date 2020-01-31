@@ -35,3 +35,62 @@
   transform: rotate(90deg);
   image-orientation: 90deg flip;
 }
+
+@keyframes waving {
+  0% {
+    transform: skewX(15deg);
+    text-shadow: 0 0 100px $color-neutral-dark;
+    opacity: 0;
+  }
+  5% {
+    text-shadow: 0 0 90px $color-neutral-dark;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    text-shadow: 0 0 0px $color-neutral-dark;
+    transform: skewX(0deg);
+  }
+  100% {
+    text-shadow: 0 0 0px $color-neutral-dark;
+    transform: skewY(15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 100px #fff;
+    opacity: 1;
+  }
+  5% {
+    text-shadow: 0 0 90px #fff;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    text-shadow: 0 0 0px #fff;
+  }
+  40% {
+    text-shadow: 0 0 90px #fff;
+  }
+  60% {
+    text-shadow: 0 0 0px #fff;
+  }
+  80% {
+    text-shadow: 0 0 90px #fff;
+  }
+
+  85% {
+    opacity: 1;
+  }
+  95% {
+    text-shadow: 0 0 90px #fff;
+  }
+  100% {
+    text-shadow: 0 0 100px #fff;
+    opacity: 1;
+  }
+}

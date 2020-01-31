@@ -20,7 +20,12 @@
   <body>
     <header class="header">
       <div class="header__logo">
-        <img src="./assets/logo.png" alt="logo" />
+        <img class="logo--light-mode" src="./assets/logo.png" alt="logo" />
+        <img
+          class="logo--dark-mode"
+          src="./assets/logo-dark-mode.png"
+          alt="logo"
+        />
       </div>
       <div class="header__nav nav">
         <ul class="nav__items">
@@ -124,7 +129,9 @@
           </svg>
         </a>
         <div class="hero-left__link">
-          <a href="custom.html" class="link">Je veux mon éco-réduc !</a>
+          <a href="custom.html" class="link link--blue"
+            >Je veux mon éco-réduc !</a
+          >
         </div>
       </div>
       <div class="hero__right hero-right">
@@ -190,11 +197,12 @@
         <div class="card__btn card--primary"></div>
         <div class="card__more card--primary">
           <div class="card__more__text">
-            <p>Recharge ton marker avec la couleur de ton choix.</p>
-            <p>Laisse libre cour a ton imagination.</p>
+            <p><em>Dessine</em> et laisse libre cour a ton imagination.</p>
+            <p><em>Recharche</em> ton marker avec la couleur de ton choix.</p>
             <p>Une erreur ?</p>
             <p>
-              Effaces et recommence à volonté, l’éffaceur a été concu pour ça.
+              <em>Efface</em> et recommence à volonté, l’éffaceur a été concu
+              pour ça.
             </p>
           </div>
         </div>
@@ -232,14 +240,19 @@
         <div class="card__btn card--secondary"></div>
         <div class="card__more card--secondary">
           <div class="card__more__text">
-            <p>Conçu à partir de plastiques et de vêtments usagés.</p>
             <p>
-              La veste Kolo. se veut la plus respectueuse de l’environnement
-              possible.
+              <em>Respectueuse de l’environnement</em> Kolo est conçu à partir
+              de plastiques et de vêtments usagés.
+            </p>
+
+            <p>
+              <em>Contribue</em> toi aussi à la confection de la kolo en nous
+              envoyant tes déchets et reçois jusqu’a 70% de réduction.
             </p>
             <p>
-              Contribue toi aussi à la confection de la kolo en nous envoyant
-              tes déchets et reçois jusqu’a 70% d’éco reduction.
+              <a href="custom.html" class="link link--white"
+                >Je veux mon éco-réduc !</a
+              >
             </p>
           </div>
         </div>
@@ -293,7 +306,7 @@
         <div class="card__btn card--tertiary"></div>
         <div class="card__more card--tertiary">
           <div class="card__more__text">
-            <p>En manque d’inspiration ?</p>
+            <p><em>En manque d’inspiration ?</em></p>
             <p>
               Sale temps. a pensé a tout et met à votre disposition un panel de
               motifs clé en main.
@@ -325,7 +338,7 @@
               >
                 <path
                   d="M6.31314 0.00012207C10.5222 5.49255 12.6263 9.40038 12.6263 11.7245C12.6263 12.5536 12.463 13.3745 12.1457 14.1405C11.8285 14.9064 11.3634 15.6024 10.7772 16.1886C10.191 16.7748 9.49502 17.2398 8.72907 17.5571C7.96313 17.8744 7.14219 18.0377 6.31314 18.0377C5.48408 18.0377 4.66315 17.8744 3.8972 17.5571C3.13126 17.2398 2.4353 16.7748 1.84908 16.1886C1.26285 15.6024 0.797824 14.9064 0.480559 14.1405C0.163294 13.3745 -1.23539e-08 12.5536 0 11.7245C0 9.40038 2.10408 5.49255 6.31314 0.00012207Z"
-                  fill="#1D1D1D"
+                  fill="#2D2D2D"
                 />
               </svg>
             </div>
@@ -341,13 +354,12 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  opacity="0.3"
                   d="M6.31314 0.00012207C10.5222 5.49255 12.6263 9.40038 12.6263 11.7245C12.6263 12.5536 12.463 13.3745 12.1457 14.1405C11.8285 14.9064 11.3634 15.6024 10.7772 16.1886C10.191 16.7748 9.49502 17.2398 8.72907 17.5571C7.96313 17.8744 7.14219 18.0377 6.31314 18.0377C5.48408 18.0377 4.66315 17.8744 3.8972 17.5571C3.13126 17.2398 2.4353 16.7748 1.84908 16.1886C1.26285 15.6024 0.797824 14.9064 0.480559 14.1405C0.163294 13.3745 -1.23539e-08 12.5536 0 11.7245C0 9.40038 2.10408 5.49255 6.31314 0.00012207Z"
-                  fill="#1D1D1D"
+                  fill="#2D2D2D"
                 />
               </svg>
             </div>
-            <div class="liquids__content__type__text">Hydroreactif</div>
+            <div class="liquids__content__type__text">Hydroréactif</div>
           </div>
           <div class="liquids__content__type liquids__content__type--fluo">
             <div class="liquids__content__type__icon">
@@ -361,7 +373,7 @@
               >
                 <path
                   d="M6.31314 0.00012207C10.5222 5.49255 12.6263 9.40038 12.6263 11.7245C12.6263 12.5536 12.463 13.3745 12.1457 14.1405C11.8285 14.9064 11.3634 15.6024 10.7772 16.1886C10.191 16.7748 9.49502 17.2398 8.72907 17.5571C7.96313 17.8744 7.14219 18.0377 6.31314 18.0377C5.48408 18.0377 4.66315 17.8744 3.8972 17.5571C3.13126 17.2398 2.4353 16.7748 1.84908 16.1886C1.26285 15.6024 0.797824 14.9064 0.480559 14.1405C0.163294 13.3745 -1.23539e-08 12.5536 0 11.7245C0 9.40038 2.10408 5.49255 6.31314 0.00012207Z"
-                  fill="#F82155"
+                  fill="#2D2D2D"
                 />
               </svg>
             </div>
@@ -369,27 +381,65 @@
           </div>
         </div>
         <div class="liquids__content__imgs">
-          <img
-            src="./assets/bluebottle.png"
-            alt="bouteille"
-            class="liquids__content__img"
-          />
-          <img
-            src="./assets/redbottle.png"
-            alt="bouteille"
-            class="lliquids__content__img"
-          />
-          <img
-            src="./assets/yellowbottle.png"
-            alt="bouteille"
-            class="liquids__content__img"
-          />
+          <div
+            class="liquids__content__box liquids__content__box--basic visible"
+          >
+            <img
+              src="./assets/bluebottle.png"
+              alt="bouteille"
+              class="liquids__content__img"
+            />
+            <img
+              src="./assets/redbottle.png"
+              alt="bouteille"
+              class="lliquids__content__img"
+            />
+            <img
+              src="./assets/yellowbottle.png"
+              alt="bouteille"
+              class="liquids__content__img"
+            />
+          </div>
+          <div class="liquids__content__box liquids__content__box--hydro">
+            <img
+              src="./assets/bluebottle-hydro.png"
+              alt="bouteille"
+              class="liquids__content__img"
+            />
+            <img
+              src="./assets/redbottle-hydro.png"
+              alt="bouteille"
+              class="lliquids__content__img"
+            />
+            <img
+              src="./assets/yellowbottle-hydro.png"
+              alt="bouteille"
+              class="liquids__content__img"
+            />
+          </div>
+          <div class="liquids__content__box liquids__content__box--fluo">
+            <img
+              src="./assets/bluebottle-fluo.png"
+              alt="bouteille"
+              class="liquids__content__img"
+            />
+            <img
+              src="./assets/redbottle-fluo.png"
+              alt="bouteille"
+              class="lliquids__content__img"
+            />
+            <img
+              src="./assets/yellowbottle-fluo.png"
+              alt="bouteille"
+              class="liquids__content__img"
+            />
+          </div>
         </div>
         <div class="liquids__content__texts">
           <div
-            class="liquids__content__text liquids__content__text--basic visible-block-opacity"
+            class="liquids__content__text liquids__content__text--basic visible"
           >
-            <h1 class="liquids__content__text__title">Koloros basiques</h1>
+            <h1 class="liquids__content__text__title">Koloros Basiques</h1>
             <h2 class="liquids__content__text__subtitle">
               3 coloris disponibles
             </h2>
@@ -400,19 +450,25 @@
             </p>
           </div>
           <div class="liquids__content__text liquids__content__text--hydro ">
-            <h1 class="liquids__content__text__title">Koloros Hydroréactif</h1>
+            <h1 class="liquids__content__text__title">
+              Koloros <span>H</span><span>y</span><span>d</span><span>r</span
+              ><span>o</span><span>r</span><span>e</span><span>a</span
+              ><span>c</span><span>t</span><span>i</span><span>f</span>
+            </h1>
             <h2 class="liquids__content__text__subtitle">
               3 coloris disponibles
             </h2>
             <p class="liquids__content__text__spec">
+              - Uniquement visible au contact de l’eau <br />
               - Adhère aux vêtements. <br />
               - Reste au lavage <br />
-              - Effacable au marker sale temps <br />
-              - Visible au contact de l’eau
+              - Effacable au marker sale temps
             </p>
           </div>
           <div class="liquids__content__text liquids__content__text--fluo">
-            <h1 class="liquids__content__text__title">Koloros Fluorescent</h1>
+            <h1 class="liquids__content__text__title">
+              Koloros <em>Fluorescent</em>
+            </h1>
             <h2 class="liquids__content__text__subtitle">
               3 coloris disponibles
             </h2>
