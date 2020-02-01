@@ -1,3 +1,27 @@
+@mixin respond-above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
 @mixin flex__row {
   display: flex;
   flex-direction: row;
@@ -209,7 +233,6 @@
 @mixin section-heading($color-heading) {
   &__title {
     font-weight: 500;
-    font-size: 24px;
     line-height: 100%;
     margin-bottom: 3px;
 
@@ -226,7 +249,6 @@
   &__subtitle {
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
     line-height: 100.5%;
     font-family: "Cedarville Cursive";
   }
