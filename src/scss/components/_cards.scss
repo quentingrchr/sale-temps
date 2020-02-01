@@ -4,4 +4,8 @@
   justify-content: space-around;
   align-items: center;
   min-height: 400px;
+  @include respond-below(xs) {
+    flex-direction: column;
+    height: 647px;
+  }
 }
