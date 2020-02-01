@@ -46,7 +46,7 @@ function addClassDown() {
 }
 
 var count = 0;
-var keywords = ["IMPERMÉABLE", "PERSONNALISABLE"];
+var keywords = ["IMPERMEABLE", "PERSONNALISABLE"];
 
 setInterval(
   function() {
