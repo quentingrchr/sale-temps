@@ -4,6 +4,8 @@ const $body = document.querySelector("body");
 const $liquidsTexts = document.querySelectorAll(".liquids__content__text");
 const $liquidsTypes = document.querySelectorAll(".liquids__content__type");
 const $liquidsImgsBoxs = document.querySelectorAll(".liquids__content__box");
+const $iconMenu = document.querySelector("#icon-menu");
+const $menu = document.querySelector("#menu");
 
 for (let i = 0; i < $cardBtn.length; i++) {
   const element = $cardBtn[i];
@@ -34,6 +36,10 @@ for (let i = 0; i < $liquidsTypes.length; i++) {
   });
 }
 
+
+
+
+
 var keywords = ["PÉRSONNALISABLE", "IMPERMÉABLE"];
 
 var count = 0;
@@ -46,3 +52,9 @@ setInterval(function() {
     count = 0;
   }
 }, 3000);
+=======
+$iconMenu.addEventListener("click", () => {
+  $menu.classList.toggle("menu-is-opened");
+  console.log("pute");
+});
+
