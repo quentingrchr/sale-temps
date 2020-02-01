@@ -62,7 +62,18 @@
     line-height: 100%;
     color: rgba($color: $color-neutral, $alpha: 0.5);
     letter-spacing: 0.2rem;
+    display: flex;
+    overflow: hidden;
+    span {
+      margin-left: 20px;
+      display: block;
+      transform: translateY(-40px);
+      &.down {
+        animation: down 5s linear infinite;
+      }
+    }
   }
+
   &__subtitle {
     font-style: normal;
     font-weight: normal;
