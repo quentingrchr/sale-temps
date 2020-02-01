@@ -13,6 +13,11 @@
   transition: box-shadow 0.2s ease, transform 0.2s ease;
   border: solid 2px $color-primary;
   overflow: hidden;
+  @include respond-below(sm) {
+    font-size: 12px;
+    width: 160px;
+    height: 38px;
+  }
 
   &__text {
     margin-left: 20px;

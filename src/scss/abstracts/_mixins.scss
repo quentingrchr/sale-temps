@@ -1,3 +1,27 @@
+@mixin respond-above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
 @mixin flex__row {
   display: flex;
   flex-direction: row;
@@ -20,11 +44,24 @@
   align-items: center;
   font-family: "Poppins";
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  @include respond-below(sm) {
+    width: 150px;
+  }
+  @include respond-below(xs) {
+    width: 168px;
+    height: 158px;
+  }
 
   &__icon {
     width: 56px;
-    & svg path {
-      transition: fill 0.1s ease;
+
+    & svg {
+      @include respond-below(xs) {
+        width: 36px;
+      }
+      & path {
+        transition: fill 0.1s ease;
+      }
     }
   }
   &__text {
@@ -43,9 +80,15 @@
     font-size: 15px;
     line-height: 132.76%;
     margin-bottom: 15px;
+    @include respond-below(sm) {
+      font-size: 12px;
+    }
   }
 
   &__paragraph {
+    @include respond-below(sm) {
+      display: none;
+    }
     font-weight: normal;
     font-size: 12px;
     line-height: 138.76%;
@@ -109,12 +152,18 @@
     justify-content: center;
     align-items: center;
     z-index: 4;
+    position: relative;
 
     &::after,
     &::before {
       content: "";
       display: inline-block;
       background-color: $color-card;
+      @include respond-below(xs) {
+        position: absolute;
+        top: 25%;
+        left: 60%;
+      }
     }
 
     &::before {
@@ -122,12 +171,22 @@
       width: 2px;
       position: absolute;
       transform: rotate(90deg);
+      @include respond-below(xs) {
+        transform-origin: 50% 100%;
+        transform: rotate(-45deg);
+        height: 8px;
+      }
     }
     &::after {
       position: absolute;
       height: 10px;
       width: 2px;
       transition: transform 0.2s 0.2s cubic-bezier(0.93, 0, 0.74, 1.51);
+      @include respond-below(xs) {
+        transform-origin: 50% 100%;
+        transform: rotate(-135deg);
+        height: 8px;
+      }
     }
   }
 
@@ -209,7 +268,6 @@
 @mixin section-heading($color-heading) {
   &__title {
     font-weight: 500;
-    font-size: 24px;
     line-height: 100%;
     margin-bottom: 3px;
 
@@ -226,7 +284,6 @@
   &__subtitle {
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
     line-height: 100.5%;
     font-family: "Cedarville Cursive";
   }

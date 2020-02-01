@@ -18,3 +18,22 @@
 .section-heading--tertiary.section-heading {
   @include section-heading($color-tertiary);
 }
+
+.section-heading {
+  &__title {
+    font-size: 24px;
+    @include respond-below(xs) {
+      font-size: 18px;
+    }
+  }
+  &__subtitle {
+    font-size: 26px;
+    @include respond-below(sm) {
+      display: flex;
+      justify-content: center;
+    }
+    @include respond-below(xs) {
+      font-size: 16px;
+    }
+  }
+}

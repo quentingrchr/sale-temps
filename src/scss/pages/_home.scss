@@ -2,6 +2,7 @@ body {
   width: 100vw;
   background-color: $color-neutral-light;
   color: $color-neutral-dark;
+  font-family: "Poppins";
 
   .logo--dark-mode {
     display: none;
@@ -51,6 +52,10 @@ body {
 section {
   margin: auto;
   width: 80%;
+
+  @include respond-below(xs) {
+    width: 100%;
+  }
 }
 
 .section-bg--blue {
