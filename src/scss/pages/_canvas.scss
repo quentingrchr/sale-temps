@@ -9,19 +9,7 @@
   border: 2px solid black;
 }
 .canvas__container:hover {
-  cursor: none;
-}
-#cursor {
-  position: absolute;
-  z-index: 100;
-  cursor: none;
-  height: 0.5px;
-  width: 0.5px;
-  transition: 0.1s;
-  transform: translate(-50%, 50%);
-  pointer-events: none;
-  border: 2px solid #f82155;
-  border-radius: 50px;
+  cursor: pointer;
 }
 
 .canvas__container {

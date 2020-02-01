@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
       rel="stylesheet"
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="scss/style.scss" />
     <script defer src="javascript/script.js"></script>
     <script defer src="javascript/canvas.js"></script>
+
     <title>sale-temps.</title>
   </head>
   <body>
@@ -109,87 +111,6 @@
       </div>
     </header>
 
-    <!-- CANVAS PREVIEW ELEMENT  -->
-
-    <div class="preview">
-      <div id="cursor"></div>
-
-      <div class="canvas__container">
-        <div class="canvas__cadre"></div>
-        <canvas id="canvas" width="195px" height="292px"></canvas>
-        <div class="canvas__cadre__behind"></div>
-        <div class="canvas__beind"></div>
-        <button class="canvas__erase">Recommencer</button>
-      </div>
-
-      <div class="canvas__container__choices">
-        <h2 class="canvas__choices__subtitle">Couleur du Koloro*</h2>
-        <div class="canvas__container__buttons">
-          <button class="canvas__buttons canvas__button__red"></button>
-          <button class="canvas__buttons canvas__button__blue"></button>
-          <button class="canvas__buttons canvas__button__yellow"></button>
-        </div>
-        <h2 class="canvas__choices__subtitle">Type du Koloro*</h2>
-
-        <div class="liquids-types">
-          <div class="liquids-type liquids-type--basic visible">
-            <div class="liquids-type__icon">
-              <svg
-                width="60%"
-                height="60%"
-                viewBox="0 0 13 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.31314 0.00012207C10.5222 5.49255 12.6263 9.40038 12.6263 11.7245C12.6263 12.5536 12.463 13.3745 12.1457 14.1405C11.8285 14.9064 11.3634 15.6024 10.7772 16.1886C10.191 16.7748 9.49502 17.2398 8.72907 17.5571C7.96313 17.8744 7.14219 18.0377 6.31314 18.0377C5.48408 18.0377 4.66315 17.8744 3.8972 17.5571C3.13126 17.2398 2.4353 16.7748 1.84908 16.1886C1.26285 15.6024 0.797824 14.9064 0.480559 14.1405C0.163294 13.3745 -1.23539e-08 12.5536 0 11.7245C0 9.40038 2.10408 5.49255 6.31314 0.00012207Z"
-                  fill="#2D2D2D"
-                />
-              </svg>
-            </div>
-            <div class="liquids-type__text">Basique</div>
-          </div>
-
-          <div class="liquids-type liquids-type--hydro">
-            <div class="liquids-type__icon">
-              <svg
-                width="60%"
-                height="60%"
-                viewBox="0 0 13 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.31314 0.00012207C10.5222 5.49255 12.6263 9.40038 12.6263 11.7245C12.6263 12.5536 12.463 13.3745 12.1457 14.1405C11.8285 14.9064 11.3634 15.6024 10.7772 16.1886C10.191 16.7748 9.49502 17.2398 8.72907 17.5571C7.96313 17.8744 7.14219 18.0377 6.31314 18.0377C5.48408 18.0377 4.66315 17.8744 3.8972 17.5571C3.13126 17.2398 2.4353 16.7748 1.84908 16.1886C1.26285 15.6024 0.797824 14.9064 0.480559 14.1405C0.163294 13.3745 -1.23539e-08 12.5536 0 11.7245C0 9.40038 2.10408 5.49255 6.31314 0.00012207Z"
-                  fill="#2D2D2D"
-                />
-              </svg>
-            </div>
-            <div class="liquids-type__text">Hydroréactif</div>
-          </div>
-
-          <div class="liquids-type liquids-type--fluo">
-            <div class="liquids-type__icon">
-              <svg
-                width="60%"
-                height="60%"
-                viewBox="0 0 13 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.31314 0.00012207C10.5222 5.49255 12.6263 9.40038 12.6263 11.7245C12.6263 12.5536 12.463 13.3745 12.1457 14.1405C11.8285 14.9064 11.3634 15.6024 10.7772 16.1886C10.191 16.7748 9.49502 17.2398 8.72907 17.5571C7.96313 17.8744 7.14219 18.0377 6.31314 18.0377C5.48408 18.0377 4.66315 17.8744 3.8972 17.5571C3.13126 17.2398 2.4353 16.7748 1.84908 16.1886C1.26285 15.6024 0.797824 14.9064 0.480559 14.1405C0.163294 13.3745 -1.23539e-08 12.5536 0 11.7245C0 9.40038 2.10408 5.49255 6.31314 0.00012207Z"
-                  fill="#2D2D2D"
-                />
-              </svg>
-            </div>
-            <div class="liquids-type__text">Fluorescent</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- END OF CANVAS PREVIEW ELEMENTT  -->
     <section class="hero">
       <div class="hero__left hero-left">
         <h2 class="hero-left__uptitle">
@@ -204,7 +125,7 @@
           de matières recyclées et personnalise là dès maintenant à prix réduit
           avec l’offre Starter pack !
         </p>
-        <a class="hero-left__btn btn">
+        <a class="hero-left__btn btn" href="canvas.html">
           <p class="btn__text">Personnaliser</p>
           <svg
             class="btn__svg"
