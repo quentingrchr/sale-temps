@@ -1,11 +1,10 @@
 .preview {
   position: absolute;
-  width: 800px;
+  width: 80vw;
   height: 500px;
-
   z-index: 40; // Z-INDEX 40 !
   top: 88px;
-  right: 40px;
+  left: 10%;
   background-color: $color-neutral-light;
   border: 2px solid black;
 }
@@ -27,7 +26,7 @@
 
 .canvas__container {
   position: absolute;
-
+  border: 2px solid green;
   width: 60%;
   height: 100%;
   display: flex;
@@ -37,6 +36,7 @@
 }
 
 #canvas {
+  border: 2px solid red;
   background-image: url("../assets/test.png");
   background-repeat: no-repeat;
   width: 60%;
