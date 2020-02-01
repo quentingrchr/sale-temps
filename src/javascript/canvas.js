@@ -10,10 +10,10 @@ window.addEventListener("mousemove", function(e) {
 
 // Recup buttons
 
-const buttonRed = document.querySelector(".button__red");
-const buttonBlue = document.querySelector(".button__blue");
-const buttonYellow = document.querySelector(".button__yellow");
-const buttonErase = document.querySelector(".erase");
+const buttonRed = document.querySelector(".canvas__button__red");
+const buttonBlue = document.querySelector(".canvas__button__blue");
+const buttonYellow = document.querySelector(".canvas__button__yellow");
+const buttonErase = document.querySelector(".canvas__erase");
 
 // Buttons event Listener
 let color = "#F82155";
