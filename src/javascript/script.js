@@ -4,6 +4,8 @@ const $body = document.querySelector("body");
 const $liquidsTexts = document.querySelectorAll(".liquids__content__text");
 const $liquidsTypes = document.querySelectorAll(".liquids__content__type");
 const $liquidsImgsBoxs = document.querySelectorAll(".liquids__content__box");
+const $preview = document.querySelector(".preview");
+console.log($preview);
 
 for (let i = 0; i < $cardBtn.length; i++) {
   const element = $cardBtn[i];
@@ -30,6 +32,9 @@ for (let i = 0; i < $liquidsTypes.length; i++) {
     $liquidsType.classList.add("visible");
     $liquidsTexts[i].classList.toggle("visible");
 
-    if (i === 2) $body.classList.add("dark-mode");
+    if (i === 2) {
+      $body.classList.add("dark-mode");
+      $preview.classList.add("dark-mode");
+    }
   });
 }

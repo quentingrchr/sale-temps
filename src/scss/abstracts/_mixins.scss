@@ -298,6 +298,15 @@
     }
   }
 }
+@mixin canvasTypeHoverOrVisible {
+  opacity: 1;
+  &.canvas__liquids__content__type--fluo {
+    text-shadow: 0 0 15px rgba($color-neutral-light, 0.5);
+    & svg {
+      filter: drop-shadow(0 0 2px rgba($color-neutral-light, 0.5));
+    }
+  }
+}
 
 @mixin wavingAnimation {
   span:nth-child(1) {

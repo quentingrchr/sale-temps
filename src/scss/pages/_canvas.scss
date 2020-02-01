@@ -1,0 +1,278 @@
+.preview {
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  border: 2px solid black;
+  z-index: 40; // Z-INDEX 40 !
+  top: 88px;
+  right: 40px;
+  background-color: $color-neutral-light;
+}
+
+.canvas__container {
+  position: absolute;
+  border: 2px solid green;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas {
+  background: green;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  z-index: 29;
+}
+
+.canvas__cadre {
+  border: 2px dotted white;
+  width: 90px;
+  height: 130px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.canvas__container__choices {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  border: 2px solid blue;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.canvas__choices__subtitle {
+  margin-left: 10%;
+  width: 80%;
+  height: 100px;
+  margin-top: 40px;
+  color: $color-neutral-dark;
+  font-size: 24px;
+  border: 2px solid blue;
+  display: flex;
+}
+
+.canvas__container__buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10%;
+  height: 40px;
+  margin-top: 10px;
+  border: 2px solid red;
+}
+
+.canvas__buttons {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 15%;
+  cursor: pointer;
+}
+.canvas__button__red {
+  background: red;
+}
+.canvas__button__blue {
+  background: blue;
+}
+.canvas__button__yellow {
+  background: yellow;
+}
+
+/* GOUTTES EFFECT FROM QUENTIN BUT WITH THE CANVAS MOFIDIER */
+.canvas__liquids {
+  border: 2px solid red;
+  margin-left: 10%;
+  height: 100%;
+  background-color: $color-neutral-light;
+
+  &__content {
+    font-family: "Poppins";
+    width: 100%;
+    height: 318px;
+    display: flex;
+    // overflow: hidden;
+
+    // color: $color-neutral-dark; dark-mode
+    &__types {
+      /////////////////////////////////////////// TYPES
+      flex-grow: 1;
+      margin-left: 2%;
+      min-width: 100px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20%;
+      justify-content: space-evenly;
+      align-items: flex-start;
+    }
+
+    &__type {
+      &:first-child {
+        margin-top: 25%;
+      }
+      &:last-child {
+      }
+      height: 36px;
+      opacity: 0.5;
+      width: 90%;
+      margin-bottom: 5%;
+      display: flex;
+      justify-content: space-around;
+      font-family: Poppins;
+      font-size: 16px;
+      line-height: 132.76%;
+      text-align: center;
+      transition: transform 0.3s ease;
+      position: relative;
+
+      &:hover {
+        @include canvasTypeHoverOrVisible;
+      }
+      &.visible {
+        @include typeHoverOrVisible;
+        transform: scale(1.1);
+        & .canvas__liquids__content__type__text {
+          &::after {
+            display: flex;
+            justify-content: flex-end;
+            content: "";
+            display: inline-block;
+            position: absolute;
+            height: 2px;
+            background-color: $color-primary;
+            bottom: 2px;
+            width: 20%;
+          }
+        }
+      }
+      &__icon {
+        border: 2px solid $color-neutral-dark;
+        width: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+      &__text {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+
+    &__texts {
+      /////////////////////////////////////////// TYPES
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      flex-grow: 1;
+    }
+
+    &__text {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      font-style: normal;
+      font-weight: normal;
+
+      &.visible {
+        visibility: visible;
+        position: static;
+        opacity: 1;
+        & .canvas__liquids__content__text__title {
+          span {
+            // HYDRO
+            display: inline-block;
+            animation: waving 10s ease-out infinite;
+            @include wavingAnimation;
+          }
+          em {
+            // FLUO
+            animation: glowing 3s ease-out infinite;
+          }
+        }
+      }
+      &__title {
+        font-size: 24px;
+        line-height: 166.76%;
+      }
+      &__subtitle {
+        font-size: 12px;
+        line-height: 166.76%;
+        margin-bottom: 15%;
+      }
+      &__spec {
+        font-size: 16px;
+        line-height: 152.76%;
+        min-height: 150px;
+      }
+    }
+  }
+}
+
+.canvas__liquids {
+  @include respond-below(sm) {
+    height: 486px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include respond-below(xs) {
+  }
+
+  &__content {
+    @include respond-below(sm) {
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+
+      &__types {
+        margin-top: 30px;
+        height: 127px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__type {
+        width: 250px;
+        @include respond-below(xs) {
+          width: 127px;
+        }
+      }
+
+      &__imgs {
+        width: 250px;
+        @include respond-below(xs) {
+          width: 127px;
+        }
+        & img {
+          width: 60px;
+          @include respond-below(xs) {
+            width: 40px;
+          }
+        }
+      }
+      &__texts {
+        & div {
+          display: none;
+        }
+      }
+    }
+  }
+}
