@@ -1,13 +1,11 @@
 //importing abstracts folder
 @import "abstracts/variables";
-
 @import "abstracts/functions";
 @import "abstracts/mixins";
 
 //importing base folder
 @import "base/reset";
 @import "base/base";
-
 @import "base/animations";
 @import "base/typography";
 @import "base/utilities";
@@ -27,6 +25,7 @@
 @import "components/hero";
 
 //importing components layout
+@import "layouts/menu";
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/navigation";

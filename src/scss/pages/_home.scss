@@ -4,10 +4,6 @@ body {
   color: $color-neutral-dark;
   font-family: "Poppins";
 
-  .logo--dark-mode {
-    display: none;
-  }
-
   &.dark-mode {
     background-color: $color-neutral-dark;
     color: $color-neutral-light;
