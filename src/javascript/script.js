@@ -36,7 +36,25 @@ for (let i = 0; i < $liquidsTypes.length; i++) {
   });
 }
 
+
+
+
+
+var keywords = ["PÉRSONNALISABLE", "IMPERMÉABLE"];
+
+var count = 0;
+var span = document.querySelector(".hero-left__uptitle--rotate");
+
+setInterval(function() {
+  span.innerHTML = keywords[count];
+  count++;
+  if (count === keywords.length) {
+    count = 0;
+  }
+}, 3000);
+=======
 $iconMenu.addEventListener("click", () => {
   $menu.classList.toggle("menu-is-opened");
   console.log("pute");
 });
+
