@@ -1,21 +1,24 @@
 .header {
-  width: 80%;
+  width: 90%;
   margin: auto;
   height: 100px;
   display: flex;
   justify-content: space-between;
 
   &__logo {
+    font-family: "Cedarville Cursive";
+    font-size: 30px;
     height: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    @include respond-below(sm) {
+      display: none;
+    }
   }
 
   &__nav {
     height: 100%;
-
     width: 50%;
   }
 }
@@ -23,6 +26,9 @@
 .nav {
   display: flex;
   justify-content: space-between;
+  @include respond-below(sm) {
+    display: none;
+  }
 
   &__items {
     display: flex;
