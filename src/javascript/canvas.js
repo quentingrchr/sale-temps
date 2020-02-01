@@ -7,6 +7,8 @@ window.addEventListener("mousemove", function(e) {
   cursor.style.left = x + "px";
   cursor.style.top = y + "px";
 });
+console.log(canvas.width);
+console.log(canvas.height);
 
 // Recup buttons
 
@@ -14,6 +16,7 @@ const buttonRed = document.querySelector(".canvas__button__red");
 const buttonBlue = document.querySelector(".canvas__button__blue");
 const buttonYellow = document.querySelector(".canvas__button__yellow");
 const buttonErase = document.querySelector(".canvas__erase");
+console.log(buttonErase);
 
 // Buttons event Listener
 let color = "#F82155";
@@ -47,15 +50,14 @@ function finishedPosition() {
 }
 function draw(e) {
   if (!painting) return;
-  if (e.clientX - 50 < 60 || e.clientX - 50 > 154) return;
-  if (e.clientY < 120 || e.clientY > 250) return;
+  if (e.clientX < 230 || e.clientX > 350) return;
+  if (e.clientY < 215 || e.clientY > 408) return;
 
   c.lineWidth = 1;
   c.lineCap = "round";
-  c.shadowColor = "#DC8F8F";
-  c.shadowBlur = 15;
   c.strokeStyle = color;
-  c.lineTo(e.clientX - 60, e.clientY - 10);
+  console.log(e.clientY);
+  c.lineTo(e.clientX - 190, e.clientY - 67);
   c.stroke();
 }
 
