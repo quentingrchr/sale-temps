@@ -33,3 +33,16 @@ for (let i = 0; i < $liquidsTypes.length; i++) {
     if (i === 2) $body.classList.add("dark-mode");
   });
 }
+
+var keywords = ["PÉRSONNALISABLE", "IMPERMÉABLE"];
+
+var count = 0;
+var span = document.querySelector(".hero-left__uptitle--rotate");
+
+setInterval(function() {
+  span.innerHTML = keywords[count];
+  count++;
+  if (count === keywords.length) {
+    count = 0;
+  }
+}, 3000);
