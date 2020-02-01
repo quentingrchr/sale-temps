@@ -15,12 +15,17 @@
     />
 
     <link rel="stylesheet" href="scss/style.scss" />
+    <script
+      defer
+      src="javascript/vendors/noframework.waypoints.min.js"
+    ></script>
     <script defer src="javascript/script.js"></script>
     <script defer src="javascript/canvas.js"></script>
 
     <title>sale-temps.</title>
   </head>
   <body>
+    <div class="exemple exemple--fluo" id="exemple"></div>
     <div class="menu" id="menu">
       <div class="menu__icon" id="icon-menu">
         <div class="hamburger" id="hamburger"></div>
@@ -113,9 +118,9 @@
 
     <section class="hero">
       <div class="hero__left hero-left">
-          <h2 class="hero-left__uptitle">
-              100% <span class="hero-left__uptitle__rotate">Personnalisable</span>
-            </h2>
+        <h2 class="hero-left__uptitle">
+          100% <span class="hero-left__uptitle__rotate">Personnalisable</span>
+        </h2>
         <h2 class="hero-left__subtitle">
           ECO-RESPONSABLE • 70% de réduction max’
         </h2>
@@ -127,7 +132,6 @@
         </p>
 
         <a class="hero-left__btn btn" href="custom.html">
-
           <p class="btn__text">Personnaliser</p>
           <svg
             class="btn__svg"
@@ -144,9 +148,7 @@
           </svg>
         </a>
         <div class="hero-left__link">
-          <a class="link link--blue"
-            >Je veux mon éco-réduc !</a
-          >
+          <a class="link link--blue">Je veux mon éco-réduc !</a>
         </div>
       </div>
       <div class="hero__right hero-right">
