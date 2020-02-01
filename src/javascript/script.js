@@ -14,6 +14,7 @@ const $liquidsSection = document.querySelector(".liquids");
 const $liquidsTexts = document.querySelectorAll(".liquids__content__text");
 const $liquidsTypes = document.querySelectorAll(".liquids__content__type");
 const $liquidsImgsBoxs = document.querySelectorAll(".liquids__content__box");
+
 const $iconMenu = document.querySelector("#icon-menu");
 const $menu = document.querySelector("#menu");
 const $exemple = document.querySelector("#exemple");
@@ -62,10 +63,31 @@ for (let i = 0; i < $liquidsTypes.length; i++) {
       // FLUO
       $body.classList.add("dark-mode");
       $exemple.classList.toggle("exemple--fluo");
+
     }
   });
 }
 
+var span = document.querySelector(".hero-left__uptitle__rotate");
+
+function addClassDown() {
+  span.classList.toggle("down");
+}
+
+var count = 0;
+var keywords = ["IMPERMEABLE", "PERSONNALISABLE"];
+
+setInterval(
+  function() {
+    span.innerHTML = keywords[count];
+    count++;
+    if (count === keywords.length) {
+      count = 0;
+    }
+  },
+  5000,
+  addClassDown()
+);
 $iconMenu.addEventListener("click", () => {
   // MENU BURGER GROWING
   $menu.classList.toggle("menu-is-opened");

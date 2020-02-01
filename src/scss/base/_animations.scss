@@ -95,6 +95,7 @@
   }
 }
 
+
 .drop {
   background: -webkit-gradient(
     linear,
@@ -124,5 +125,28 @@
 @-moz-keyframes fall {
   to {
     margin-top: 900px;
+
+@keyframes down {
+  0% {
+    transform: translateY(-40px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(50px);
+
   }
 }

@@ -1,20 +1,13 @@
 .liquids-types {
-  min-width: 100px;
-  height: 600px;
-  width: 600px;
+
   display: flex;
   flex-direction: column;
-  margin-bottom: 20%;
+
   justify-content: space-evenly;
   align-items: flex-start;
 }
 .liquids-type {
-  &:first-child {
-    margin-top: 25%;
-  }
-  &:last-child {
-    margin-bottom: 25%;
-  }
+
   height: 36px;
   opacity: 0.5;
   width: 90%;
@@ -29,6 +22,9 @@
   position: relative;
 
   &:hover {
+
+
+    opacity: 1;
     &.liquids-type--fluo {
       text-shadow: 0 0 15px rgba($color-neutral-light, 0.5);
       & svg {
@@ -38,12 +34,15 @@
   }
   &.visible {
     transform: scale(1.1);
+
+    opacity: 1;
     &.liquids-type--fluo {
       text-shadow: 0 0 15px rgba($color-neutral-light, 0.5);
       & svg {
         filter: drop-shadow(0 0 2px rgba($color-neutral-light, 0.5));
       }
     }
+
     & .liquids-type__text {
       &::after {
         display: flex;
@@ -52,6 +51,8 @@
         display: inline-block;
         position: absolute;
         height: 2px;
+
+        background-color: red;
         bottom: 2px;
         width: 20%;
       }

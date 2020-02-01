@@ -1,0 +1,105 @@
+.preview {
+  position: absolute;
+  width: 80vw;
+  height: 500px;
+  z-index: 40; // Z-INDEX 40 !
+  top: 88px;
+  left: 10%;
+  background-color: $color-neutral-light;
+  border: 2px solid black;
+}
+.canvas__container:hover {
+  cursor: pointer;
+}
+
+.canvas__container {
+  position: absolute;
+  border: 2px solid green;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas {
+  border: 2px solid red;
+  background-image: url("../assets/test.png");
+  background-repeat: no-repeat;
+  width: 60%;
+  height: 80%;
+  position: absolute;
+  z-index: 29;
+  background-position: center;
+}
+
+.canvas__cadre {
+  width: 90px;
+  height: 130px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.canvas__container__choices {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.canvas__erase {
+  position: absolute;
+  width: 220px;
+  height: 40px;
+  border-radius: 30px;
+  border: 1.5px solid $color-neutral-dark;
+  border-radius: 30px;
+  bottom: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.canvas__choices__subtitle {
+  margin-left: 10%;
+  width: 80%;
+  height: 100px;
+  margin-top: 40px;
+  color: $color-neutral-dark;
+  font-size: 24px;
+
+  display: flex;
+}
+
+.canvas__container__buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10%;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.canvas__buttons {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 15%;
+  cursor: pointer;
+}
+.canvas__button__red {
+  background: $color-tertiary;
+}
+.canvas__button__blue {
+  background: $color-primary;
+}
+.canvas__button__yellow {
+  background: $color-secondary;
+}

@@ -12,6 +12,7 @@
 
 //importing pages folder
 @import "pages/home";
+@import "pages/canvas";
 
 //importing components folder
 @import "components/exemple";
@@ -24,7 +25,8 @@
 @import "components/link";
 @import "components/section-heading";
 @import "components/hero";
-
+@import "components/hero";
+@import "components/types";
 //importing components layout
 @import "layouts/menu";
 @import "layouts/header";

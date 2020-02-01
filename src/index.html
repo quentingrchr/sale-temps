@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
       rel="stylesheet"
@@ -19,6 +20,8 @@
       src="javascript/vendors/noframework.waypoints.min.js"
     ></script>
     <script defer src="javascript/script.js"></script>
+    <script defer src="javascript/canvas.js"></script>
+
     <title>sale-temps.</title>
   </head>
   <body>
@@ -111,11 +114,12 @@
         </ul>
       </div>
     </header>
+
     <section class="hero">
       <div class="hero__left hero-left">
-        <h2 class="hero-left__uptitle">
-          100% Personnalisable
-        </h2>
+          <h2 class="hero-left__uptitle">
+              100% <span class="hero-left__uptitle__rotate">Personnalisable</span>
+            </h2>
         <h2 class="hero-left__subtitle">
           ECO-RESPONSABLE • 70% de réduction max’
         </h2>
@@ -125,7 +129,10 @@
           de matières recyclées et personnalise là dès maintenant à prix réduit
           avec l’offre Starter pack !
         </p>
+
         <a class="hero-left__btn btn" href="custom.html">
+
+
           <p class="btn__text">Personnaliser</p>
           <svg
             class="btn__svg"
@@ -142,7 +149,7 @@
           </svg>
         </a>
         <div class="hero-left__link">
-          <a href="custom.html" class="link link--blue"
+          <a class="link link--blue"
             >Je veux mon éco-réduc !</a
           >
         </div>
@@ -160,6 +167,10 @@
             href="https://zupimages.net/up/20/05/yvus.png"
             class="right__pencil float"
           />
+
+        </svg>
+
+  
         </svg> -->
       </div>
     </section>
@@ -224,8 +235,9 @@
       <div class="card card--secondary">
         <div class="card__icon card--secondary">
           <svg
-            width="65"
-            height="65"
+            preserveAspectRatio
+            width="100%"
+            height="100%"
             viewBox="0 0 65 65"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -274,8 +286,9 @@
       <div class="card card--tertiary">
         <div class="card__icon card--tertiary">
           <svg
-            width="67"
-            height="67"
+            preserveAspectRatio
+            width="100%"
+            height="100%"
             viewBox="0 0 67 67"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
