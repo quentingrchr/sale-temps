@@ -14,17 +14,21 @@
     />
 
     <link rel="stylesheet" href="scss/style.scss" />
+    <script
+      defer
+      src="javascript/vendors/noframework.waypoints.min.js"
+    ></script>
     <script defer src="javascript/script.js"></script>
     <title>sale-temps.</title>
   </head>
   <body>
+    <div class="exemple exemple--fluo" id="exemple"></div>
     <div class="menu" id="menu">
       <div class="menu__icon" id="icon-menu">
         <div class="hamburger" id="hamburger"></div>
       </div>
       <menu class="menu__menu">
         <ul>
-          <li><a href="#">Recyclage</a></li>
           <li><a href="#">Nos Produits</a></li>
           <li><a href="#">Mon Panier</a></li>
           <li><a href="#">Se Connecter</a></li>
@@ -121,7 +125,7 @@
           de matières recyclées et personnalise là dès maintenant à prix réduit
           avec l’offre Starter pack !
         </p>
-        <a class="hero-left__btn btn">
+        <a class="hero-left__btn btn" href="custom.html">
           <p class="btn__text">Personnaliser</p>
           <svg
             class="btn__svg"
