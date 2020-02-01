@@ -57,7 +57,6 @@ setInterval(function() {
     count = 0;
   }
 }, 3000);
-=======
 $iconMenu.addEventListener("click", () => {
   $menu.classList.toggle("menu-is-opened");
   console.log("pute");
