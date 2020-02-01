@@ -15,20 +15,22 @@
     />
 
     <link rel="stylesheet" href="scss/style.scss" />
-    <script defer src="javascript/script.js"></script>
     <script defer src="javascript/canvas.js"></script>
     <title>Canvas shit</title>
   </head>
   <body>
     <div class="preview">
-      <div id="cursor"></div>
-
-      <div class="canvas__container">
-        <div class="canvas__cadre"></div>
-        <canvas id="canvas" width="195px" height="292px"></canvas>
-        <div class="canvas__cadre__behind"></div>
-        <div class="canvas__beind"></div>
-        <button class="canvas__erase">Recommencer</button>
+      <div class="container">
+        <div class="canvas__container">
+          <div class="canvas__cadre"></div>
+          <canvas id="canvas" width="200px" height="390px"></canvas>
+          <button class="canvas__erase">Effacer l'avant</button>
+        </div>
+        <div class="canvas__container__back">
+          <div class="canvas__cadre__back"></div>
+          <canvas id="canvas__back" width="200px" height="390px"></canvas>
+          <button class="canvas__erase__back">Effacer l'arrière</button>
+        </div>
       </div>
 
       <div class="canvas__container__choices">

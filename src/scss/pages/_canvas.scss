@@ -8,14 +8,15 @@
   background-color: $color-neutral-light;
   border: 2px solid black;
 }
-.canvas__container:hover {
-  cursor: pointer;
-}
-
-.canvas__container {
+.container {
   position: absolute;
-  border: 2px solid green;
-  width: 60%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.canvas__container {
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -24,24 +25,21 @@
 }
 
 #canvas {
-  border: 2px solid red;
   background-image: url("../assets/test.png");
   background-repeat: no-repeat;
-  width: 60%;
-  height: 80%;
-  position: absolute;
   z-index: 29;
   background-position: center;
 }
 
 .canvas__cadre {
-  width: 90px;
-  height: 130px;
+  width: 118px;
+  height: 190px;
   position: absolute;
-  top: 40%;
-  left: 40%;
+  border: 2px dotted $color-neutral-dark;
+  top: 190px;
   pointer-events: none;
-  z-index: 30;
+  z-index: 100;
+  opacity: 0.2;
 }
 
 .canvas__container__choices {
@@ -56,7 +54,6 @@
 }
 
 .canvas__erase {
-  position: absolute;
   width: 220px;
   height: 40px;
   border-radius: 30px;
@@ -87,6 +84,56 @@
   margin-top: 10px;
 }
 
+/* Back View Canvas */
+
+.canvas__container__back {
+  left: 30%;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas__back {
+  background-image: url("../assets/veste-back.png");
+  background-repeat: no-repeat;
+  z-index: 29;
+  background-position: center;
+}
+.canvas__cadre__back {
+  width: 110px;
+  height: 190px;
+  position: absolute;
+  border: 2px dotted $color-neutral-dark;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  top: 170px;
+  pointer-events: none;
+  z-index: 30;
+  opacity: 0.2;
+}
+#canvas:hover {
+  cursor: url("../assets/feutre-canvas.png") 4 12, auto;
+}
+#canvas__back:hover {
+  cursor: url("../assets/feutre-canvas.png") 4 12, auto;
+}
+
+.canvas__erase__back {
+  width: 220px;
+  height: 40px;
+  border-radius: 30px;
+  border: 1.5px solid $color-neutral-dark;
+  border-radius: 30px;
+  bottom: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* OPTIONS */
 .canvas__buttons {
   width: 36px;
   height: 36px;
