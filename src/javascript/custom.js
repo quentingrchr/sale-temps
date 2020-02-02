@@ -7,12 +7,15 @@ const $inkContain = document.querySelectorAll(".form__ink__inputs");
 const $btnJacket = document.querySelector("#btnJacket");
 const $form1 = document.querySelector("#form1");
 const $form2 = document.querySelector("#form2");
+
+// ORDER
 const order = {
   color: false,
   size: false,
   ink: false
 };
 
+// SIZE EVENT LISTENERS
 for (let i = 0; i < $sizeInputs.length; i++) {
   let $circle = $sizeInputs[i];
   $circle.addEventListener("click", () => {
@@ -42,12 +45,14 @@ for (let i = 0; i < $sizeInputs.length; i++) {
         break;
     }
     if (checkIfStepReady(1)) {
-      // CHECK IF IT SHOULD DISPLAY SUBMIT BUTTON OR NOT
+      // ALL REQUIRED INPUTS ARE SELECTED AND STORED
+
       displayEl($btnJacket);
     }
   });
 }
 
+// COLORS EVENT LISTENERS
 for (let i = 0; i < $colInputs.length; i++) {
   let $circle = $colInputs[i];
   $circle.addEventListener("click", () => {
@@ -68,11 +73,14 @@ for (let i = 0; i < $colInputs.length; i++) {
         break;
     }
     if (checkIfStepReady(1)) {
+      // ALL REQUIRED INPUTS ARE SELECTED AND STORED
+
       displayEl($btnJacket);
     }
   });
 }
 
+// INKS EVENT LISTENERS
 for (let i = 0; i < $inkInputs.length; i++) {
   let $ink = $inkInputs[i];
   $ink.addEventListener("click", () => {
@@ -96,22 +104,22 @@ for (let i = 0; i < $inkInputs.length; i++) {
         break;
     }
     if (checkIfStepReady(2)) {
+      // AN INPUT IS SELECTED AND STORED
       displayEl($btnJacket);
     }
   });
 }
 
 function checkIfStepReady(step) {
+  // TO CHECK IS REQUIRED INPUT ARE SELECTED TO JUMP TO THE NEXT STEP
   if (step === 1) {
     if (order.size && order.color) return true;
     else return false;
   }
   if (step === 2) {
     if (order.ink) {
-      console.log(true);
       return true;
     } else {
-      console.log(order.ink);
       return false;
     }
   }
@@ -123,10 +131,17 @@ function displayEl(el) {
 }
 
 $btnJacket.addEventListener("click", () => {
-  // let { size } = order;
-  // let { color } = order;
-  // alert("Color : " + color + " and Size : " + size);
+  // SUBMIT BUTTON (JUMP TO 2ND STEP)
   $form1.style.display = "none";
-  $form2.style.display = "block";
+  $form2.classList.toggle("visible");
   $btnJacket.style.visibility = "hidden";
+
+  if (order.size && order.color && order.ink) {
+    // STEP 1 AND 2 ARE VALIDATED (JUMP TO RECAP)
+    console.log(true);
+    let { size } = order;
+    let { color } = order;
+    let { ink } = order;
+    alert("Color : " + color + " and Size : " + size + " with ink " + ink);
+  }
 });

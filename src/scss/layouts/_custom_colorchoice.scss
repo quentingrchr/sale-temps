@@ -162,7 +162,16 @@
 .section-custom__form--1 {
 }
 .section-custom__form--2 {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  &.visible {
+    visibility: visible;
+    position: static;
+    opacity: 1;
+  }
 }
 
 .form__ink {
