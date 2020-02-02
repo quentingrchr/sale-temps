@@ -22,6 +22,10 @@ const buttonYellow = document.querySelector(".button__yellow");
 let urlFront = require("../assets/veste-front-canvas.png");
 let urlBack = require("../assets/veste-back-canvas.png");
 
+const cursor = document.getElementById("cursor");
+
+// END OF LOADING DOM ELEMENT
+
 // Load images
 let vesteFront = new Image();
 let vesteBack = new Image();
@@ -53,21 +57,30 @@ let limitBackX = 305;
 let limitBackY = 140;
 let limitBackSizeX = 200;
 let limitBackSizeY = 250;
-
+let erasing = false;
 // Event listeners
 buttonRed.addEventListener("click", () => {
+  erasing = false;
   color = "#F82155";
+  cursor.style.background = "#F82155";
 });
 buttonBlue.addEventListener("click", () => {
+  erasing = false;
   color = "#0075FF";
+  cursor.style.background = "#0075FF";
 });
 buttonYellow.addEventListener("click", () => {
+  erasing = false;
   color = "#FFC700";
+  cursor.style.background = "#FFC700";
 });
 
 // Functions
 
 function startPosition() {
+  console.log(erasing);
+
+  if (erasing) return;
   painting = true;
 }
 
@@ -157,3 +170,36 @@ function draw() {
   requestAnimationFrame(draw);
 }
 draw();
+
+// CURSOR STYLE
+
+console.log(cursor);
+
+window.addEventListener("mousemove", function(e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.left = x + "px";
+  cursor.style.top = y + "px";
+});
+
+// Eraser
+
+const eraser = document.querySelector(".eraser");
+
+eraser.addEventListener("click", () => {
+  erasing = true;
+  cursor.style.background = "white";
+});
+// ERASING FONCTION CALLED DELETING
+function deleting(e) {
+  if (!erasing) return;
+  cdraw.clearRect(e.clientX, e.clientY, 5, 5);
+}
+
+canvasdraw.addEventListener("mousemove", deleting);
+
+// GOUTTES DROPLETS
+
+const $body = document.querySelector("body");
+const $liquidsTexts = document.querySelectorAll(".liquids__content__text");
+const $liquidsTypes = document.querySelectorAll(".liquids__content__type");
