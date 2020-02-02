@@ -96,8 +96,6 @@ buttonYellow.addEventListener("click", () => {
 // Functions
 
 function startPosition() {
-  console.log(erasing);
-
   if (erasing) return;
   painting = true;
 }
@@ -164,6 +162,22 @@ function resizeCanvas() {
 
 // Event Listeners
 window.addEventListener("resize", resizeCanvas);
+vesteBack.onload = function() {
+  c.drawImage(
+    vesteFront,
+    vesteFrontX,
+    vesteFrontY,
+    vesteFrontWidth,
+    vesteFrontHeigth
+  );
+  cRight.drawImage(
+    vesteBack,
+    vesteBackX,
+    vesteBackY,
+    vesteBackWidth,
+    vesteBackHeigth
+  );
+};
 function draw() {
   c.drawImage(
     vesteFront,
@@ -239,32 +253,17 @@ function deleting(e) {
 
 canvasdraw.addEventListener("mousemove", deleting);
 
-// GOUTTES DROPLETS
+// CANVAS SLIDES IN
 
-const $body = document.querySelector("body");
-const $liquidsTexts = document.querySelectorAll(".liquids__content__text");
-const $liquidsTypes = document.querySelectorAll(".liquids__content__type");
+const canvasAcces = document.querySelector(".canvas__acces");
+const canvasClose = document.querySelector(".canvas__close");
+const canvasBody = document.querySelector(".canvas__body");
+console.log(canvasBody);
 
-for (let i = 0; i < $liquidsTypes.length; i++) {
-  const $liquidsType = $liquidsTypes[i];
-  $liquidsType.addEventListener("click", () => {
-    $liquidsTexts.forEach(el => {
-      el.classList.remove("visible");
-    });
-    $liquidsTypes.forEach(el => {
-      el.classList.remove("visible");
-    });
-    $liquidsImgsBoxs.forEach(el => {
-      el.classList.remove("visible");
-    });
-
-    $body.classList.remove("dark-mode");
-    $liquidsImgsBoxs[i].classList.add("visible");
-    $liquidsType.classList.add("visible");
-    $liquidsTexts[i].classList.toggle("visible");
-
-    if (i === 2) {
-      $body.classList.add("dark-mode");
-    }
-  });
-}
+canvasAcces.addEventListener("click", () => {
+  canvasBody.classList.remove("canvas__body__close");
+  canvasBody.classList.add("canvas__body__slide");
+});
+canvasClose.addEventListener("click", () => {
+  canvasBody.classList.add("canvas__body__close");
+});
