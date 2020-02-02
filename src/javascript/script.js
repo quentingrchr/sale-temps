@@ -9,7 +9,6 @@ const $iconMenu = document.querySelector("#icon-menu");
 const $menu = document.querySelector("#menu");
 const $exemple = document.querySelector("#exemple");
 
-const test = $("#exemple");
 for (let i = 0; i < $cardBtn.length; i++) {
   const element = $cardBtn[i];
   element.addEventListener("click", () => {
@@ -95,24 +94,24 @@ setInterval(
 
 var nbDrop = 10;
 
-// function to generate a random number range.
+// FUNCTION TO GENERATE RANDOM NUMBER RANGE
 function randRange(minNum, maxNum) {
   return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 }
 
-// function to generate drops
+// FUNCTION TO GENERATE DROPS
 function createRain() {
   for (i = 1; i < nbDrop; i++) {
-    var dropLeft = randRange(0, 1600);
-    var dropTop = randRange(-1000, 1400);
+    let dropLeft = randRange(0, 1600);
+    let dropTop = randRange(-1000, 1400);
 
     $(".rain").append('<div class="drop" id="drop' + i + '"></div>');
     $("#drop" + i).css("left", dropLeft);
     $("#drop" + i).css("top", dropTop);
   }
 }
-// Make it rain
 
+// KILL THE RAIN
 function stopRain() {
   const $drops = document.querySelectorAll(".drop");
 
