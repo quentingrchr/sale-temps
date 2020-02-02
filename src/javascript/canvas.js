@@ -24,6 +24,10 @@ let urlBack = require("../assets/veste-back-canvas.png");
 
 const cursor = document.getElementById("cursor");
 
+const sizeSmall = document.querySelector(".size__small");
+const sizeMedium = document.querySelector(".size__medium");
+const sizeBig = document.querySelector(".size__big");
+
 // END OF LOADING DOM ELEMENT
 
 // Load images
@@ -37,6 +41,11 @@ vesteBack.src = urlBack;
 let painting = false;
 
 let color = "red";
+let inkWidth = 1;
+let eraseWidth = 5;
+
+let size = "5px";
+
 let vesteFrontWidth = 400;
 let vesteFrontHeigth = 400;
 
@@ -63,16 +72,25 @@ buttonRed.addEventListener("click", () => {
   erasing = false;
   color = "#F82155";
   cursor.style.background = "#F82155";
+  buttonRed.style.border = "2px solid black";
+  buttonBlue.style.border = "none";
+  buttonYellow.style.border = "none";
 });
 buttonBlue.addEventListener("click", () => {
   erasing = false;
   color = "#0075FF";
   cursor.style.background = "#0075FF";
+  buttonRed.style.border = "none";
+  buttonBlue.style.border = "2px solid black";
+  buttonYellow.style.border = "none";
 });
 buttonYellow.addEventListener("click", () => {
   erasing = false;
   color = "#FFC700";
   cursor.style.background = "#FFC700";
+  buttonRed.style.border = "none";
+  buttonBlue.style.border = "none";
+  buttonYellow.style.border = "2px solid black";
 });
 
 // Functions
@@ -99,7 +117,7 @@ const drawing = e => {
     return;
   }
 
-  cdraw.lineWidth = 1;
+  cdraw.lineWidth = inkWidth;
   cdraw.lineCap = "round";
   cdraw.strokeStyle = color;
   cdraw.lineTo(e.clientX, e.clientY);
@@ -171,6 +189,29 @@ function draw() {
 }
 draw();
 
+// WIDTH BUTTONS
+
+sizeSmall.addEventListener("click", () => {
+  eraseWidth = 5;
+  inkWidth = 1;
+  size = "5px";
+  cursor.style.width = size;
+  cursor.style.height = size;
+});
+sizeMedium.addEventListener("click", () => {
+  eraseWidth = 10;
+  inkWidth = 5;
+  size = "10px";
+  cursor.style.width = size;
+  cursor.style.height = size;
+});
+sizeBig.addEventListener("click", () => {
+  eraseWidth = 15;
+  inkWidth = 10;
+  size = "15px";
+  cursor.style.width = size;
+  cursor.style.height = size;
+});
 // CURSOR STYLE
 
 console.log(cursor);
@@ -193,7 +234,7 @@ eraser.addEventListener("click", () => {
 // ERASING FONCTION CALLED DELETING
 function deleting(e) {
   if (!erasing) return;
-  cdraw.clearRect(e.clientX, e.clientY, 5, 5);
+  cdraw.clearRect(e.clientX, e.clientY, eraseWidth, eraseWidth);
 }
 
 canvasdraw.addEventListener("mousemove", deleting);
