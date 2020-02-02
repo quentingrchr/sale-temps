@@ -1,0 +1,102 @@
+.starter-pack {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 500px;
+  font-family: "Poppins";
+
+  &__img {
+    grid-area: 1 / 1 / 4 / 2;
+    background-color: $color-tertiary;
+    background: url("../assets/starter-pack.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__text {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__title {
+      margin-left: 10%;
+      margin-bottom: 5%;
+    }
+    &__paragraph {
+      margin-left: 10%;
+      font-size: 16px;
+      line-height: 152.76%;
+    }
+  }
+
+  &__buy {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    &__text {
+      margin-left: 10%;
+      display: flex;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 132.76%;
+      & p:nth-child(1) {
+        font-weight: bold;
+        font-size: 24px;
+      }
+    }
+    &__btn {
+      margin-left: 10%;
+      margin-top: 10%;
+    }
+  }
+  @include respond-below(xs) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    &__img {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    &__text {
+      grid-area: 1 / 1 / 2 / 2;
+      align-items: center;
+      &__title {
+        & .section-heading__title {
+          display: flex;
+          justify-content: center;
+        }
+        & .section-heading__subtitle {
+          justify-content: flex-start;
+        }
+      }
+      &__paragraph {
+        display: none;
+      }
+    }
+    &__buy {
+      grid-area: 3 / 1 / 4 / 2;
+      align-items: center;
+      &__text {
+        flex-direction: column;
+        margin-left: 0%;
+        margin-top: 5%;
+        & p:nth-child(1) {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      &__btn {
+        margin-top: 5%;
+        margin-left: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

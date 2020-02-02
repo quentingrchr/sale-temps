@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "reda": "parcel src/canvas.html"
+    "reda": "parcel src/canvas.html",
+    "quentin": "parcel src/quentin2.html"
   },
   "keywords": [],
   "author": "",

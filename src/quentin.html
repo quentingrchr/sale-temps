@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="scss/style.scss" />
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    ></script>
+    <script
+      defer
+      src="javascript/vendors/noframework.waypoints.min.js"
+    ></script>
+    <script defer src="javascript/script.js"></script>
+    <script defer src="javascript/canvas.js"></script>
+
+    <title>sale-temps.</title>
+  </head>
+  <body>
+    <div class="exemple exemple--fluo" id="exemple"></div>
+    <div class="menu" id="menu">
+      <div class="menu__icon" id="icon-menu">
+        <div class="hamburger" id="hamburger"></div>
+      </div>
+      <menu class="menu__menu">
+        <ul>
+          <li><a href="#">Recyclage</a></li>
+          <li><a href="#">Nos Produits</a></li>
+          <li><a href="#">Mon Panier</a></li>
+          <li><a href="#">Se Connecter</a></li>
+          <li><a href="#">Envoyez ses déchets</a></li>
+        </ul>
+      </menu>
+    </div>
+    <header class="header">
+      <div class="header__logo">
+        sale temps.
+      </div>
+      <div class="header__nav nav">
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a href="" class="nav__item--primary">Recyclage</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__item--secondary">Nos Produits</a>
+          </li>
+        </ul>
+        <ul class="nav__infos">
+          <li class="nav__info nav__info--tertiary">
+            <a href="">
+              <svg
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                xlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.77982 1.0961L1.77983 1.09609L1.77855 1.09485C1.58881 0.911714 1.28736 0.914278 1.10087 1.10078C0.914393 1.28725 0.911767 1.58891 1.09499 1.77851L1.09498 1.77852L1.09618 1.77972L2.99909 3.68318L0.92468 9.90679L0.924629 9.90694C0.867073 10.0806 0.91211 10.272 1.0417 10.4015L14.5983 23.9585L14.5983 23.9585C14.7872 24.1471 15.0931 24.1471 15.2819 23.9585L15.2819 23.9585L23.9584 15.2819C23.9584 15.2818 23.9584 15.2818 23.9584 15.2818C24.1473 15.0932 24.1473 14.787 23.9584 14.5984C23.9584 14.5984 23.9584 14.5983 23.9584 14.5983L10.4017 1.04206C10.4017 1.04202 10.4017 1.04199 10.4016 1.04196C10.2723 0.911785 10.0803 0.866704 9.90667 0.925223C9.90663 0.925238 9.90658 0.925253 9.90654 0.925268L3.6831 2.99956L1.77982 1.0961ZM8.368 5.53037L8.36799 5.53036C7.73035 4.74948 6.61797 4.56206 5.76235 5.07953L4.44739 3.76391L9.92911 1.93577L22.933 14.9389L14.9401 22.933L1.93586 9.92919L3.76307 4.44755L5.0787 5.76317C4.56141 6.61862 4.74862 7.73118 5.52953 8.36865C6.33168 9.02364 7.49945 8.96493 8.23187 8.23252C8.9641 7.50029 9.02279 6.33252 8.368 5.53037ZM6.46435 7.14789L6.46434 7.1479L6.46559 7.14911C6.65519 7.33233 6.95685 7.3297 7.14333 7.14323C7.32982 6.95673 7.33239 6.65529 7.14925 6.46554L7.14926 6.46553L7.14803 6.46431L6.49102 5.80681C6.85956 5.68665 7.27009 5.78168 7.54892 6.06249L7.5497 6.06326C7.93277 6.44069 7.97055 7.0459 7.63726 7.46794C7.30396 7.88981 6.70647 7.99342 6.25058 7.70802C5.83626 7.44854 5.65983 6.94343 5.80696 6.49001L6.46435 7.14789Z"
+                  fill="#2D2D2D"
+                  stroke="#2D2D2D"
+                  stroke-width="0.2"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="nav__info nav__info--secondary">
+            <a href="">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.08817 14.2228H7.08917C7.09001 14.2228 7.09085 14.2227 7.09169 14.2227H18.7773C19.065 14.2227 19.318 14.0318 19.397 13.7552L21.9752 4.73177C22.0307 4.53723 21.9918 4.32809 21.8701 4.16663C21.7482 4.00516 21.5577 3.91016 21.3555 3.91016H5.60172L5.14098 1.83675C5.07535 1.54184 4.81384 1.33203 4.51172 1.33203H0.644531C0.288528 1.33203 0 1.62056 0 1.97656C0 2.33257 0.288528 2.62109 0.644531 2.62109H3.99475C4.07632 2.98851 6.19958 12.5433 6.32178 13.093C5.6368 13.3908 5.15625 14.0738 5.15625 14.8672C5.15625 15.9333 6.02368 16.8008 7.08984 16.8008H18.7773C19.1333 16.8008 19.4219 16.5123 19.4219 16.1562C19.4219 15.8002 19.1333 15.5117 18.7773 15.5117H7.08984C6.73451 15.5117 6.44531 15.2225 6.44531 14.8672C6.44531 14.5124 6.73351 14.2237 7.08817 14.2228V14.2228ZM20.501 5.19922L18.2911 12.9336H7.60681L5.88806 5.19922H20.501Z"
+                  fill="black"
+                />
+                <path
+                  d="M15.5547 18.7344C15.5547 19.8005 16.4221 20.668 17.4883 20.668C18.5544 20.668 19.4219 19.8005 19.4219 18.7344C19.4219 17.6682 18.5544 16.8008 17.4883 16.8008C16.4221 16.8008 15.5547 17.6682 15.5547 18.7344ZM17.4883 18.0898C17.8436 18.0898 18.1328 18.379 18.1328 18.7344C18.1328 19.0897 17.8436 19.3789 17.4883 19.3789C17.1329 19.3789 16.8438 19.0897 16.8438 18.7344C16.8438 18.379 17.1329 18.0898 17.4883 18.0898Z"
+                  fill="black"
+                />
+                <path
+                  d="M6.44531 18.7344C6.44531 19.8005 7.31274 20.668 8.37891 20.668C9.44507 20.668 10.3125 19.8005 10.3125 18.7344C10.3125 17.6682 9.44507 16.8008 8.37891 16.8008C7.31274 16.8008 6.44531 17.6682 6.44531 18.7344ZM8.37891 18.0898C8.73424 18.0898 9.02344 18.379 9.02344 18.7344C9.02344 19.0897 8.73424 19.3789 8.37891 19.3789C8.02357 19.3789 7.73438 19.0897 7.73438 18.7344C7.73438 18.379 8.02357 18.0898 8.37891 18.0898Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="nav__info nav__info--primary">
+            <a href="">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.0711 12.9289C15.9819 11.8398 14.6855 11.0335 13.2711 10.5454C14.786 9.50199 15.7812 7.75578 15.7812 5.78125C15.7812 2.59348 13.1878 0 10 0C6.81223 0 4.21875 2.59348 4.21875 5.78125C4.21875 7.75578 5.21402 9.50199 6.72898 10.5454C5.31453 11.0335 4.01813 11.8398 2.92895 12.9289C1.0402 14.8177 0 17.3289 0 20H1.5625C1.5625 15.3475 5.34754 11.5625 10 11.5625C14.6525 11.5625 18.4375 15.3475 18.4375 20H20C20 17.3289 18.9598 14.8177 17.0711 12.9289ZM10 10C7.67379 10 5.78125 8.1075 5.78125 5.78125C5.78125 3.455 7.67379 1.5625 10 1.5625C12.3262 1.5625 14.2188 3.455 14.2188 5.78125C14.2188 8.1075 12.3262 10 10 10Z"
+                  fill="#1D1D1D"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="starter-pack">
+      <div class="starter-pack__img"></div>
+      <div class="starter-pack__text">
+        <div class="starter-pack__text__title">
+          <div class="section-heading section-heading--secondary">
+            <h2 class="section-heading__title section-heading--secondary">
+              STARTER PACK
+            </h2>
+            <p class="section-heading__subtitle section-heading--secondary">
+              inclus feutre et encre au choix
+            </p>
+          </div>
+        </div>
+        <div class="starter-pack__text__paragraph">
+          Choisis ton liquide végétal et créer ton unique kolo avec le marker
+          sale temps. en personnalisant ton Starter pack.
+        </div>
+      </div>
+      <div class="starter-pack__buy">
+        <div class="starter-pack__buy__text">
+          <p class="starter-pack__price">100€*</p>
+          <p class="starter-pack__info">(*prix sans réduction)</p>
+        </div>
+        <div class="starter-pack__buy__btn">
+          <a class="btn" href="custom.html">
+            <p class="btn__text">Personnaliser</p>
+            <svg
+              class="btn__svg"
+              width="20"
+              height="15"
+              viewBox="0 0 20 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.4678 0.680002C13.1953 0.398007 12.7418 0.398007 12.4598 0.680002C12.1874 0.952469 12.1874 1.40595 12.4598 1.67778L17.5707 6.78861H0.705621C0.31248 6.78924 0 7.10172 0 7.49486C0 7.888 0.31248 8.21065 0.705621 8.21065H17.5707L12.4598 13.3119C12.1874 13.5939 12.1874 14.0481 12.4598 14.3199C12.7418 14.6019 13.1959 14.6019 13.4678 14.3199L19.7885 7.99915C20.0705 7.72668 20.0705 7.27321 19.7885 7.00137L13.4678 0.680002Z"
+                fill="#FBFBFB"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
