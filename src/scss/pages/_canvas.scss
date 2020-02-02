@@ -2,27 +2,27 @@
   border: 2px solid blue;
   position: absolute;
   left: 0px;
-
   z-index: 1;
+  pointer-events: none;
 }
 #canvas__draw {
   position: absolute;
-  z-index: 13;
-  border: 2px dotted red;
+  z-index: 10;
 }
 
 #canvas__right {
   position: absolute;
   right: 0px;
   border: 2px solid green;
+  pointer-events: none;
 }
 #canvas__right:hover {
   background: grey;
 }
 
 .options {
-  position: relative;
-  z-index: 10;
+  position: absolute;
+  z-index: 13;
   width: 20vw;
   height: 500px;
   left: 40%;
@@ -31,9 +31,6 @@
   justify-content: center;
   align-items: center;
   border: 2px solid black;
-}
-.options:hover {
-  cursor: pointer;
 }
 
 .buttons {
