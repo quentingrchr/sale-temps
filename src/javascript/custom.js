@@ -97,7 +97,7 @@ for (let i = 0; i < $inkInputs.length; i++) {
       case 1:
         order.ink = "hydro";
         break;
-      case 1:
+      case 2:
         order.ink = "fluo";
         break;
       default:
