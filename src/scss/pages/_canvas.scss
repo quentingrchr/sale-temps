@@ -19,7 +19,7 @@
 #canvas__right {
   position: absolute;
   right: 0px;
-
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -51,25 +51,24 @@
   height: 36px;
   border-radius: 20px;
   margin-top: 24px;
-}
-.button:hover {
-  cursor: pointer;
-}
-
-.button__title {
-  width: 80%;
-  font-family: "Poppins";
-  font-size: 24px;
-  margin-left: 10%;
-}
-.button__red {
-  background: #f82155;
-}
-.button__blue {
-  background: #0075ff;
-}
-.button__yellow {
-  background: #ffc700;
+  &__title {
+    width: 80%;
+    font-family: "Poppins";
+    font-size: 24px;
+    margin-left: 10%;
+  }
+  &__red {
+    background: $color-tertiary;
+  }
+  &__blue {
+    background: $color-primary;
+  }
+  &__yellow {
+    background: $color-secondary;
+  }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .color__title {
@@ -92,6 +91,7 @@
   color: $color-neutral-dark;
   font-size: 16px;
   @include flex__center;
+  font-family: "Poppins";
 }
 .eraser:hover {
   cursor: pointer;
