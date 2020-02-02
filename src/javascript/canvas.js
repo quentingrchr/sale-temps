@@ -164,14 +164,7 @@ const showingCanvas = () => {
 
   // Event Listeners
   window.addEventListener("resize", resizeCanvas);
-  vesteBack.onload = function() {
-    c.drawImage(
-      vesteFront,
-      vesteFrontX,
-      vesteFrontY,
-      vesteFrontWidth,
-      vesteFrontHeigth
-    );
+  onload = function() {
     cRight.drawImage(
       vesteBack,
       vesteBackX,
