@@ -16,6 +16,11 @@
   position: absolute;
   top: 25px;
   left: 50px;
+  font-family: "Cedarville Cursive";
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .steper {
@@ -67,6 +72,12 @@
         margin-left: 10px;
       }
     }
+  }
+  &__btn {
+    visibility: hidden;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
   }
 }
 
