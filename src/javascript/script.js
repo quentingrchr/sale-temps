@@ -8,7 +8,10 @@ const $liquidsImgsBoxs = document.querySelectorAll(".liquids__content__box");
 const $iconMenu = document.querySelector("#icon-menu");
 const $menu = document.querySelector("#menu");
 const $exemple = document.querySelector("#exemple");
+const $cusSizCircles = document.querySelectorAll(".size__circle");
+const $cusColCircles = document.querySelectorAll(".color__circle");
 
+const test = $("#exemple");
 for (let i = 0; i < $cardBtn.length; i++) {
   const element = $cardBtn[i];
   element.addEventListener("click", () => {
@@ -31,12 +34,11 @@ for (let i = 0; i < $liquidsTypes.length; i++) {
     $exemple.classList.remove("exemple--basic");
     $exemple.classList.remove("exemple--hydro");
     $exemple.classList.remove("exemple--fluo");
-
-    $liquidsSection.classList.remove("rain");
     $body.classList.remove("dark-mode");
     $liquidsImgsBoxs[i].classList.add("visible");
     $liquidsType.classList.add("visible");
     $liquidsTexts[i].classList.toggle("visible");
+    stopRain();
 
     if (i == 0) {
       //BASIC
@@ -46,7 +48,7 @@ for (let i = 0; i < $liquidsTypes.length; i++) {
       // HYDRO
       $liquidsSection.classList.add("rain");
       $exemple.classList.toggle("exemple--hydro");
-      // createRain();
+      createRain();
     }
     if (i === 2) {
       // FLUO
@@ -91,24 +93,31 @@ setInterval(
   addClassDown()
 );
 
-// RAIN ANIMATION
-// number of drops created.
-// var nbDrop = 858;
+var nbDrop = 10;
 
-// // function to generate a random number range.
-// function randRange(minNum, maxNum) {
-//   return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
-// }
+// function to generate a random number range.
+function randRange(minNum, maxNum) {
+  return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+}
 
-// // function to generate drops
-// function createRain() {
-//   for (i = 1; i < nbDrop; i++) {
-//     var dropLeft = randRange(0, 1600);
-//     var dropTop = randRange(-1000, 1400);
+// function to generate drops
+function createRain() {
+  for (i = 1; i < nbDrop; i++) {
+    var dropLeft = randRange(0, 1600);
+    var dropTop = randRange(-1000, 1400);
 
-//     $(".rain").append('<div class="drop" id="drop' + i + '"></div>');
-//     $("#drop" + i).css("left", dropLeft);
-//     $("#drop" + i).css("top", dropTop);
-//   }
-// }
-// // Make it rain
+    $(".rain").append('<div class="drop" id="drop' + i + '"></div>');
+    $("#drop" + i).css("left", dropLeft);
+    $("#drop" + i).css("top", dropTop);
+  }
+}
+// Make it rain
+
+function stopRain() {
+  const $drops = document.querySelectorAll(".drop");
+
+  for (let i = 0; i < $drops.length; i++) {
+    const drop = $drops[i];
+    drop.remove();
+  }
+}
