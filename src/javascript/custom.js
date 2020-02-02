@@ -1,18 +1,22 @@
-const $sizCircles = document.querySelectorAll(".size__circle");
-const $sizContain = document.querySelector(".size__circles");
-const $colCircles = document.querySelectorAll(".color__circle");
-const $colContain = document.querySelector(".color__circles");
+const $sizeInputs = document.querySelectorAll(".form__size__input");
+const $sizeContain = document.querySelector(".from__size__inputs");
+const $colInputs = document.querySelectorAll(".form__color__input");
+const $colContain = document.querySelector(".form__color__inputs");
+const $inkInputs = document.querySelectorAll(".form__ink__input");
+const $inkContain = document.querySelectorAll(".form__ink__inputs");
 const $btnJacket = document.querySelector("#btnJacket");
+const $form1 = document.querySelector("#form1");
+const $form2 = document.querySelector("#form2");
 const order = {
   color: false,
   size: false,
   ink: false
 };
 
-for (let i = 0; i < $sizCircles.length; i++) {
-  let $circle = $sizCircles[i];
+for (let i = 0; i < $sizeInputs.length; i++) {
+  let $circle = $sizeInputs[i];
   $circle.addEventListener("click", () => {
-    $sizCircles.forEach(element => {
+    $sizeInputs.forEach(element => {
       element.classList.remove("active");
     });
     // UPDATE DOM
@@ -44,10 +48,10 @@ for (let i = 0; i < $sizCircles.length; i++) {
   });
 }
 
-for (let i = 0; i < $colCircles.length; i++) {
-  let $circle = $colCircles[i];
+for (let i = 0; i < $colInputs.length; i++) {
+  let $circle = $colInputs[i];
   $circle.addEventListener("click", () => {
-    $colCircles.forEach(element => {
+    $colInputs.forEach(element => {
       element.classList.remove("active");
     });
     // UPDATE DOM
@@ -69,14 +73,47 @@ for (let i = 0; i < $colCircles.length; i++) {
   });
 }
 
+for (let i = 0; i < $inkInputs.length; i++) {
+  let $ink = $inkInputs[i];
+  $ink.addEventListener("click", () => {
+    $inkInputs.forEach(element => {
+      element.classList.remove("active");
+    });
+    // UPDATE DOM
+    $ink.classList.toggle("active");
+    // UPDATE ORDER
+    switch (i) {
+      case 0:
+        order.ink = "basic";
+        break;
+      case 1:
+        order.ink = "hydro";
+        break;
+      case 1:
+        order.ink = "fluo";
+        break;
+      default:
+        break;
+    }
+    if (checkIfStepReady(2)) {
+      displayEl($btnJacket);
+    }
+  });
+}
+
 function checkIfStepReady(step) {
   if (step === 1) {
     if (order.size && order.color) return true;
     else return false;
   }
   if (step === 2) {
-    if (order.ink) return true;
-    else return false;
+    if (order.ink) {
+      console.log(true);
+      return true;
+    } else {
+      console.log(order.ink);
+      return false;
+    }
   }
 }
 
@@ -86,7 +123,10 @@ function displayEl(el) {
 }
 
 $btnJacket.addEventListener("click", () => {
-  let { size } = order;
-  let { color } = order;
-  alert("Color : " + color + " and Size : " + size);
+  // let { size } = order;
+  // let { color } = order;
+  // alert("Color : " + color + " and Size : " + size);
+  $form1.style.display = "none";
+  $form2.style.display = "block";
+  $btnJacket.style.visibility = "hidden";
 });
