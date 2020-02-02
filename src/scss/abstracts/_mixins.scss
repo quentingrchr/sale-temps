@@ -31,6 +31,12 @@
   flex-direction: column;
 }
 
+@mixin flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin card($color-card) {
   box-shadow: 0px 4px 10px rgba(137, 137, 137, 0.25);
   width: 222px;

@@ -78,3 +78,37 @@
   margin-bottom: 10%;
   margin-left: 10%;
 }
+
+/* ERASER */
+
+.eraser {
+  width: 150px;
+  height: 30px;
+  border: 1px solid $color-neutral-dark;
+  border-radius: 30px;
+  margin-top: 48px;
+  color: $color-neutral-dark;
+  font-size: 16px;
+  @include flex__center;
+}
+.eraser:hover {
+  cursor: pointer;
+}
+
+/* CURSOR STYLE */
+body {
+  cursor: none;
+}
+
+#cursor {
+  position: absolute;
+  z-index: 30;
+  cursor: none;
+  height: 5px;
+  width: 5px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  background: #f82155;
+  border-radius: 50%;
+  border: 2px solid;
+}
