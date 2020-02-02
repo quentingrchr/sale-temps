@@ -20,6 +20,9 @@ body {
         fill: $color-neutral-light;
       }
     }
+    & .header__logo {
+      background: red;
+    }
 
     & .card {
       background-color: $color-neutral-dark;
@@ -48,6 +51,7 @@ body {
 section {
   margin: auto;
   width: 80%;
+  margin-top: 88px;
 
   @include respond-below(xs) {
     width: 100%;
