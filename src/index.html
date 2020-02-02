@@ -23,12 +23,42 @@
       defer
       src="javascript/vendors/noframework.waypoints.min.js"
     ></script>
+
     <script defer src="javascript/script.js"></script>
     <script defer src="javascript/canvas.js"></script>
 
     <title>sale-temps.</title>
   </head>
   <body>
+    <!--  Canvas ELEMENT  -->
+    <div class="canvas__body">
+      <div id="cursor"></div>
+      <canvas id="canvas__left"></canvas>
+      <canvas id="canvas__right"></canvas>
+      <canvas id="canvas__draw"></canvas>
+
+      <div class="options">
+        <h1 class="button__title">Choisi ta couleur</h1>
+        <div class="buttons">
+          <div class=" button button__red"></div>
+          <div class="button button__blue"></div>
+          <div class="button button__yellow"></div>
+        </div>
+        <h2 class="color__title">Type du Koloro*</h2>
+
+        <!-- ERASER AND SIZES -->
+        <div class="eraser">Effaceur</div>
+        <div class="size">
+          <div class="size size__small">Petit</div>
+          <div class="size size__medium">Moyen</div>
+          <div class="size size__big">Grand</div>
+        </div>
+        <div class="canvas__close">Fermer</div>
+      </div>
+    </div>
+    <!-- END OF CANVAS ELEMENT  -->
+    
+    <!--  MOBILE VERSION -->
     <div class="exemple exemple--fluo" id="exemple"></div>
     <div class="menu" id="menu">
       <div class="menu__icon" id="icon-menu">
@@ -173,6 +203,13 @@
 
   
         </svg> -->
+        <div class="canvas__acces">
+          Je veux essayer
+          <object
+            type="image/svg+xml"
+            data="../src/assets/canvaspen.svg"
+          ></object>
+        </div>
       </div>
     </section>
     <section class="cards">
