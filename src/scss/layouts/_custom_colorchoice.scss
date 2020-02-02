@@ -54,16 +54,17 @@
 .section-custom {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 80%;
   margin: 200px auto;
   &__image {
     width: 318px;
   }
-  &__choice {
+  &__form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 280px;
+    width: 50%;
     p {
       font-size: 24px;
       font-weight: 400;
@@ -81,59 +82,41 @@
   }
 }
 
-.choice--color {
-  display: flex;
-  flex-direction: column;
+.section-custom__form {
 }
 
-.color__circles {
-  // APPLY ON THE CONTAINER
-  display: flex;
-  width: 150px;
-  margin: 20px 0px 20px 0px;
-  justify-content: space-between;
-}
-
-.color__circle {
-  // APPLY ON BOTH COLOR CIRCLE
-  width: 60px;
-  height: 60px;
-  border-radius: 70px;
-  opacity: 0.8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  color: transparent;
-  &:hover {
-    opacity: 1;
+.form__color {
+  &__inputs {
+    display: flex;
+    width: 150px;
+    margin: 20px 0px 20px 0px;
+    justify-content: space-between;
   }
-  &.active {
-    opacity: 1;
+  &__input {
+    width: 60px;
+    height: 60px;
+    border-radius: 70px;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: transparent;
+    &:hover {
+      opacity: 1;
+    }
+    &.active {
+      opacity: 1;
+    }
   }
 }
 
-.color__circle--white {
-  // APPLY ON WHITE MODIFIER
-  border: 0.5px solid $color-neutral-dark;
-  &.active {
-    color: $color-neutral-dark;
+.form__size {
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
   }
-}
-
-.color__circle--black {
-  // APPLY ON BLACK MODIFIER
-  border: solid 0.5px transparent;
-  background-color: $color-neutral-dark;
-  &.active {
-    color: $color-neutral-light;
-  }
-}
-
-.size__circles {
-  display: flex;
-  justify-content: space-between;
-  .size__circle {
+  &__input {
     margin: 20px 0px 20px 0px;
     font-size: 16px;
     font-weight: 300;
@@ -156,6 +139,80 @@
       opacity: 1;
       background-color: $color-neutral-dark;
       color: $color-neutral-light;
+    }
+  }
+}
+
+.form__color__input--white {
+  // APPLY ON WHITE MODIFIER
+  border: 0.5px solid $color-neutral-dark;
+  &.active {
+    color: $color-neutral-dark;
+  }
+}
+
+.form__color__input--black {
+  // APPLY ON BLACK MODIFIER
+  border: solid 0.5px transparent;
+  background-color: $color-neutral-dark;
+  &.active {
+    color: $color-neutral-light;
+  }
+}
+.section-custom__form--1 {
+}
+.section-custom__form--2 {
+  display: none;
+}
+
+.form__ink {
+  &__label {
+    em {
+      font-weight: 600;
+    }
+  }
+  &__info {
+    margin-bottom: 5%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 132.76%;
+  }
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 225px;
+
+    border: 1px solid $color-neutral-dark;
+    opacity: 0.5;
+
+    & h3 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 132.76%;
+      margin-bottom: 5%;
+    }
+
+    & p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+    &.active {
+      opacity: 1;
     }
   }
 }
