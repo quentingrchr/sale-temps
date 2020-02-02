@@ -19,28 +19,18 @@
     <title>Canvas shit</title>
   </head>
   <body>
-    <div class="preview">
-      <div class="container">
-        <div class="canvas__container">
-          <div class="canvas__cadre"></div>
-          <canvas id="canvas" width="200px" height="390px"></canvas>
-          <button class="canvas__erase">Effacer l'avant</button>
-        </div>
-        <div class="canvas__container__back">
-          <div class="canvas__cadre__back"></div>
-          <canvas id="canvas__back" width="200px" height="390px"></canvas>
-          <button class="canvas__erase__back">Effacer l'arrière</button>
-        </div>
-      </div>
+    <canvas id="canvas__left"></canvas>
+    <canvas id="canvas__right"></canvas>
+    <canvas id="canvas__draw"></canvas>
 
-      <div class="canvas__container__choices">
-        <h2 class="canvas__choices__subtitle">Couleur du Koloro*</h2>
-        <div class="canvas__container__buttons">
-          <button class="canvas__buttons canvas__button__red"></button>
-          <button class="canvas__buttons canvas__button__blue"></button>
-          <button class="canvas__buttons canvas__button__yellow"></button>
-        </div>
-        <h2 class="canvas__choices__subtitle">Type du Koloro*</h2>
+    <div class="options">
+      <h1 class="button__title">Choisi ta couleur</h1>
+      <div class="buttons">
+        <div class=" button button__red"></div>
+        <div class="button button__blue"></div>
+        <div class="button button__yellow"></div>
+      </div>
+      <h2 class="color__title">Type du Koloro*</h2>
 
         <div class="liquids-types">
           <div class="liquids-type liquids-type--basic visible">
@@ -99,6 +89,10 @@
         </div>
       </div>
     </div>
+    </div>
+       
+        <!-- TYPE KOLORO -->
+        
 
     <!-- END OF CANVAS PREVIEW ELEMENTT  -->
   </body>
