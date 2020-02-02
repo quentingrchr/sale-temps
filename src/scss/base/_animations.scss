@@ -150,3 +150,22 @@
     margin-top: 900px;
   }
 }
+
+@keyframes draw-kollab {
+  from {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1000;
+  }
+}
+
+.kollab-artist__svg {
+  & path {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: draw-kollab 3s linear infinite alternate;
+  }
+}
