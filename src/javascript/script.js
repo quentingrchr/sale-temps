@@ -8,7 +8,6 @@ const $liquidsImgsBoxs = document.querySelectorAll(".liquids__content__box");
 const $iconMenu = document.querySelector("#icon-menu");
 const $menu = document.querySelector("#menu");
 const $exemple = document.querySelector("#exemple");
-const $kollabSvg = document.querySelector("#kollab-artist-svg");
 
 const test = $("#exemple");
 for (let i = 0; i < $cardBtn.length; i++) {
