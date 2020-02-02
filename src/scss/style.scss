@@ -26,8 +26,11 @@
 @import "components/hero";
 @import "components/hero";
 @import "components/types";
+
 //importing components layout
+@import "layouts/kollab-artist";
 @import "layouts/menu";
+@import "layouts/starter-pack";
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/navigation";

@@ -19,6 +19,15 @@
   @include section-heading($color-tertiary);
 }
 
+.section-heading--tertiary--italic.section-heading {
+  // MODIFIER FOR KOLLAB ARTIST
+  @include section-heading($color-tertiary);
+  & .section-heading__subtitle {
+    font-style: italic;
+    font-family: "Poppins";
+  }
+}
+
 .section-heading {
   &__title {
     font-size: 24px;
