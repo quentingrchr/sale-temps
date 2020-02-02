@@ -140,7 +140,7 @@ const drawingRight = e => {
     return;
   }
 
-  cdraw.lineWidth = 1;
+  cdraw.lineWidth = inkWidth;
   cdraw.lineCap = "round";
   cdraw.strokeStyle = color;
   cdraw.lineTo(e.clientX, e.clientY);
