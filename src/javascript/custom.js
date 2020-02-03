@@ -72,6 +72,7 @@ for (let i = 0; i < $colInputs.length; i++) {
         $blackJacket.classList.add("fade-out");
         $blackJacket.classList.remove("zoom-in");
         $whiteJacket.classList.remove("fade-out");
+        $blackJacket.classList.remove("translate-black");
         break;
       case 1:
         order.color = "black";
@@ -79,6 +80,7 @@ for (let i = 0; i < $colInputs.length; i++) {
         $whiteJacket.classList.add("fade-out");
         $blackJacket.classList.remove("fade-out");
         $blackJacket.classList.add("zoom-in");
+        $blackJacket.classList.add("translate-black");
         break;
       default:
         break;
