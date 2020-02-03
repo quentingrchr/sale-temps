@@ -1,5 +1,6 @@
 body {
   transition: background-color 0.5s;
+  overflow: hidden;
 }
 .custom {
   font-family: "Poppins";
@@ -60,7 +61,10 @@ body {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin: 200px auto;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
   &__image {
     width: 318px;
     position: relative;
@@ -89,9 +93,6 @@ body {
   }
   &__btn {
     visibility: hidden;
-    position: absolute;
-    right: 5%;
-    bottom: 5%;
   }
 }
 
@@ -250,4 +251,14 @@ body {
 .section-custom__image--black {
   transition: 0.5s;
   position: absolute;
+}
+
+.section__custom__container {
+  width: 80%;
+  height: 40px;
+  margin-left: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 5%;
 }
