@@ -1,3 +1,4 @@
+const $body = document.querySelector("body");
 const $sizeInputs = document.querySelectorAll(".form__size__input");
 const $sizeContain = document.querySelector(".from__size__inputs");
 const $colInputs = document.querySelectorAll(".form__color__input");
@@ -112,18 +113,21 @@ for (let i = 0; i < $inkInputs.length; i++) {
         $svgBasic.classList.remove("fade-out-svg");
         $svgFluo.classList.add("fade-out-svg");
         stopRain();
+        $body.classList.remove("dark-mode");
         break;
       case 1:
         order.ink = "hydro";
         $svgBasic.classList.remove("fade-out-svg");
         $svgFluo.classList.add("fade-out-svg");
         createRain();
+        $body.classList.remove("dark-mode");
         break;
       case 2:
         order.ink = "fluo";
         $svgFluo.classList.remove("fade-out-svg");
         $svgBasic.classList.add("fade-out-svg");
         stopRain();
+        $body.classList.add("dark-mode");
         break;
       default:
         break;

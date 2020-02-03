@@ -1,5 +1,6 @@
 body {
   width: 100vw;
+  transition: background-color 0.5s ease-in-out;
   background-color: $color-neutral-light;
   color: $color-neutral-dark;
   font-family: "Poppins";

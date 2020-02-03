@@ -1,3 +1,6 @@
+body {
+  transition: background-color 0.5s;
+}
 .custom {
   font-family: "Poppins";
   overflow: hidden;
@@ -30,7 +33,6 @@
   align-items: center;
   p {
     font-size: 16px;
-    color: $color-neutral-dark;
   }
 
   p:not(:last-child)::after {
@@ -72,7 +74,6 @@
     p {
       font-size: 24px;
       font-weight: 400;
-      color: $color-neutral-dark;
       .dots_three {
         margin-left: 10px;
       }
@@ -198,8 +199,8 @@
     align-items: center;
     width: 175px;
     height: 225px;
-
-    border: 1px solid $color-neutral-dark;
+    transition: opacity 0.5s, box-shadow 0.5s, transform 0.2s,
+      border-radius 0.5s;
     opacity: 0.5;
 
     & h3 {
