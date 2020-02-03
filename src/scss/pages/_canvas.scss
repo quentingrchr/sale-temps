@@ -5,11 +5,13 @@
   display: flex;
   border: 2px solid black;
   background: $color-neutral-light;
+  display: none;
   z-index: 500;
   cursor: none;
   transform: translateX(100%);
   transition: 0.5s transform;
 }
+
 
 .canvas__body--slide {
   display: block;

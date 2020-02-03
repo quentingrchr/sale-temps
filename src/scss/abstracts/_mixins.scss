@@ -150,6 +150,9 @@
   }
 
   &__btn {
+    @include respond-below(xs) {
+      display: none;
+    }
     cursor: pointer;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -172,11 +175,6 @@
       content: "";
       display: inline-block;
       background-color: $color-card;
-      @include respond-below(xs) {
-        position: absolute;
-        top: 25%;
-        left: 60%;
-      }
     }
 
     &::before {
