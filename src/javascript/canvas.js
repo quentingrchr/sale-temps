@@ -69,6 +69,7 @@ const showingCanvas = () => {
   let limitBackSizeX = 200;
   let limitBackSizeY = 250;
   let erasing = false;
+
   // Event listeners
   buttonRed.addEventListener("click", () => {
     erasing = false;

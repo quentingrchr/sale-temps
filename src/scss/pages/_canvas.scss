@@ -3,9 +3,16 @@
   height: 100%;
   position: absolute;
   background: $color-neutral-light;
+  display: none;
   z-index: 500;
   cursor: none;
   transform: translateX(100%);
+}
+
+@include respond-below(md) {
+  .canvas__body {
+    display: none;
+  }
 }
 
 .canvas__body__slide {
