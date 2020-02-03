@@ -259,11 +259,13 @@ const canvasAcces = document.querySelector(".canvas__acces");
 const canvasClose = document.querySelector(".canvas__close");
 const canvasBody = document.querySelector(".canvas__body");
 
-canvasBody.classList.remove("canvas__body__slide");
-canvasBody.classList.remove("canvas__body__close");
-
 console.log(canvasBody);
 let showing;
+window.onload = function() {
+  showing = false;
+  canvasBody.classList.remove("canvas__body--slide");
+};
+
 canvasAcces.addEventListener("click", () => {
   showing = true;
 
