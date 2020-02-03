@@ -67,16 +67,3 @@ section {
 .hero__right {
   @include flex__end;
 }
-
-.canvas__acces {
-  border: 1.5px solid $color-neutral-dark;
-  width: 180px;
-  height: 40px;
-  border-radius: 30px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  &:hover {
-    cursor: pointer;
-  }
-}
