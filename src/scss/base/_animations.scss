@@ -167,8 +167,13 @@
 
 .fade-out {
   opacity: 0;
+  transform: translateX(-1000px);
 }
 
 .zoom-in {
   transform: scale(1.1);
+}
+
+.translate-black {
+  transform: translateX(100px);
 }
