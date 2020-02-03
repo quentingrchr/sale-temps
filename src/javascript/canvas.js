@@ -275,3 +275,7 @@ canvasClose.addEventListener("click", () => {
   body.style.overflow = "auto";
   canvasBody.classList.remove("canvas__body--slide");
 });
+
+// c.clearRect(0, 0, canvas.width, canvas.height);
+// cRight.clearRect(0, 0, canvasRight.width, canvasRight.height);
+// cdraw.clearRect(0, 0, canvasdraw.width, canvasdraw.height);
