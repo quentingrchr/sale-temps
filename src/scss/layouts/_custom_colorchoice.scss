@@ -1,5 +1,6 @@
 .custom {
   font-family: "Poppins";
+  overflow: hidden;
 }
 
 .header-custom {
@@ -21,9 +22,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  em {
-    color: $color-secondary;
-  }
 }
 
 .steper {
@@ -58,18 +56,12 @@
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin: 200px auto;
+  margin: 100px auto;
+  margin-bottom: 0px;
+
   &__image {
     width: 318px;
     position: relative;
-    #Calque_1 {
-      transition: opacity 0.5s;
-      stroke: $color-tertiary;
-      width: 150px;
-      position: absolute;
-      top: 120px;
-      left: 150px;
-    }
   }
   &__form {
     display: flex;
@@ -88,7 +80,6 @@
   }
   &__btn {
     visibility: hidden;
-    position: absolute;
     right: 5%;
     bottom: 5%;
   }
@@ -106,7 +97,6 @@
     height: 60px;
     border-radius: 70px;
     opacity: 0.8;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,8 +121,6 @@
     font-size: 16px;
     font-weight: 300;
     width: 60px;
-    transition: background-color 0.5s;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,9 +198,8 @@
     align-items: center;
     width: 175px;
     height: 225px;
-    transition: opacity 0.5s, box-shadow 0.5s, transform 0.5s,
-      border-radius 0.5s;
-    //border: 1px solid $color-neutral-dark;
+
+    border: 1px solid $color-neutral-dark;
     opacity: 0.5;
 
     & h3 {
@@ -231,9 +218,6 @@
 
     &:hover {
       opacity: 1;
-      border-radius: 20px;
-      transform: translateY(-5px);
-      box-shadow: 2px 18px 24px -9px rgba(158, 155, 158, 1);
     }
     &.active {
       opacity: 1;
@@ -250,4 +234,15 @@
 .section-custom__image--black {
   transition: 0.5s;
   position: absolute;
+}
+
+.section__custom__container {
+  width: 80%;
+  margin-left: 10%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 150px;
+  margin-top: 3%;
 }
