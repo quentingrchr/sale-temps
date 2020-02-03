@@ -10,8 +10,8 @@ const $form1 = document.querySelector("#form1");
 const $form2 = document.querySelector("#form2");
 const $whiteJacket = document.querySelector(".section-custom__image--white");
 const $blackJacket = document.querySelector(".section-custom__image--black");
-const $svgBasic = document.querySelector(".svg-basic");
-const $svgFluo = document.querySelector(".svg-neon");
+const $svgBasic = document.querySelector(".custom__svg--basic");
+const $svgFluo = document.querySelector(".custom__svg--fluo");
 const $steper = document.querySelectorAll(".steper p");
 
 var step = 0;
