@@ -8,29 +8,12 @@
   z-index: 500;
   cursor: none;
   transform: translateX(100%);
+  transition: 0.5s transform;
 }
 
-.canvas__body__slide {
+.canvas__body--slide {
   display: block;
-  animation: slide 2s ease-out forwards;
-}
-.canvas__body__close {
-  display: none;
-  transform: 1s;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-@keyframes close {
-  to {
-    transform: translateX(300px);
-  }
+  transform: none;
 }
 
 #canvas__left {

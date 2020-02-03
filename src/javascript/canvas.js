@@ -267,11 +267,11 @@ canvasAcces.addEventListener("click", () => {
   showing = true;
 
   showingCanvas();
-  canvasBody.classList.remove("canvas__body__close");
-  canvasBody.classList.add("canvas__body__slide");
+
+  canvasBody.classList.add("canvas__body--slide");
 });
 canvasClose.addEventListener("click", () => {
   showing = false;
   body.style.overflow = "auto";
-  canvasBody.classList.add("canvas__body__close");
+  canvasBody.classList.remove("canvas__body--slide");
 });
