@@ -2,40 +2,20 @@
   width: 100%;
   height: 100%;
   position: absolute;
+  display: flex;
+  border: 2px solid black;
   background: $color-neutral-light;
   display: none;
   z-index: 500;
   cursor: none;
   transform: translateX(100%);
+  transition: 0.5s transform;
 }
 
-@include respond-below(md) {
-  .canvas__body {
-    display: none;
-  }
-}
 
-.canvas__body__slide {
+.canvas__body--slide {
   display: block;
-  animation: slide 2s ease-out forwards;
-}
-.canvas__body__close {
-  display: none;
-  transform: 1s;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-@keyframes close {
-  to {
-    transform: translateX(300px);
-  }
+  transform: none;
 }
 
 #canvas__left {

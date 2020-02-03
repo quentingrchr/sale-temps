@@ -1,3 +1,4 @@
+const $body = document.querySelector("body");
 const $sizeInputs = document.querySelectorAll(".form__size__input");
 const $sizeContain = document.querySelector(".from__size__inputs");
 const $colInputs = document.querySelectorAll(".form__color__input");
@@ -7,6 +8,15 @@ const $inkContain = document.querySelectorAll(".form__ink__inputs");
 const $btnJacket = document.querySelector("#btnJacket");
 const $form1 = document.querySelector("#form1");
 const $form2 = document.querySelector("#form2");
+const $whiteJacket = document.querySelector(".section-custom__image--white");
+const $blackJacket = document.querySelector(".section-custom__image--black");
+const $svgBasic = document.querySelector(".custom__svg--basic");
+const $svgFluo = document.querySelector(".custom__svg--fluo");
+const $steper = document.querySelectorAll(".steper p");
+
+var step = 0;
+
+console.log($svgBasic);
 
 // ORDER
 const order = {
@@ -65,9 +75,19 @@ for (let i = 0; i < $colInputs.length; i++) {
     switch (i) {
       case 0:
         order.color = "white";
+        $whiteJacket.classList.add("zoom-in");
+        $blackJacket.classList.add("fade-out");
+        $blackJacket.classList.remove("zoom-in");
+        $whiteJacket.classList.remove("fade-out");
+        $blackJacket.classList.remove("translate-black");
         break;
       case 1:
         order.color = "black";
+        $whiteJacket.classList.remove("zoom-in");
+        $whiteJacket.classList.add("fade-out");
+        $blackJacket.classList.remove("fade-out");
+        $blackJacket.classList.add("zoom-in");
+        $blackJacket.classList.add("translate-black");
         break;
       default:
         break;
@@ -93,12 +113,24 @@ for (let i = 0; i < $inkInputs.length; i++) {
     switch (i) {
       case 0:
         order.ink = "basic";
+        $svgBasic.classList.remove("fade-out-svg");
+        $svgFluo.classList.add("fade-out-svg");
+        stopRain();
+        $body.classList.remove("dark-mode");
         break;
       case 1:
         order.ink = "hydro";
+        $svgBasic.classList.remove("fade-out-svg");
+        $svgFluo.classList.add("fade-out-svg");
+        createRain();
+        $body.classList.remove("dark-mode");
         break;
       case 2:
         order.ink = "fluo";
+        $svgFluo.classList.remove("fade-out-svg");
+        $svgBasic.classList.add("fade-out-svg");
+        stopRain();
+        $body.classList.add("dark-mode");
         break;
       default:
         break;
@@ -135,6 +167,9 @@ $btnJacket.addEventListener("click", () => {
   $form1.style.display = "none";
   $form2.classList.toggle("visible");
   $btnJacket.style.visibility = "hidden";
+  $steper[step].classList.remove("visible-step");
+  checkStep();
+  $steper[step].classList.add("visible-step");
 
   if (order.size && order.color && order.ink) {
     // STEP 1 AND 2 ARE VALIDATED (JUMP TO RECAP)
@@ -145,3 +180,46 @@ $btnJacket.addEventListener("click", () => {
     alert("Color : " + color + " and Size : " + size + " with ink " + ink);
   }
 });
+
+// FUNCTION TO GENERATE DROPS
+function createRain() {
+  for (i = 1; i < nbDrop; i++) {
+    let dropLeft = randRange(0, 1600);
+    let dropTop = randRange(-600, 600);
+    $(".rain").append('<div class="drop" id="drop' + i + '"></div>');
+    console.log(document.querySelector(".drop"));
+    $("#drop" + i).css("left", dropLeft);
+    $("#drop" + i).css("top", dropTop);
+  }
+}
+
+var nbDrop = 10;
+
+// FUNCTION TO GENERATE RANDOM NUMBER RANGE
+function randRange(minNum, maxNum) {
+  return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+}
+
+// KILL THE RAIN
+function stopRain() {
+  const $drops = document.querySelectorAll(".drop");
+
+  for (let i = 0; i < $drops.length; i++) {
+    const drop = $drops[i];
+    drop.remove();
+  }
+}
+
+function checkStep() {
+  if (order.color === false && order.size === false) {
+    step = 0;
+  }
+  if (order.color && order.size) {
+    step = 1;
+  }
+  if (order.color && order.size && order.ink) {
+    step = 2;
+  }
+}
+
+$steper[0].classList.add("visible-step");

@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
       rel="stylesheet"
@@ -18,7 +22,7 @@
   </head>
   <body class="custom">
     <div class="custom__logo">
-      <a href="index.html"> sale temps.</a>
+      <a href="index.html"> sale temps<em>.</em></a>
     </div>
     <header class="header-custom">
       <div class="header-custom__title"><h1>PIMP TA VESTE.</h1></div>
@@ -28,10 +32,83 @@
       <p>Choix du Koloro</p>
       <p>Récap'</p>
     </div>
-
-    <div class="section-custom">
+    <!-- start section choice color and size -->
+    <div class="section-custom rain">
       <div class="section-custom__image">
-        <img src="assets/doubleveste.png" alt="veste noir et blanc" />
+        <img
+          class="section-custom__image--white"
+          src="assets/vesteBlanche.png"
+          alt="veste blanche"
+        />
+        <img
+          class="section-custom__image--black"
+          src="assets/vesteNoir.png"
+          alt=" veste noire"
+        />
+        <div>
+          <svg
+            class="custom__svg custom__svg--fluo fade-out-svg "
+            width="141"
+            height="60"
+            viewBox="0 0 141 60"
+            fill="none"
+            id="Calque_1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_f)">
+              <path
+                class="draw-svg"
+                d="M57.5283 22.5962C50.695 21.0962 35.1283 18.9962 27.5283 22.5962C18.0283 27.0962 10.0283 46.0962 5.52832 51.5962C1.02832 57.0962 26.5283 38.5962 34.5283 35.0962C40.9283 32.2962 46.8617 32.9295 49.0283 33.5962C52.3617 33.4295 59.3283 32.7962 60.5283 31.5962C62.0283 30.0962 70.5283 25.0961 72.5283 22.5962C74.5283 20.0962 87.0283 3.5962 98.0283 5.0962C109.028 6.5962 128.528 13.5962 134.528 16.5962C140.528 19.5962 110.028 13.5962 98.0283 19.0962C88.4283 23.4962 80.0283 32.9295 77.0283 37.0962C78.195 40.9295 80.7283 49.1962 81.5283 51.5962C82.3283 53.9962 75.8617 54.2629 72.5283 54.0962C71.695 51.0962 69.5283 44.6962 67.5283 43.0962C65.5283 41.4962 61.0283 32.4295 59.0283 28.0962L58.2783 23.5962M58.2783 23.5962L57.5283 19.0962L56.0283 15.0962H63.0283L67.5283 19.0962C66.3617 20.4295 62.8783 23.1962 58.2783 23.5962Z"
+                stroke="#F82155"
+                stroke-width="2"
+              />
+            </g>
+            <path
+              class="draw-svg"
+              d="M57.5283 22.5962C50.695 21.0962 35.1283 18.9962 27.5283 22.5962C18.0283 27.0962 10.0283 46.0962 5.52832 51.5962C1.02832 57.0962 26.5283 38.5962 34.5283 35.0962C40.9283 32.2962 46.8617 32.9295 49.0283 33.5962C52.3617 33.4295 59.3283 32.7962 60.5283 31.5962C62.0283 30.0962 70.5283 25.0961 72.5283 22.5962C74.5283 20.0962 87.0283 3.5962 98.0283 5.0962C109.028 6.5962 128.528 13.5962 134.528 16.5962C140.528 19.5962 110.028 13.5962 98.0283 19.0962C88.4283 23.4962 80.0283 32.9295 77.0283 37.0962C78.195 40.9295 80.7283 49.1962 81.5283 51.5962C82.3283 53.9962 75.8617 54.2629 72.5283 54.0962C71.695 51.0962 69.5283 44.6962 67.5283 43.0962C65.5283 41.4962 61.0283 32.4295 59.0283 28.0962L58.2783 23.5962M58.2783 23.5962L57.5283 19.0962L56.0283 15.0962H63.0283L67.5283 19.0962C66.3617 20.4295 62.8783 23.1962 58.2783 23.5962Z"
+              stroke="white"
+              stroke-width="2"
+            />
+            <defs>
+              <filter
+                id="filter0_f"
+                x="-0.00012207"
+                y="0"
+                width="140.303"
+                height="59.1363"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="2"
+                  result="effect1_foregroundBlur"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+
+        <svg
+          class="custom__svg custom__svg--basic fade-out-svg"
+          data-name="Calque 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 138.64 51.45"
+        >
+          <title>mouette</title>
+          <path
+            class="draw-svg"
+            d="M17.25,80.86S31.82,52.63,43.11,50.68s27.07,1,27.07,1,9.73-.78,9.54-2.53-4.87-4.48-4.87-4.48H69a3.68,3.68,0,0,0,1,2.14c1,1.17.59,9.16.59,9.16l3.31,6.81s9.39,12.66,9.37,18.11,11.07,0,11.07,0S87.7,66.65,88.68,66.45,97.25,52,109.9,48.34s38.75-1.56,38.75-1.56-27.45-14.21-40.3-12.85S86.21,49.9,83.75,52,73.1,61.78,64,62.56,49,61.78,39.41,68,17.25,80.86,17.25,80.86Z"
+            transform="translate(-14.9 -32.84)"
+            style="fill:none;stroke-miterlimit:10;stroke-width:2px"
+          />
+        </svg>
       </div>
       <div class="section-custom__form section-custom__form--1" id="form1">
         <div class="section-custom__form__color">
@@ -58,6 +135,9 @@
           </div>
         </div>
       </div>
+      <!-- end of section choice and size -->
+
+      <!-- start of section ink choice-->
       <div class="section-custom__form section-custom__form--2" id="form2">
         <div class="section-custom__form__ink">
           <p class="form__ink__label">
@@ -94,21 +174,27 @@
         </div>
       </div>
     </div>
-    <a class="section-custom__btn btn" id="btnJacket">
-      <p class="btn__text">Étape Suivante</p>
-      <svg
-        class="btn__svg"
-        width="20"
-        height="15"
-        viewBox="0 0 20 15"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M13.4678 0.680002C13.1953 0.398007 12.7418 0.398007 12.4598 0.680002C12.1874 0.952469 12.1874 1.40595 12.4598 1.67778L17.5707 6.78861H0.705621C0.31248 6.78924 0 7.10172 0 7.49486C0 7.888 0.31248 8.21065 0.705621 8.21065H17.5707L12.4598 13.3119C12.1874 13.5939 12.1874 14.0481 12.4598 14.3199C12.7418 14.6019 13.1959 14.6019 13.4678 14.3199L19.7885 7.99915C20.0705 7.72668 20.0705 7.27321 19.7885 7.00137L13.4678 0.680002Z"
-          fill="#FBFBFB"
-        />
-      </svg>
-    </a>
+    <!-- end of section ink choice -->
+
+    <!-- start button next step -->
+    <div class="section__custom__container">
+      <a class="section-custom__btn btn" id="btnJacket">
+        <p class="btn__text">Étape Suivante</p>
+        <svg
+          class="btn__svg"
+          width="20"
+          height="15"
+          viewBox="0 0 20 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.4678 0.680002C13.1953 0.398007 12.7418 0.398007 12.4598 0.680002C12.1874 0.952469 12.1874 1.40595 12.4598 1.67778L17.5707 6.78861H0.705621C0.31248 6.78924 0 7.10172 0 7.49486C0 7.888 0.31248 8.21065 0.705621 8.21065H17.5707L12.4598 13.3119C12.1874 13.5939 12.1874 14.0481 12.4598 14.3199C12.7418 14.6019 13.1959 14.6019 13.4678 14.3199L19.7885 7.99915C20.0705 7.72668 20.0705 7.27321 19.7885 7.00137L13.4678 0.680002Z"
+            fill="#FBFBFB"
+          />
+        </svg>
+      </a>
+    </div>
+    <!-- end button next step -->
   </body>
 </html>
