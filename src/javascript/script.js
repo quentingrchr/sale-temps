@@ -7,7 +7,6 @@ const $liquidsTypes = document.querySelectorAll(".liquids__content__type");
 const $liquidsImgsBoxs = document.querySelectorAll(".liquids__content__box");
 const $iconMenu = document.querySelector("#icon-menu");
 const $menu = document.querySelector("#menu");
-const $exemple = document.querySelector("#exemple");
 
 for (let i = 0; i < $cardBtn.length; i++) {
   const element = $cardBtn[i];
@@ -28,9 +27,7 @@ for (let i = 0; i < $liquidsTypes.length; i++) {
     $liquidsImgsBoxs.forEach(el => {
       el.classList.remove("visible");
     });
-    $exemple.classList.remove("exemple--basic");
-    $exemple.classList.remove("exemple--hydro");
-    $exemple.classList.remove("exemple--fluo");
+
     $body.classList.remove("dark-mode");
     $liquidsImgsBoxs[i].classList.add("visible");
     $liquidsType.classList.add("visible");
@@ -39,18 +36,15 @@ for (let i = 0; i < $liquidsTypes.length; i++) {
 
     if (i == 0) {
       //BASIC
-      $exemple.classList.toggle("exemple--basic");
     }
     if (i === 1) {
       // HYDRO
       $liquidsSection.classList.add("rain");
-      $exemple.classList.toggle("exemple--hydro");
       createRain();
     }
     if (i === 2) {
       // FLUO
       $body.classList.add("dark-mode");
-      $exemple.classList.toggle("exemple--fluo");
     }
   });
 }
@@ -61,15 +55,6 @@ $iconMenu.addEventListener("click", () => {
 });
 
 // WAYPOINTS
-
-var wpLiquids = new Waypoint({
-  element: $liquidsSection,
-  handler: function(direction) {
-    $exemple.classList.toggle("opacity-1");
-  },
-
-  offset: "60%"
-});
 
 var span = document.querySelector(".hero-left__uptitle__rotate");
 
@@ -104,8 +89,10 @@ function createRain() {
   for (i = 1; i < nbDrop; i++) {
     let dropLeft = randRange(0, 1600);
     let dropTop = randRange(-1000, 1400);
+    console.log("rain");
 
     $(".rain").append('<div class="drop" id="drop' + i + '"></div>');
+    console.log(document.querySelector(".drop"));
     $("#drop" + i).css("left", dropLeft);
     $("#drop" + i).css("top", dropTop);
   }
