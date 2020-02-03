@@ -1,25 +1,23 @@
 .link {
   height: 50px;
   font-family: "Poppins", sans-serif;
-  // color: $color-neutral-dark; dark-mode
   font-size: 16px;
   align-items: center;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
-  border: 1px solid transparent;
-  border-bottom: 1px transparent $color-neutral-dark;
+  border-bottom: 1px solid $color-neutral-dark;
 }
 
 .link--blue {
   &:hover {
     color: $color-primary;
-    border-bottom: 1px solid $color-primary;
+    border-bottom: 1px $color-primary solid;
   }
 }
 
 .link--white {
   color: $color-neutral-light;
+  border-bottom: 1px solid $color-neutral-light;
   transition: border 0.3s ease;
   &:hover {
-    border-bottom: 1px $color-neutral-light solid;
   }
 }

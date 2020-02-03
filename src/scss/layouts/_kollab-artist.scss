@@ -30,6 +30,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 10%;
     &__title {
       margin-left: 10%;
       margin-bottom: 5%;
@@ -57,6 +58,7 @@
   }
 
   &__btn {
+    margin-bottom: 30%;
     grid-area: 2 / 2 / 3 / 3;
     display: flex;
     flex-direction: column;
@@ -85,6 +87,15 @@
       &__title {
         & p {
           justify-content: flex-start;
+        }
+      }
+    }
+    &__btn {
+      margin-bottom: 0%;
+      .btn {
+        width: 150px;
+        &__svg {
+          display: none;
         }
       }
     }
