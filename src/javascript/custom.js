@@ -9,8 +9,11 @@ const $form1 = document.querySelector("#form1");
 const $form2 = document.querySelector("#form2");
 const $whiteJacket = document.querySelector(".section-custom__image--white");
 const $blackJacket = document.querySelector(".section-custom__image--black");
-console.log($whiteJacket);
-console.log($blackJacket);
+const $svgBasic = document.querySelector(".svg-basic");
+const $svgFluo = document.querySelector(".svg-neon");
+
+console.log($svgBasic);
+
 // ORDER
 const order = {
   color: false,
@@ -106,12 +109,21 @@ for (let i = 0; i < $inkInputs.length; i++) {
     switch (i) {
       case 0:
         order.ink = "basic";
+        $svgBasic.classList.remove("fade-out-svg");
+        $svgFluo.classList.add("fade-out-svg");
+        stopRain();
         break;
       case 1:
         order.ink = "hydro";
+        $svgBasic.classList.remove("fade-out-svg");
+        $svgFluo.classList.add("fade-out-svg");
+        createRain();
         break;
       case 2:
         order.ink = "fluo";
+        $svgFluo.classList.remove("fade-out-svg");
+        $svgBasic.classList.add("fade-out-svg");
+        stopRain();
         break;
       default:
         break;
@@ -158,3 +170,32 @@ $btnJacket.addEventListener("click", () => {
     alert("Color : " + color + " and Size : " + size + " with ink " + ink);
   }
 });
+
+// FUNCTION TO GENERATE DROPS
+function createRain() {
+  for (i = 1; i < nbDrop; i++) {
+    let dropLeft = randRange(0, 1600);
+    let dropTop = randRange(-600, 600);
+    $(".rain").append('<div class="drop" id="drop' + i + '"></div>');
+    console.log(document.querySelector(".drop"));
+    $("#drop" + i).css("left", dropLeft);
+    $("#drop" + i).css("top", dropTop);
+  }
+}
+
+var nbDrop = 10;
+
+// FUNCTION TO GENERATE RANDOM NUMBER RANGE
+function randRange(minNum, maxNum) {
+  return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+}
+
+// KILL THE RAIN
+function stopRain() {
+  const $drops = document.querySelectorAll(".drop");
+
+  for (let i = 0; i < $drops.length; i++) {
+    const drop = $drops[i];
+    drop.remove();
+  }
+}

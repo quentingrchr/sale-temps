@@ -88,9 +88,7 @@ function randRange(minNum, maxNum) {
 function createRain() {
   for (i = 1; i < nbDrop; i++) {
     let dropLeft = randRange(0, 1600);
-    let dropTop = randRange(-1000, 1400);
-    console.log("rain");
-
+    let dropTop = randRange(1000, 1400);
     $(".rain").append('<div class="drop" id="drop' + i + '"></div>');
     console.log(document.querySelector(".drop"));
     $("#drop" + i).css("left", dropLeft);
