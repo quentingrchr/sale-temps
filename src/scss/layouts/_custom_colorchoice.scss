@@ -58,6 +58,7 @@
   margin: 200px auto;
   &__image {
     width: 318px;
+    position: relative;
   }
   &__form {
     display: flex;
@@ -80,9 +81,6 @@
     right: 5%;
     bottom: 5%;
   }
-}
-
-.section-custom__form {
 }
 
 .form__color {
@@ -159,8 +157,7 @@
     color: $color-neutral-light;
   }
 }
-.section-custom__form--1 {
-}
+
 .section-custom__form--2 {
   visibility: hidden;
   position: absolute;
@@ -224,4 +221,15 @@
       opacity: 1;
     }
   }
+}
+
+.section-custom__image--white {
+  position: absolute;
+  left: 100px;
+  transition: 0.5s;
+}
+
+.section-custom__image--black {
+  transition: 0.5s;
+  position: absolute;
 }

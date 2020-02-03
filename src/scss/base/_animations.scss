@@ -169,3 +169,11 @@
     animation: draw-kollab 3s linear infinite alternate;
   }
 }
+
+.fade-out {
+  opacity: 0;
+}
+
+.zoom-in {
+  transform: scale(1.1);
+}

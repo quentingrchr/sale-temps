@@ -13,10 +13,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^9.7.4",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.25.0"
   },
-  "dependencies": {
-    "autoprefixer": "^9.7.4"
-  }
+  "dependencies": {}
 }
