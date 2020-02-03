@@ -7,7 +7,10 @@ const $inkContain = document.querySelectorAll(".form__ink__inputs");
 const $btnJacket = document.querySelector("#btnJacket");
 const $form1 = document.querySelector("#form1");
 const $form2 = document.querySelector("#form2");
-
+const $whiteJacket = document.querySelector(".section-custom__image--white");
+const $blackJacket = document.querySelector(".section-custom__image--black");
+console.log($whiteJacket);
+console.log($blackJacket);
 // ORDER
 const order = {
   color: false,
@@ -65,9 +68,17 @@ for (let i = 0; i < $colInputs.length; i++) {
     switch (i) {
       case 0:
         order.color = "white";
+        $whiteJacket.classList.add("zoom-in");
+        $blackJacket.classList.add("fade-out");
+        $blackJacket.classList.remove("zoom-in");
+        $whiteJacket.classList.remove("fade-out");
         break;
       case 1:
         order.color = "black";
+        $whiteJacket.classList.remove("zoom-in");
+        $whiteJacket.classList.add("fade-out");
+        $blackJacket.classList.remove("fade-out");
+        $blackJacket.classList.add("zoom-in");
         break;
       default:
         break;
