@@ -135,6 +135,7 @@ body {
   &__inputs {
     display: flex;
     justify-content: space-between;
+    max-width: 480px;
   }
   &__input {
     margin: 20px 0px 20px 0px;
