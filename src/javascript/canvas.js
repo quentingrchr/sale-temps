@@ -1,5 +1,8 @@
+const body = document.querySelector("body");
+
 const showingCanvas = () => {
   if (!showing) return;
+  body.style.overflow = "hidden";
   const canvas = document.getElementById("canvas__left");
   const c = canvas.getContext("2d");
 
@@ -49,10 +52,10 @@ const showingCanvas = () => {
   let size = "5px";
 
   let vesteFrontWidth = 400;
-  let vesteFrontHeigth = 400;
+  let vesteFrontHeigth = 600;
 
   let vesteBackWidth = 400;
-  let vesteBackHeigth = 400;
+  let vesteBackHeigth = 600;
   let gap = 20;
   let vesteFrontX = gap;
   let vesteFrontY = gap;
@@ -60,14 +63,14 @@ const showingCanvas = () => {
   let vesteBackY = gap;
 
   let limitFrontX = 120;
-  let limitFrontY = 140;
+  let limitFrontY = 230;
   let limitFrontSizeX = 200;
-  let limitFrontSizeY = 250;
+  let limitFrontSizeY = 350;
 
   let limitBackX = 305;
-  let limitBackY = 140;
+  let limitBackY = 180;
   let limitBackSizeX = 200;
-  let limitBackSizeY = 250;
+  let limitBackSizeY = 350;
   let erasing = false;
   // Event listeners
   buttonRed.addEventListener("click", () => {
@@ -254,16 +257,21 @@ const showingCanvas = () => {
 const canvasAcces = document.querySelector(".canvas__acces");
 const canvasClose = document.querySelector(".canvas__close");
 const canvasBody = document.querySelector(".canvas__body");
-console.log(canvasBody);
-let showing = true;
 
+canvasBody.classList.remove("canvas__body__slide");
+canvasBody.classList.remove("canvas__body__close");
+
+console.log(canvasBody);
+let showing;
 canvasAcces.addEventListener("click", () => {
   showing = true;
+
   showingCanvas();
   canvasBody.classList.remove("canvas__body__close");
   canvasBody.classList.add("canvas__body__slide");
 });
 canvasClose.addEventListener("click", () => {
   showing = false;
+  body.style.overflow = "auto";
   canvasBody.classList.add("canvas__body__close");
 });
