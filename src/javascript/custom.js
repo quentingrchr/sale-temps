@@ -12,6 +12,9 @@ const $whiteJacket = document.querySelector(".section-custom__image--white");
 const $blackJacket = document.querySelector(".section-custom__image--black");
 const $svgBasic = document.querySelector(".svg-basic");
 const $svgFluo = document.querySelector(".svg-neon");
+const $steper = document.querySelectorAll(".steper p");
+
+var step = 0;
 
 console.log($svgBasic);
 
@@ -164,6 +167,9 @@ $btnJacket.addEventListener("click", () => {
   $form1.style.display = "none";
   $form2.classList.toggle("visible");
   $btnJacket.style.visibility = "hidden";
+  $steper[step].classList.remove("visible-step");
+  checkStep();
+  $steper[step].classList.add("visible-step");
 
   if (order.size && order.color && order.ink) {
     // STEP 1 AND 2 ARE VALIDATED (JUMP TO RECAP)
@@ -203,3 +209,17 @@ function stopRain() {
     drop.remove();
   }
 }
+
+function checkStep() {
+  if (order.color === false && order.size === false) {
+    step = 0;
+  }
+  if (order.color && order.size) {
+    step = 1;
+  }
+  if (order.color && order.size && order.ink) {
+    step = 2;
+  }
+}
+
+$steper[0].classList.add("visible-step");
