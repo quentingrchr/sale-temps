@@ -58,8 +58,8 @@ $iconMenu.addEventListener("click", () => {
 
 var span = document.querySelector(".hero-left__uptitle__rotate");
 
-function addClassDown() {
-  span.classList.toggle("down");
+function addClassRotateDown() {
+  span.classList.toggle("rotate-down");
 }
 
 var count = 0;
@@ -73,8 +73,8 @@ setInterval(
       count = 0;
     }
   },
-  5000,
-  addClassDown()
+  2000,
+  addClassRotateDown()
 );
 
 var nbDrop = 10;

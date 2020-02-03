@@ -68,8 +68,8 @@
       margin-left: 20px;
       display: block;
       transform: translateY(-40px);
-      &.down {
-        animation: down 5s linear infinite;
+      &.rotate-down {
+        animation: rotate-down 2s linear infinite;
       }
     }
   }
@@ -94,10 +94,5 @@
   }
   &__link {
     transition: transform 0.2s ease;
-    &:hover {
-      .link {
-        border: 1px solid transparent;
-      }
-    }
   }
 }

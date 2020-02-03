@@ -1,6 +1,7 @@
 .liquids {
   background-color: #ebf0ff;
   height: 464px;
+  padding: 0 10%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -34,6 +35,7 @@
       &:last-child {
         margin-bottom: 25%;
       }
+      cursor: pointer;
       height: 36px;
       opacity: 0.5;
       width: 90%;
@@ -119,7 +121,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      align-items: center;
+      align-items: flex-start;
       position: relative;
       flex-grow: 1;
     }
@@ -179,7 +181,6 @@
       flex-direction: column;
       align-items: center;
       height: 100%;
-
       &__types {
         margin-top: 30px;
         height: 127px;

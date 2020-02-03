@@ -12,8 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include respond-below(sm) {
-      display: none;
+    em {
+      color: $color-secondary;
     }
   }
 
