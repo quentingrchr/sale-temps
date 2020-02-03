@@ -3,7 +3,6 @@ body {
 }
 .custom {
   font-family: "Poppins";
-  overflow: hidden;
 }
 
 .header-custom {
@@ -25,6 +24,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  em {
+    color: $color-secondary;
+  }
 }
 
 .steper {
@@ -58,12 +60,18 @@ body {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin: 100px auto;
-  margin-bottom: 0px;
-
+  margin: 200px auto;
   &__image {
     width: 318px;
     position: relative;
+    #Calque_1 {
+      transition: opacity 0.5s;
+      stroke: $color-tertiary;
+      width: 150px;
+      position: absolute;
+      top: 120px;
+      left: 150px;
+    }
   }
   &__form {
     display: flex;
@@ -81,6 +89,7 @@ body {
   }
   &__btn {
     visibility: hidden;
+    position: absolute;
     right: 5%;
     bottom: 5%;
   }
@@ -98,6 +107,7 @@ body {
     height: 60px;
     border-radius: 70px;
     opacity: 0.8;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,6 +132,8 @@ body {
     font-size: 16px;
     font-weight: 300;
     width: 60px;
+    transition: background-color 0.5s;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -219,6 +231,9 @@ body {
 
     &:hover {
       opacity: 1;
+      border-radius: 20px;
+      transform: translateY(-5px);
+      box-shadow: 2px 18px 24px -9px rgba(158, 155, 158, 1);
     }
     &.active {
       opacity: 1;
@@ -236,15 +251,4 @@ body {
   transition: 0.5s;
   position: absolute;
   border: 2px solid black;
-}
-
-.section__custom__container {
-  width: 80%;
-  margin-left: 10%;
-  height: 30px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  margin-bottom: 150px;
-  margin-top: 3%;
 }
