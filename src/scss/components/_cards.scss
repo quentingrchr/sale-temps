@@ -7,5 +7,6 @@
   @include respond-below(xs) {
     flex-direction: column;
     height: 647px;
+    margin-top: 96px;
   }
 }

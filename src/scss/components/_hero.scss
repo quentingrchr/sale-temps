@@ -60,7 +60,7 @@
 .hero-left {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
 
   font-family: "Poppins";
@@ -137,7 +137,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    transition: none;
     margin-top: -70px;
     &__title {
       margin-top: 20px;
@@ -155,6 +154,9 @@
   }
   .hero-left__btn {
     transform: translateY(470px);
+    &:hover {
+      transform: translateY(470px);
+    }
   }
   // .btn {
   //   transition: transform 10s;
