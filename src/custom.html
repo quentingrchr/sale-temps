@@ -118,8 +118,8 @@
             <img src="assets/dot3.png" alt="dots" class="dots_three" />
           </p>
           <div class="form__color__inputs">
-            <div class="form__color__input form__color__input--white">W</div>
-            <div class="form__color__input form__color__input--black">B</div>
+            <div class="form__color__input form__color__input--white">B</div>
+            <div class="form__color__input form__color__input--black">N</div>
           </div>
         </div>
         <div class="section-custom__form__size">
@@ -174,8 +174,66 @@
           </div>
         </div>
       </div>
+      <!-- end of section ink choice -->
+      <div class="recap" id="recap">
+        <div class="recap__title">
+          <h1>Récap de ton pack <img src="assets/dot3.png" alt="3dots" /></h1>
+        </div>
+        <div class="recap__order order">
+          <div class="order__details">
+            <div class="details_vest">
+              <p>Détail de la veste</p>
+            </div>
+            <div class="details__circle circle">
+              <div class="circle__color" id="circle__color"></div>
+              <div class="circle__size" id="circle__size"></div>
+            </div>
+          </div>
+          <div class="order__ink">
+            <p>Couleur du Koloro</p>
+            <p id="inkRecap">Fluorescent <span>marqueur inclus</span></p>
+            <img id="inkImage" alt="ink_fluo" />
+          </div>
+        </div>
+        <div class="recap__price price">
+          <div class="price__euro">
+            <p>100€</p>
+          </div>
+          <label for="eco">
+            <input type="radio" name="eco" />
+            <p>Appliquer mes 0€ d'éco-réduction</p>
+          </label>
+        </div>
+        <div class="recap__btn__container">
+          <a class="recap__btn btn" id="btn-add-to-basket" href="index.html"
+            ><p>Ajouter au panier</p>
+            <svg
+              class="btn__svg"
+              width="22"
+              height="20"
+              viewBox="0 0 22 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.08817 13.5046H7.08917C7.09001 13.5046 7.09085 13.5044 7.09169 13.5044H18.7773C19.065 13.5044 19.318 13.3136 19.397 13.0369L21.9752 4.0135C22.0307 3.81897 21.9918 3.60983 21.8701 3.44836C21.7482 3.2869 21.5577 3.19189 21.3555 3.19189H5.60172L5.14098 1.11848C5.07535 0.823578 4.81384 0.61377 4.51172 0.61377H0.644531C0.288528 0.61377 0 0.902298 0 1.2583C0 1.6143 0.288528 1.90283 0.644531 1.90283H3.99475C4.07632 2.27025 6.19958 11.8251 6.32178 12.3748C5.6368 12.6725 5.15625 13.3555 5.15625 14.1489C5.15625 15.2151 6.02368 16.0825 7.08984 16.0825H18.7773C19.1333 16.0825 19.4219 15.794 19.4219 15.438C19.4219 15.082 19.1333 14.7935 18.7773 14.7935H7.08984C6.73451 14.7935 6.44531 14.5043 6.44531 14.1489C6.44531 13.7941 6.73351 13.5054 7.08817 13.5046ZM20.501 4.48096L18.2911 12.2153H7.60681L5.88806 4.48096H20.501Z"
+                fill="#FBFBFB"
+              />
+              <path
+                d="M15.5547 18.0161C15.5547 19.0822 16.4221 19.9497 17.4883 19.9497C18.5544 19.9497 19.4219 19.0822 19.4219 18.0161C19.4219 16.9499 18.5544 16.0825 17.4883 16.0825C16.4221 16.0825 15.5547 16.9499 15.5547 18.0161ZM17.4883 17.3715C17.8436 17.3715 18.1328 17.6607 18.1328 18.0161C18.1328 18.3714 17.8436 18.6606 17.4883 18.6606C17.1329 18.6606 16.8437 18.3714 16.8437 18.0161C16.8437 17.6607 17.1329 17.3715 17.4883 17.3715Z"
+                fill="#FBFBFB"
+              />
+              <path
+                d="M6.44528 18.0161C6.44528 19.0822 7.31271 19.9497 8.37888 19.9497C9.44504 19.9497 10.3125 19.0822 10.3125 18.0161C10.3125 16.9499 9.44504 16.0825 8.37888 16.0825C7.31271 16.0825 6.44528 16.9499 6.44528 18.0161ZM8.37888 17.3715C8.73421 17.3715 9.02341 17.6607 9.02341 18.0161C9.02341 18.3714 8.73421 18.6606 8.37888 18.6606C8.02354 18.6606 7.73434 18.3714 7.73434 18.0161C7.73434 17.6607 8.02354 17.3715 8.37888 17.3715Z"
+                fill="#FBFBFB"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
-    <!-- end of section ink choice -->
+
+    <!-- start of section ink choice-->
 
     <!-- start button next step -->
     <div class="section__custom__container">
