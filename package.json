@@ -5,11 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "reda": "parcel src/canvas.html",
-    "quentin": "parcel src/quentin.html",
-    "footer": "parcel src/footer.html",
-    "hero-right": "parcel src/hero-right.html"
+    "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "",

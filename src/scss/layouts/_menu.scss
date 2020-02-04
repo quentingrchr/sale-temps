@@ -23,6 +23,9 @@
     background-color: $color-neutral-light;
     z-index: 10;
     transition: height 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     & ul {
       display: flex;
       justify-content: space-around;
@@ -30,7 +33,7 @@
       text-transform: uppercase;
       font-weight: bold;
       letter-spacing: 0.2rem;
-      height: 100%;
+      height: 90%;
       & li {
         height: 100%;
         text-align: center;
@@ -43,10 +46,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        &:hover {
-          background-color: $color-primary;
-          color: $color-neutral-light;
-        }
         color: $color-primary;
         text-decoration: none;
       }
