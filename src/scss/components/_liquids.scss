@@ -189,6 +189,9 @@
         margin-bottom: 0%;
         justify-content: center;
         align-items: center;
+        @include respond-below(xs) {
+          margin-left: 0%;
+        }
       }
 
       &__type {
