@@ -1,4 +1,11 @@
 const body = document.querySelector("body");
+const basicInk = document.querySelector(".canvas__basic__container");
+const hydroInk = document.querySelector(".canvas__hydro__container");
+const fluoInk = document.querySelector(".canvas__fluo__container");
+const canvasAcces = document.querySelector(".canvas__acces");
+const canvasClose = document.querySelector(".canvas__close");
+const canvasBody = document.querySelector(".canvas__body");
+
 let showing;
 
 const showingCanvas = () => {
@@ -45,6 +52,8 @@ const showingCanvas = () => {
   let inkWidth = 1;
   let eraseWidth = 5;
 
+  let shadowColor = "none";
+  let blurWidth = 0;
   let size = "5px";
 
   let vesteFrontWidth = 400;
@@ -64,6 +73,7 @@ const showingCanvas = () => {
   buttonRed.addEventListener("click", () => {
     erasing = false;
     color = "#F82155";
+    shadowColor = color;
     cursor.style.background = "#F82155";
     buttonRed.style.border = "2px solid black";
     buttonBlue.style.border = "none";
@@ -72,6 +82,7 @@ const showingCanvas = () => {
   buttonBlue.addEventListener("click", () => {
     erasing = false;
     color = "#0075FF";
+    shadowColor = color;
     cursor.style.background = "#0075FF";
     buttonRed.style.border = "none";
     buttonBlue.style.border = "2px solid black";
@@ -80,10 +91,27 @@ const showingCanvas = () => {
   buttonYellow.addEventListener("click", () => {
     erasing = false;
     color = "#FFC700";
+    shadowColor = color;
     cursor.style.background = "#FFC700";
     buttonRed.style.border = "none";
     buttonBlue.style.border = "none";
     buttonYellow.style.border = "2px solid black";
+  });
+
+  basicInk.addEventListener("click", () => {
+    shadowColor = "none";
+    blurWidth = 0;
+    body.classList.remove("dark-mode");
+  });
+  hydroInk.addEventListener("click", () => {
+    body.classList.remove("dark-mode");
+  });
+  fluoInk.addEventListener("click", () => {
+    shadowColor = "#F82155";
+    inkWidth = 5;
+    blurWidth = inkWidth;
+    inkWidth = 0;
+    body.classList.add("dark-mode");
   });
 
   // Functions
@@ -107,7 +135,8 @@ const showingCanvas = () => {
     if (e.clientY < limitFrontY || e.clientY > limitFrontY + limitFrontSizeY) {
       return;
     }
-
+    cdraw.shadowColor = shadowColor;
+    cdraw.shadowBlur = blurWidth;
     cdraw.lineWidth = inkWidth;
     cdraw.lineCap = "round";
     cdraw.strokeStyle = color;
@@ -131,6 +160,17 @@ const showingCanvas = () => {
 
   // Event Listeners
   window.addEventListener("resize", resizeCanvas);
+  window.addEventListener("resize", () => {
+    if (showing) {
+      showing = false;
+      body.style.overflow = "auto";
+      canvasBody.classList.remove("canvas-is-open");
+      canvasBody.classList.add("canvas-is-closed");
+      if ((canvasBody.style.display = "none")) {
+        body.style.overflow = "auto";
+      }
+    }
+  });
 
   function draw() {
     c.drawImage(
@@ -201,10 +241,6 @@ const showingCanvas = () => {
 
 // CANVAS SLIDES IN
 
-const canvasAcces = document.querySelector(".canvas__acces");
-const canvasClose = document.querySelector(".canvas__close");
-const canvasBody = document.querySelector(".canvas__body");
-
 console.log(canvasBody);
 canvasBody.addEventListener("click", function(event) {
   event.stopPropagation();
@@ -221,6 +257,7 @@ canvasAcces.addEventListener("click", event => {
   event.stopPropagation();
   showing = true;
   bodyslide = false;
+  canvasBody.style.display = "flex";
 
   showingCanvas();
 
