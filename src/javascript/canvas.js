@@ -1,4 +1,5 @@
 const body = document.querySelector("body");
+let showing;
 
 const showingCanvas = () => {
   if (!showing) return;
@@ -9,11 +10,6 @@ const showingCanvas = () => {
   canvas.width = window.innerWidth / 2;
   canvas.height = window.innerHeight;
 
-  const canvasRight = document.getElementById("canvas__right");
-  const cRight = canvasRight.getContext("2d");
-
-  canvasRight.width = window.innerWidth / 2;
-  canvasRight.height = window.innerHeight;
   const canvasdraw = document.getElementById("canvas__draw");
   const cdraw = canvasdraw.getContext("2d");
 
@@ -54,23 +50,14 @@ const showingCanvas = () => {
   let vesteFrontWidth = 400;
   let vesteFrontHeigth = 600;
 
-  let vesteBackWidth = 400;
-  let vesteBackHeigth = 600;
   let gap = 20;
   let vesteFrontX = gap;
   let vesteFrontY = gap;
-  let vesteBackX = canvasRight.width - vesteBack.width;
-  let vesteBackY = gap;
 
   let limitFrontX = 120;
   let limitFrontY = 230;
   let limitFrontSizeX = 200;
   let limitFrontSizeY = 350;
-
-  let limitBackX = 305;
-  let limitBackY = 180;
-  let limitBackSizeX = 200;
-  let limitBackSizeY = 350;
   let erasing = false;
 
   // Event listeners
@@ -132,28 +119,6 @@ const showingCanvas = () => {
   canvasdraw.addEventListener("mouseup", finishedPosition);
   canvasdraw.addEventListener("mousemove", drawing);
 
-  const drawingRight = e => {
-    if (!painting) return;
-    if (
-      e.clientX < limitBackX + canvasRight.width ||
-      e.clientX > limitBackX + limitBackSizeX + canvasRight.width
-    ) {
-      return;
-    }
-    if (e.clientY < limitBackY || e.clientY > limitBackY + limitBackSizeY) {
-      return;
-    }
-
-    cdraw.lineWidth = inkWidth;
-    cdraw.lineCap = "round";
-    cdraw.strokeStyle = color;
-    cdraw.lineTo(e.clientX, e.clientY);
-    cdraw.stroke();
-  };
-  canvasdraw.addEventListener("mousedown", startPosition);
-  canvasdraw.addEventListener("mouseup", finishedPosition);
-  canvasdraw.addEventListener("mousemove", drawingRight);
-
   // Responsivness of canvasImage
   let storagewidth = canvas.width; // 1366
 
@@ -162,21 +127,11 @@ const showingCanvas = () => {
     canvas.height = window.innerHeight;
     canvasdraw.width = window.innerWidth;
     canvasdraw.height = window.innerHeight;
-    canvasRight.width = window.innerWidth / 2;
-    canvasRight.height = window.innerHeight;
   }
 
   // Event Listeners
   window.addEventListener("resize", resizeCanvas);
-  onload = function() {
-    cRight.drawImage(
-      vesteBack,
-      vesteBackX,
-      vesteBackY,
-      vesteBackWidth,
-      vesteBackHeigth
-    );
-  };
+
   function draw() {
     c.drawImage(
       vesteFront,
@@ -185,15 +140,6 @@ const showingCanvas = () => {
       vesteFrontWidth,
       vesteFrontHeigth
     );
-    cRight.drawImage(
-      vesteBack,
-      vesteBackX,
-      vesteBackY,
-      vesteBackWidth,
-      vesteBackHeigth
-    );
-    cRight.setLineDash([4]);
-    cRight.strokeRect(limitBackX, limitBackY, limitBackSizeX, limitBackSizeY);
 
     c.setLineDash([6]);
     c.strokeRect(limitFrontX, limitFrontY, limitFrontSizeX, limitFrontSizeY);
@@ -260,25 +206,37 @@ const canvasClose = document.querySelector(".canvas__close");
 const canvasBody = document.querySelector(".canvas__body");
 
 console.log(canvasBody);
-let showing;
+canvasBody.addEventListener("click", function(event) {
+  event.stopPropagation();
+  console.log("canvas");
+});
+
 window.onload = function() {
   showing = false;
+  bodyslide = true;
   canvasBody.classList.remove("canvas__body--slide");
 };
 
-canvasAcces.addEventListener("click", () => {
+canvasAcces.addEventListener("click", event => {
+  event.stopPropagation();
   showing = true;
+  bodyslide = false;
 
   showingCanvas();
 
-  canvasBody.classList.add("canvas__body--slide");
+  canvasBody.classList.remove("canvas-is-closed");
+  canvasBody.classList.add("canvas-is-open");
 });
 canvasClose.addEventListener("click", () => {
   showing = false;
   body.style.overflow = "auto";
-  canvasBody.classList.remove("canvas__body--slide");
+  // canvasBody.classList.remove("canvas__body--slide");
+  canvasBody.classList.remove("canvas-is-open");
+  canvasBody.classList.add("canvas-is-closed");
 });
-
-// c.clearRect(0, 0, canvas.width, canvas.height);
-// cRight.clearRect(0, 0, canvasRight.width, canvasRight.height);
-// cdraw.clearRect(0, 0, canvasdraw.width, canvasdraw.height);
+body.addEventListener("click", () => {
+  showing = false;
+  body.style.overflow = "auto";
+  canvasBody.classList.remove("canvas-is-open");
+  canvasBody.classList.add("canvas-is-closed");
+});
