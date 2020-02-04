@@ -126,7 +126,7 @@ body {
     &:hover {
       opacity: 1;
       transform: translateY(-5px);
-      box-shadow: 2px 26px 24px -6px rgba(173, 173, 173, 1);
+      box-shadow: 2px 15px 24px -6px rgba(173, 173, 173, 1);
     }
     &.active {
       opacity: 1;
@@ -162,7 +162,7 @@ body {
       background-color: $color-neutral-dark;
       color: $color-neutral-light;
       transform: translateY(-5px);
-      box-shadow: 2px 26px 24px -6px rgba(173, 173, 173, 1);
+      box-shadow: 2px 15px 24px -6px rgba(173, 173, 173, 1);
     }
     &.active {
       opacity: 1;
@@ -252,6 +252,7 @@ body {
       border-radius: 20px;
       transform: translateY(-5px);
       box-shadow: 2px 18px 24px -9px rgba(158, 155, 158, 1);
+      cursor: pointer;
     }
     &.active {
       opacity: 1;
@@ -288,7 +289,7 @@ body {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 35%;
     margin-top: 40px;
     .order__details {
@@ -349,6 +350,9 @@ body {
     }
     label {
       display: flex;
+      input {
+        cursor: pointer;
+      }
       p {
         font-size: 18px;
         font-weight: 400;
