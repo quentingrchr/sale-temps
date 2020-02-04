@@ -9,6 +9,10 @@ body {
     background-color: $color-neutral-dark;
     color: $color-neutral-light;
 
+    & .canvas__body {
+      background-color: $color-neutral-dark;
+    }
+
     & .logo--dark-mode {
       display: block;
     }
