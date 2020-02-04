@@ -1,0 +1,41 @@
+.engagements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 121px;
+  background-color: #e7e7e7;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.engagement {
+  width: 128px;
+  height: 80px;
+
+  &:not(:last-child) {
+    margin-right: 140px;
+  }
+
+  &__svg {
+    height: 70%;
+    width: 100%;
+    @include flex__center;
+  }
+  &__text {
+    @include flex__center;
+    height: 30%;
+    width: 100%;
+  }
+}
+@include respond-below(sm) {
+  .engagements {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+  }
+  .engagement {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+}

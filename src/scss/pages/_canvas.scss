@@ -1,6 +1,5 @@
 .canvas__body {
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
   position: absolute;
   display: flex;
   border: 2px solid black;
@@ -9,10 +8,15 @@
   cursor: none;
   transform: translateX(100%);
   transition: 1.5s transform;
+  width: 0%;
+  height: 0%;
 }
 
 .canvas__body--slide {
+  width: 100%;
+  height: 100%;
   transform: none;
+  overflow: hidden;
 }
 
 #canvas__left {
@@ -113,6 +117,7 @@
 .size {
   width: 100%;
   height: 100px;
+
   @include flex__center;
   justify-content: space-around;
   &__small {
@@ -120,6 +125,9 @@
     height: 36px;
     border: 2px solid $color-neutral-dark;
     border-radius: 50%;
+    background-color: $color-neutral-light;
+    color: $color-neutral-dark;
+
     &:hover {
       cursor: pointer;
       background: $color-neutral-dark;
@@ -132,6 +140,9 @@
     height: 44px;
     border-radius: 50%;
     border: 2px solid $color-neutral-dark;
+    background-color: $color-neutral-light;
+    color: $color-neutral-dark;
+
     &:hover {
       cursor: pointer;
       background: $color-neutral-dark;
@@ -144,6 +155,9 @@
     height: 52px;
     border-radius: 50%;
     border: 2px solid $color-neutral-dark;
+    background-color: $color-neutral-light;
+    color: $color-neutral-dark;
+
     &:hover {
       cursor: pointer;
       background: $color-neutral-dark;
