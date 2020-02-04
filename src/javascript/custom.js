@@ -13,6 +13,15 @@ const $blackJacket = document.querySelector(".section-custom__image--black");
 const $svgBasic = document.querySelector(".custom__svg--basic");
 const $svgFluo = document.querySelector(".custom__svg--fluo");
 const $steper = document.querySelectorAll(".steper p");
+const $recap = document.querySelector("#recap");
+const $colorRecap = document.querySelector("#circle__color");
+const $sizeRecap = document.querySelector("#circle__size");
+const $inkRecap = document.querySelector("#inkRecap");
+const $inkImage = document.querySelector("#inkImage");
+
+let hydroinksrc = require("../assets/ink-input-hydro.png");
+let basicinksrc = require("../assets/ink-input-basic.png");
+let fluoinksrc = require("../assets/ink-input-fluo.png");
 
 var step = 0;
 
@@ -37,19 +46,19 @@ for (let i = 0; i < $sizeInputs.length; i++) {
     // UPDATE ORDER
     switch (i) {
       case 0:
-        order.size = "xs";
+        order.size = "XS";
         break;
       case 1:
-        order.size = "s";
+        order.size = "S";
         break;
       case 2:
-        order.size = "m";
+        order.size = "M";
         break;
       case 3:
-        order.size = "l";
+        order.size = "L";
         break;
       case 4:
-        order.size = "xl";
+        order.size = "XL";
         break;
       default:
         break;
@@ -112,21 +121,21 @@ for (let i = 0; i < $inkInputs.length; i++) {
     // UPDATE ORDER
     switch (i) {
       case 0:
-        order.ink = "basic";
+        order.ink = "Basique";
         $svgBasic.classList.remove("fade-out-svg");
         $svgFluo.classList.add("fade-out-svg");
         stopRain();
         $body.classList.remove("dark-mode");
         break;
       case 1:
-        order.ink = "hydro";
+        order.ink = "Hydroréactif";
         $svgBasic.classList.remove("fade-out-svg");
         $svgFluo.classList.add("fade-out-svg");
         createRain();
         $body.classList.remove("dark-mode");
         break;
       case 2:
-        order.ink = "fluo";
+        order.ink = "Fluorescent";
         $svgFluo.classList.remove("fade-out-svg");
         $svgBasic.classList.add("fade-out-svg");
         stopRain();
@@ -173,11 +182,25 @@ $btnJacket.addEventListener("click", () => {
 
   if (order.size && order.color && order.ink) {
     // STEP 1 AND 2 ARE VALIDATED (JUMP TO RECAP)
-    console.log(true);
     let { size } = order;
     let { color } = order;
     let { ink } = order;
-    alert("Color : " + color + " and Size : " + size + " with ink " + ink);
+    $colorRecap.style.backgroundColor = color;
+    $sizeRecap.innerHTML = `${size}`;
+    $inkRecap.innerHTML = `${ink}` + "<span>marqueur inclus</span>";
+    if (order.ink === "Basique") {
+      $inkImage.src = basicinksrc;
+    } else if (order.ink === "Hydroréactif") {
+      $inkImage.src = hydroinksrc;
+    } else {
+      $inkImage.src = fluoinksrc;
+    }
+
+    $body.classList.remove("dark-mode");
+    $recap.classList.add("visible");
+    stopRain();
+    $svgBasic.style.display = "none";
+    $svgFluo.style.display = "none";
   }
 });
 
