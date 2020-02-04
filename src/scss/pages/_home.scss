@@ -47,6 +47,12 @@ body {
         }
       }
     }
+    .engagements {
+      background-color: $color-neutral-dark;
+      svg path {
+        fill: $color-neutral-light;
+      }
+    }
   }
 }
 
