@@ -71,6 +71,7 @@
 
     & svg {
       fill: $color-neutral;
+      width: 36px;
       @include respond-below(xs) {
         width: 36px;
       }
