@@ -82,6 +82,10 @@
   }
 }
 
+.arrowTop {
+  cursor: pointer;
+}
+
 @include respond-below(sm) {
   .footer {
     align-items: center;

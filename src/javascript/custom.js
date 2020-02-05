@@ -25,8 +25,6 @@ let fluoinksrc = require("../assets/ink-input-fluo.png");
 
 var step = 0;
 
-console.log($svgBasic);
-
 // ORDER
 const order = {
   color: false,

@@ -17,6 +17,19 @@ const $iconBasicArea = document.getElementById("icon__basic__area");
 const $iconHydroArea = document.getElementById("icon__hydro__area");
 const $iconFluoArea = document.getElementById("icon__fluo__area");
 
+const $arrowTop = document.querySelector(".arrowTop");
+
+$arrowTop.addEventListener("click", () => {
+  console.log("button work");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+console.log($body.clientHeight);
+
 $iconBasicArea.addEventListener("click", () => {
   $iconBasic.style.border = "2px solid #F82155";
   $iconHydro.style.border = "2px solid #2D2D2D";
