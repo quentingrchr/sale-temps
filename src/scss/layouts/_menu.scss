@@ -10,6 +10,35 @@
 //   left: 0;
 // }
 
+.header-mobile {
+  @include respond-above(sm) {
+    display: none;
+  }
+  background-color: $color-neutral-light;
+  width: 100%;
+  margin: auto;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+
+  &__logo {
+    font-family: "Cedarville Cursive";
+    font-size: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    em {
+      color: $color-secondary;
+    }
+  }
+}
+
 .menu {
   display: none;
   @include respond-below(sm) {
@@ -20,7 +49,8 @@
     width: 100vw;
     position: fixed;
     overflow: hidden;
-    background-color: $color-neutral-light;
+    color: $color-neutral-light;
+    background-color: $color-primary;
     z-index: 10;
     transition: height 0.3s ease-in-out;
     display: flex;
@@ -46,7 +76,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: $color-primary;
         text-decoration: none;
       }
     }
@@ -69,14 +98,14 @@
     height: 100vh;
   }
   & .hamburger:before {
-    background-color: $color-primary;
+    background-color: $color-neutral-light;
     transform: rotate(45deg);
     top: 8px;
     left: 0;
   }
 
   .hamburger:after {
-    background-color: $color-primary;
+    background-color: $color-neutral-light;
     transform: rotate(135deg);
     top: 8px;
     left: 0;

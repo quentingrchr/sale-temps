@@ -1,4 +1,7 @@
 .header {
+  @include respond-below(sm) {
+    display: none;
+  }
   width: 80%;
   margin: auto;
   height: 100px;
@@ -26,9 +29,6 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  @include respond-below(sm) {
-    display: none;
-  }
 
   &__items {
     display: flex;
