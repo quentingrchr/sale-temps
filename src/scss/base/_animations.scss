@@ -177,6 +177,14 @@
 
 .translate-black {
   transform: translateX(100px);
+  @include respond-below(sm-md) {
+    transform: translateX(40px);
+  }
+}
+@include respond-below(sm-md) {
+  .translate-white {
+    transform: translateX(-65px);
+  }
 }
 
 .fade-out-svg {
