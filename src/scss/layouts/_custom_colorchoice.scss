@@ -83,6 +83,9 @@ body {
       position: absolute;
       top: 120px;
       left: 150px;
+      @include respond-below(sm-md) {
+        left: 90px;
+      }
     }
   }
   &__form {
@@ -202,7 +205,7 @@ body {
     opacity: 1;
     transform: translateY(0px);
     @include respond-below(sm-md) {
-      transform: translateY(0px);
+      transform: translateY(40px);
     }
   }
 }
@@ -409,8 +412,16 @@ body {
     justify-content: center;
     height: 140vh;
     overflow: visible;
-    a {
+    .header-custom__title {
+      margin-top: 70px;
+    }
+    .custom-logo {
       position: static;
+      width: 100vw;
+      margin-right: 10%;
+      display: flex;
+      justify-content: center;
+      // text-align: center;
     }
     .steper {
       display: none;
@@ -467,17 +478,18 @@ body {
 
       &__btn {
         margin-bottom: 50px;
+        margin-top: 60px;
       }
     }
     .recap {
-      width: 0px;
-      height: 0px;
+      display: none;
       text-align: center;
       &.visible {
+        display: block;
         width: 100%;
         height: 50%;
         text-align: center;
-        transform: translateY(0px);
+        transform: translateY(40px);
       }
 
       &__details {
@@ -487,6 +499,9 @@ body {
         justify-content: center;
       }
     }
+  }
+  .recap__btn__container {
+    width: 85vw;
   }
   .recap__price {
     display: flex;
@@ -504,11 +519,5 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .recap__btn__container {
-    margin-top: 60px;
-    width: 70vw;
-    display: flex;
-    justify-content: flex-end;
   }
 }
