@@ -1,0 +1,18 @@
+.steamer {
+  overflow: hidden;
+  height: 0;
+  width: 100%;
+  background-color: $color-tertiary;
+  color: $color-neutral-light;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 132.76%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.steamer--active {
+  height: 40px;
+}

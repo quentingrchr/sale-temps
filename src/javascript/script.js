@@ -7,6 +7,7 @@ const $liquidsTypes = document.querySelectorAll(".liquids__content__type");
 const $liquidsImgsBoxs = document.querySelectorAll(".liquids__content__box");
 const $iconMenu = document.querySelector("#icon-menu");
 const $menu = document.querySelector("#menu");
+const $steamer = document.querySelector("#steamer");
 
 const $iconBasic = document.getElementById("icon__basic");
 const $iconHydro = document.getElementById("icon__hydro");
@@ -128,4 +129,10 @@ function stopRain() {
     const drop = $drops[i];
     drop.remove();
   }
+}
+
+if (window.sessionStorage.getItem("ordered") === "true") {
+  $steamer.classList.add("steamer--active");
+  $steamer.querySelector("p").classList.add("steamer-movin");
+  window.sessionStorage.setItem("ordered", false);
 }
