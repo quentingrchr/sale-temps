@@ -28,7 +28,6 @@ const showingCanvas = () => {
   const buttonYellow = document.querySelector(".button__yellow");
 
   let urlFront = require("../assets/veste-front-canvas.png");
-  let urlBack = require("../assets/veste-back-canvas.png");
 
   const cursor = document.getElementById("cursor");
 
@@ -40,10 +39,8 @@ const showingCanvas = () => {
 
   // Load images
   let vesteFront = new Image();
-  let vesteBack = new Image();
 
   vesteFront.src = urlFront;
-  vesteBack.src = urlBack;
 
   // Some Variables
   let painting = false;

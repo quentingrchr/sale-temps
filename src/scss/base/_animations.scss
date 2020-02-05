@@ -3,18 +3,18 @@
     stroke-dashoffset: 0%;
   }
 }
-.draw-svg {
-  z-index: 1;
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation-name: draw;
-  animation-direction: alternate-reverse;
-  animation-duration: 2s;
-  animation-delay: 2s;
-  animation-timing-function: cubic-bezier(0.14, 0.15, 0.1, 0.05);
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-}
+// .draw-svg {
+//   z-index: 1;
+//   stroke-dasharray: 600;
+//   stroke-dashoffset: 600;
+//   animation-name: draw;
+//   animation-direction: alternate-reverse;
+//   animation-duration: 2s;
+//   animation-delay: 2s;
+//   animation-timing-function: cubic-bezier(0.14, 0.15, 0.1, 0.05);
+//   animation-fill-mode: both;
+//   animation-iteration-count: infinite;
+// }
 
 @keyframes move {
   0% {
@@ -182,4 +182,15 @@
 .fade-out-svg {
   opacity: 0;
   transform: translateX(-1000px);
+}
+
+// SAFARI ANIMATION RESET
+@media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
+  .kollab-artist__svg {
+    & path {
+      stroke-dasharray: 600;
+      stroke-dashoffset: 650;
+      animation: none;
+    }
+  }
 }
