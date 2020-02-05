@@ -34,13 +34,23 @@
   <body>
     <!--  Canvas ELEMENT  -->
     <div class="canvas__body canvas-is-closed">
-        <div class="canvas__close"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14.36 15.78L7.99997 9.40997L1.63997 15.78L0.219971 14.36L6.58997 7.99997L0.219971 1.63997L1.63997 0.219971L7.99997 6.58997L14.36 0.229971L15.77 1.63997L9.40997 7.99997L15.77 14.36L14.36 15.78Z" fill="#FBFBFB"/>
-          </svg>
-          </div>
+      <div class="canvas__close">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14.36 15.78L7.99997 9.40997L1.63997 15.78L0.219971 14.36L6.58997 7.99997L0.219971 1.63997L1.63997 0.219971L7.99997 6.58997L14.36 0.229971L15.77 1.63997L9.40997 7.99997L15.77 14.36L14.36 15.78Z"
+            fill="#FBFBFB"
+          />
+        </svg>
+      </div>
       <div id="cursor"></div>
       <canvas id="canvas__left">Loading canvas or canvas not supported</canvas>
-     
+
       <canvas id="canvas__draw">Loading canvas or canvas not supported</canvas>
 
       <div class="options">
@@ -52,70 +62,66 @@
         </div>
 
         <!-- KOLOROS TYPE -->
-        
 
-        <div class="canvas__koloros"><h2 class="color__title">Type du Koloro*</h2>
-            <div
-              class="canvas__basic__container"
-            >
-              <div class="canvas__basic">
-                <svg
-                  width="60%"
-                  height="60%"
-                  viewBox="0 0 13 19"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.31314 0.00012207C10.5222 5.49255 12.6263 9.40038 12.6263 11.7245C12.6263 12.5536 12.463 13.3745 12.1457 14.1405C11.8285 14.9064 11.3634 15.6024 10.7772 16.1886C10.191 16.7748 9.49502 17.2398 8.72907 17.5571C7.96313 17.8744 7.14219 18.0377 6.31314 18.0377C5.48408 18.0377 4.66315 17.8744 3.8972 17.5571C3.13126 17.2398 2.4353 16.7748 1.84908 16.1886C1.26285 15.6024 0.797824 14.9064 0.480559 14.1405C0.163294 13.3745 -1.23539e-08 12.5536 0 11.7245C0 9.40038 2.10408 5.49255 6.31314 0.00012207Z"
-                    fill="#2D2D2D"
-                  />
-                </svg>
-              </div>
-              <div class="canvas__basic__text">Basique</div>
+        <div class="canvas__koloros">
+          <h2 class="color__title">Type du Koloro*</h2>
+          <div class="canvas__basic__container">
+            <div class="canvas__basic">
+              <svg
+                width="60%"
+                height="60%"
+                viewBox="0 0 13 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.31314 0.00012207C10.5222 5.49255 12.6263 9.40038 12.6263 11.7245C12.6263 12.5536 12.463 13.3745 12.1457 14.1405C11.8285 14.9064 11.3634 15.6024 10.7772 16.1886C10.191 16.7748 9.49502 17.2398 8.72907 17.5571C7.96313 17.8744 7.14219 18.0377 6.31314 18.0377C5.48408 18.0377 4.66315 17.8744 3.8972 17.5571C3.13126 17.2398 2.4353 16.7748 1.84908 16.1886C1.26285 15.6024 0.797824 14.9064 0.480559 14.1405C0.163294 13.3745 -1.23539e-08 12.5536 0 11.7245C0 9.40038 2.10408 5.49255 6.31314 0.00012207Z"
+                  fill="#2D2D2D"
+                />
+              </svg>
             </div>
-            <div class="canvas__hydro__container">
-              <div class="canvas__hydro">
-                <svg
-                  width="60%"
-                  height="60%"
-                  viewBox="0 0 13 19"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.31314 0.00012207C10.5222 5.49255 12.6263 9.40038 12.6263 11.7245C12.6263 12.5536 12.463 13.3745 12.1457 14.1405C11.8285 14.9064 11.3634 15.6024 10.7772 16.1886C10.191 16.7748 9.49502 17.2398 8.72907 17.5571C7.96313 17.8744 7.14219 18.0377 6.31314 18.0377C5.48408 18.0377 4.66315 17.8744 3.8972 17.5571C3.13126 17.2398 2.4353 16.7748 1.84908 16.1886C1.26285 15.6024 0.797824 14.9064 0.480559 14.1405C0.163294 13.3745 -1.23539e-08 12.5536 0 11.7245C0 9.40038 2.10408 5.49255 6.31314 0.00012207Z"
-                    fill="#2D2D2D"
-                  />
-                </svg>
-              </div>
-              <div class="canvas__hydro__text">Hydroréactif</div>
-            </div>
-            <div class="canvas__fluo__container">
-              <div class="canvas__fluo">
-                <svg
-                  preserveAspectRatio="xMidYMid meet"
-                  width="60%"
-                  height="60%"
-                  viewBox="0 0 13 19"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.31314 0.00012207C10.5222 5.49255 12.6263 9.40038 12.6263 11.7245C12.6263 12.5536 12.463 13.3745 12.1457 14.1405C11.8285 14.9064 11.3634 15.6024 10.7772 16.1886C10.191 16.7748 9.49502 17.2398 8.72907 17.5571C7.96313 17.8744 7.14219 18.0377 6.31314 18.0377C5.48408 18.0377 4.66315 17.8744 3.8972 17.5571C3.13126 17.2398 2.4353 16.7748 1.84908 16.1886C1.26285 15.6024 0.797824 14.9064 0.480559 14.1405C0.163294 13.3745 -1.23539e-08 12.5536 0 11.7245C0 9.40038 2.10408 5.49255 6.31314 0.00012207Z"
-                    fill="#2D2D2D"
-                  />
-                </svg>
-              </div>
-              <div class="canvas__fluo__text">Fluorescent</div>
-            </div>
+            <div class="canvas__basic__text">Basique</div>
           </div>
-        
+          <div class="canvas__hydro__container">
+            <div class="canvas__hydro">
+              <svg
+                width="60%"
+                height="60%"
+                viewBox="0 0 13 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.31314 0.00012207C10.5222 5.49255 12.6263 9.40038 12.6263 11.7245C12.6263 12.5536 12.463 13.3745 12.1457 14.1405C11.8285 14.9064 11.3634 15.6024 10.7772 16.1886C10.191 16.7748 9.49502 17.2398 8.72907 17.5571C7.96313 17.8744 7.14219 18.0377 6.31314 18.0377C5.48408 18.0377 4.66315 17.8744 3.8972 17.5571C3.13126 17.2398 2.4353 16.7748 1.84908 16.1886C1.26285 15.6024 0.797824 14.9064 0.480559 14.1405C0.163294 13.3745 -1.23539e-08 12.5536 0 11.7245C0 9.40038 2.10408 5.49255 6.31314 0.00012207Z"
+                  fill="#2D2D2D"
+                />
+              </svg>
+            </div>
+            <div class="canvas__hydro__text">Hydroréactif</div>
+          </div>
+          <div class="canvas__fluo__container">
+            <div class="canvas__fluo">
+              <svg
+                preserveAspectRatio="xMidYMid meet"
+                width="60%"
+                height="60%"
+                viewBox="0 0 13 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.31314 0.00012207C10.5222 5.49255 12.6263 9.40038 12.6263 11.7245C12.6263 12.5536 12.463 13.3745 12.1457 14.1405C11.8285 14.9064 11.3634 15.6024 10.7772 16.1886C10.191 16.7748 9.49502 17.2398 8.72907 17.5571C7.96313 17.8744 7.14219 18.0377 6.31314 18.0377C5.48408 18.0377 4.66315 17.8744 3.8972 17.5571C3.13126 17.2398 2.4353 16.7748 1.84908 16.1886C1.26285 15.6024 0.797824 14.9064 0.480559 14.1405C0.163294 13.3745 -1.23539e-08 12.5536 0 11.7245C0 9.40038 2.10408 5.49255 6.31314 0.00012207Z"
+                  fill="#2D2D2D"
+                />
+              </svg>
+            </div>
+            <div class="canvas__fluo__text">Fluorescent</div>
+          </div>
+        </div>
 
         <!-- ERASER AND SIZES -->
-        <h2 class="size_option"> Choisis ta taille de marker</h2>
+        <h2 class="size_option">Choisis ta taille de marker</h2>
         <div class="size">
-          
           <div class="size size__small">S</div>
           <div class="size size__medium">M</div>
           <div class="size size__big">L</div>
@@ -230,9 +236,10 @@
         </h2>
         <h1 class="hero-left__title">Kolo.</h1>
         <p class="hero-left__text">
-          Découvre notre nouvelle veste imperméable <strong>fabriquée en France</strong> à partir
-          de matières recyclées et personnalise là dès maintenant à prix réduit
-          avec l’offre <span class="cedarville">starter pack !</span>
+          Découvre notre nouvelle veste imperméable
+          <strong>fabriquée en France</strong> à partir de matières recyclées et
+          personnalise là dès maintenant à prix réduit avec l’offre
+          <span class="cedarville">starter pack !</span>
         </p>
         <a class="hero-left__btn btn" href="custom.html">
           <p class="btn__text">Personnaliser</p>
@@ -271,27 +278,24 @@
           </svg>
         </div>
         <div class="hero-right__button">
-      
-            <a class="btn btn--dark canvas__acces" id="canvas__acces" href="#">
-              <p class="btn__text">Je veux essayer</p>
-              <svg
-                class="btn__svg"
-                width="20"
-                height="19"
-                viewBox="0 0 20 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.74886 18.3497C9.52886 17.6497 9.13886 15.7197 8.23886 14.4997C7.34886 13.2497 6.11886 12.3897 4.87886 11.5597C3.99411 11.002 3.20415 10.3066 2.53886 9.49967C2.25886 9.16967 1.68886 8.55967 2.26886 8.43967C2.85886 8.31967 3.87886 8.89967 4.39886 9.11967C5.30886 9.49967 6.20886 9.93967 7.04886 10.4597L8.05886 8.75967C6.49886 7.72967 4.49886 6.81967 2.63886 6.54967C1.57886 6.38967 0.458856 6.60967 0.0988564 7.75967C-0.221144 8.74967 0.288856 9.74967 0.868856 10.5297C2.23886 12.3597 4.36886 13.2397 5.95886 14.8197C6.29886 15.1497 6.70886 15.5397 6.90886 15.9997C7.11886 16.4397 7.06886 16.4697 6.59886 16.4697C5.35886 16.4697 3.80886 15.4997 2.79886 14.8597L1.78886 16.5597C3.31886 17.4997 5.87886 18.9697 7.74886 18.3497ZM18.8389 2.74967C19.0589 2.52967 19.0589 2.16967 18.8389 1.95967L17.5389 0.659667C17.4341 0.558722 17.2943 0.502319 17.1489 0.502319C17.0034 0.502319 16.8636 0.558722 16.7589 0.659667L15.7389 1.67967L17.8189 3.75967L18.8389 2.74967ZM8.99886 8.41967V10.4997H11.0789L17.2289 4.34967L15.1489 2.26967L8.99886 8.41967Z"
-                  fill="#2D2D2D"
-                />
-              </svg>
-            </a>
-          </div>
+          <a class="btn btn--dark canvas__acces" id="canvas__acces" href="#">
+            <p class="btn__text">Je veux essayer</p>
+            <svg
+              class="btn__svg"
+              width="20"
+              height="19"
+              viewBox="0 0 20 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.74886 18.3497C9.52886 17.6497 9.13886 15.7197 8.23886 14.4997C7.34886 13.2497 6.11886 12.3897 4.87886 11.5597C3.99411 11.002 3.20415 10.3066 2.53886 9.49967C2.25886 9.16967 1.68886 8.55967 2.26886 8.43967C2.85886 8.31967 3.87886 8.89967 4.39886 9.11967C5.30886 9.49967 6.20886 9.93967 7.04886 10.4597L8.05886 8.75967C6.49886 7.72967 4.49886 6.81967 2.63886 6.54967C1.57886 6.38967 0.458856 6.60967 0.0988564 7.75967C-0.221144 8.74967 0.288856 9.74967 0.868856 10.5297C2.23886 12.3597 4.36886 13.2397 5.95886 14.8197C6.29886 15.1497 6.70886 15.5397 6.90886 15.9997C7.11886 16.4397 7.06886 16.4697 6.59886 16.4697C5.35886 16.4697 3.80886 15.4997 2.79886 14.8597L1.78886 16.5597C3.31886 17.4997 5.87886 18.9697 7.74886 18.3497ZM18.8389 2.74967C19.0589 2.52967 19.0589 2.16967 18.8389 1.95967L17.5389 0.659667C17.4341 0.558722 17.2943 0.502319 17.1489 0.502319C17.0034 0.502319 16.8636 0.558722 16.7589 0.659667L15.7389 1.67967L17.8189 3.75967L18.8389 2.74967ZM8.99886 8.41967V10.4997H11.0789L17.2289 4.34967L15.1489 2.26967L8.99886 8.41967Z"
+                fill="#2D2D2D"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
-
-      
     </section>
     <section class="cards">
       <div class="card card--primary">
@@ -445,8 +449,8 @@
         <div class="card__text card--tertiary">
           <h1 class="card__title card--tertiary">Kollab' artist</h1>
           <p class="card__paragraph card--tertiary">
-            Découvre les créations d’artistes et
-            partage toi même ta Kolo sur le hashtag #Kolo
+            Découvre les créations d’artistes et partage toi même ta Kolo sur le
+            hashtag #Kolo
           </p>
         </div>
         <div class="card__btn card--tertiary"></div>
@@ -508,18 +512,18 @@
         <a class="btn" href="#">
           <p class="btn__text">Découvrir</p>
           <svg
-          class="btn__svg"
-          width="20"
-          height="15"
-          viewBox="0 0 20 15"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M13.4678 0.680002C13.1953 0.398007 12.7418 0.398007 12.4598 0.680002C12.1874 0.952469 12.1874 1.40595 12.4598 1.67778L17.5707 6.78861H0.705621C0.31248 6.78924 0 7.10172 0 7.49486C0 7.888 0.31248 8.21065 0.705621 8.21065H17.5707L12.4598 13.3119C12.1874 13.5939 12.1874 14.0481 12.4598 14.3199C12.7418 14.6019 13.1959 14.6019 13.4678 14.3199L19.7885 7.99915C20.0705 7.72668 20.0705 7.27321 19.7885 7.00137L13.4678 0.680002Z"
-            fill="#FBFBFB"
-          />
-        </svg>
+            class="btn__svg"
+            width="20"
+            height="15"
+            viewBox="0 0 20 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.4678 0.680002C13.1953 0.398007 12.7418 0.398007 12.4598 0.680002C12.1874 0.952469 12.1874 1.40595 12.4598 1.67778L17.5707 6.78861H0.705621C0.31248 6.78924 0 7.10172 0 7.49486C0 7.888 0.31248 8.21065 0.705621 8.21065H17.5707L12.4598 13.3119C12.1874 13.5939 12.1874 14.0481 12.4598 14.3199C12.7418 14.6019 13.1959 14.6019 13.4678 14.3199L19.7885 7.99915C20.0705 7.72668 20.0705 7.27321 19.7885 7.00137L13.4678 0.680002Z"
+              fill="#FBFBFB"
+            />
+          </svg>
         </a>
       </div>
     </section>
@@ -540,10 +544,13 @@
       <div class="liquids__content">
         <div class="liquids__content__types">
           <div
-          id="icon__basic__area"
+            id="icon__basic__area"
             class="liquids__content__type liquids__content__type--basic visible"
           >
-            <div id="icon__basic" class="liquids__content__type__icon liquids__content__type__icon--tertiary">
+            <div
+              id="icon__basic"
+              class="liquids__content__type__icon liquids__content__type__icon--tertiary"
+            >
               <svg
                 width="60%"
                 height="60%"
@@ -557,9 +564,16 @@
                 />
               </svg>
             </div>
-            <div class="liquids__content__type__text liquids__content__type__text--tertiary">Basique</div>
+            <div
+              class="liquids__content__type__text liquids__content__type__text--tertiary"
+            >
+              Basique
+            </div>
           </div>
-          <div id="icon__hydro__area" class="liquids__content__type liquids__content__type--hydro">
+          <div
+            id="icon__hydro__area"
+            class="liquids__content__type liquids__content__type--hydro"
+          >
             <div id="icon__hydro" class="liquids__content__type__icon">
               <svg
                 width="60%"
@@ -574,9 +588,16 @@
                 />
               </svg>
             </div>
-            <div class=" liquids__content__type__text liquids__content__type__text--primary">Hydroréactif</div>
+            <div
+              class=" liquids__content__type__text liquids__content__type__text--primary"
+            >
+              Hydroréactif
+            </div>
           </div>
-          <div id="icon__fluo__area" class="liquids__content__type liquids__content__type--fluo">
+          <div
+            id="icon__fluo__area"
+            class="liquids__content__type liquids__content__type--fluo"
+          >
             <div id="icon__fluo" class="liquids__content__type__icon">
               <svg
                 preserveAspectRatio="xMidYMid meet"
@@ -592,7 +613,11 @@
                 />
               </svg>
             </div>
-            <div class=" liquids__content__type__text liquids__content__type__text--secondary">Fluorescent</div>
+            <div
+              class=" liquids__content__type__text liquids__content__type__text--secondary"
+            >
+              Fluorescent
+            </div>
           </div>
         </div>
         <div class="liquids__content__imgs">
@@ -829,60 +854,60 @@
     </section>
     <section class="ig">
       <div class="ig__titles">
-      <h2 class="ig__title"> Ils portent nos vestes</h2>
-      <h3 class="ig__subtitle">#maKolorable</h3>
+        <h2 class="ig__title">Ils portent nos vestes</h2>
+        <h3 class="ig__subtitle">#maKolorable</h3>
+      </div>
+      <div class="ig-container">
+        <div class="ig-container__card card ">
+          <div class="card__photo card-photo">
+            <img
+              class="card-photo__img"
+              src="/assets/ex-hydro.png"
+              alt="instagram hydro exemple"
+            />
+            <p class="card-photo__detail">Encre Hydroréactive</p>
+          </div>
+          <a class="card__user">@igordyachenko</a>
+          <p class="card__source">Instagram</p>
+        </div>
+        <div class="ig-container__card card ">
+          <div class="card__photo card-photo">
+            <img
+              class="card-photo__img"
+              src="/assets/ex-fluo.png"
+              alt="instagram fluo exemple"
+            />
+            <p class="card-photo__detail">Encre Fluorescente</p>
+          </div>
+          <a class="card__user">@quelquun</a>
+          <p class="card__source">Instagram</p>
+        </div>
+        <div class="ig-container__card card ">
+          <div class="card__photo card-photo">
+            <img
+              class="card-photo__img"
+              src="/assets/insta3.png"
+              alt="instagram basic exemple"
+            />
+            <p class="card-photo__detail">Encre Basique</p>
+          </div>
+          <a class="card__user">@ivetazalc</a>
+          <p class="card__source">Instagram</p>
+        </div>
+        <div class="ig-container__card card ">
+          <div class="card__photo card-photo">
+            <img
+              class="card-photo__img"
+              src="/assets/insta4.png"
+              alt="instagram basic exemple"
+            />
+            <p class="card-photo__detail">Sans Encre</p>
+          </div>
 
-    </div>
-    <div class="ig-container">
-      <div class="ig-container__card card ">
-        <div class="card__photo card-photo">
-          <img
-            class="card-photo__img"
-            src="/assets/ex-hydro.png"
-            alt="instagram hydro exemple"
-          />
-          <p class="card-photo__detail">Encre Hydroréactive</p>
+          <a class="card__user">@timdessaint</a>
+          <p class="card__source">Instagram</p>
         </div>
-        <a class="card__user">@igordyachenko</a>
-        <p class="card__source">Instagram</p>
       </div>
-      <div class="ig-container__card card ">
-        <div class="card__photo card-photo">
-          <img
-            class="card-photo__img"
-            src="/assets/ex-fluo.png"
-            alt="instagram fluo exemple"
-          />
-          <p class="card-photo__detail">Encre Fluorescente</p>
-        </div>
-        <a class="card__user">@quelquun</a>
-        <p class="card__source">Instagram</p>
-      </div>
-      <div class="ig-container__card card ">
-        <div class="card__photo card-photo">
-          <img
-            class="card-photo__img"
-            src="/assets/insta3.png"
-            alt="instagram basic exemple"
-          />
-          <p class="card-photo__detail">Encre Basique</p>
-        </div>
-        <a class="card__user">@ivetazalc</a>
-        <p class="card__source">Instagram</p>
-      </div>
-      <div class="ig-container__card card ">
-        <div class="card__photo card-photo">
-          <img
-            class="card-photo__img"
-            src="/assets/insta4.png"
-            alt="instagram basic exemple"
-          />
-          <p class="card-photo__detail">Sans Encre</p>
-        </div>
-        <a class="card__user">@timdessaint</a>
-        <p class="card__source">Instagram</p>
-      </div>
-    </div>
     </section>
     <section class="engagements">
       <div class="engagements__engagement engagement">
@@ -1202,16 +1227,20 @@
               />
             </svg>
           </div>
-          <a href="#"> <div class="brand__logo">sale temps<em>.</em></div></a>
+          <a href="#">
+            <div class="brand__logo">sale temps<em>.</em></div></a
+          >
         </div>
         <div class="footer__socials socials">
-            
           <div class="socials__title">
             Suivez-nous <br />
             sur nos réseaux sociaux.
           </div>
           <div class="socials__icons icons">
-            <a href="https://www.instagram.com/sale_temps_jacket/" class="icons__icon">
+            <a
+              href="https://www.instagram.com/sale_temps_jacket/"
+              class="icons__icon"
+            >
               <svg
                 width="28"
                 height="27"
@@ -1225,7 +1254,9 @@
                 />
               </svg>
             </a>
-            <a href="https://www.instagram.com/sale_temps_jacket/" class="icons__icon icons__icon--twitter"
+            <a
+              href="https://www.instagram.com/sale_temps_jacket/"
+              class="icons__icon icons__icon--twitter"
               ><svg
                 width="28"
                 height="22"
@@ -1239,7 +1270,10 @@
                 />
               </svg>
             </a>
-            <a href="https://www.instagram.com/sale_temps_jacket/" class="icons__icon">
+            <a
+              href="https://www.instagram.com/sale_temps_jacket/"
+              class="icons__icon"
+            >
               <svg
                 width="28"
                 height="27"
@@ -1256,17 +1290,21 @@
           </div>
         </div>
       </section>
-      
     </footer>
     <div class="arrowTop">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="12" fill="#FBFBFB"/>
-          <path d="M12.7725 17.0249L11.3439 17.0332L11.3002 9.53334L8.45765 12.05L7.02546 11.4333L11.9998 7.02922L17.0253 11.375L15.6004 12.0083L12.7287 9.52501L12.7725 17.0249Z" fill="#2D2D2D"/>
-          </svg>
-          
-          
-        </div>
-        
+      <svg
+        width="48"
+        height="48"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="12" cy="12" r="12" fill="#FBFBFB" />
+        <path
+          d="M12.7725 17.0249L11.3439 17.0332L11.3002 9.53334L8.45765 12.05L7.02546 11.4333L11.9998 7.02922L17.0253 11.375L15.6004 12.0083L12.7287 9.52501L12.7725 17.0249Z"
+          fill="#2D2D2D"
+        />
+      </svg>
+    </div>
   </body>
 </html>
-
