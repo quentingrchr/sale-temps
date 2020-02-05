@@ -8,6 +8,30 @@ const $liquidsImgsBoxs = document.querySelectorAll(".liquids__content__box");
 const $iconMenu = document.querySelector("#icon-menu");
 const $menu = document.querySelector("#menu");
 
+const $iconBasic = document.getElementById("icon__basic");
+const $iconHydro = document.getElementById("icon__hydro");
+const $iconFluo = document.getElementById("icon__fluo");
+
+const $iconBasicArea = document.getElementById("icon__basic__area");
+const $iconHydroArea = document.getElementById("icon__hydro__area");
+const $iconFluoArea = document.getElementById("icon__fluo__area");
+
+$iconBasicArea.addEventListener("click", () => {
+  $iconBasic.style.border = "2px solid #F82155";
+  $iconHydro.style.border = "2px solid #2D2D2D";
+  $iconFluo.style.border = "2px solid #2D2D2D";
+});
+$iconHydroArea.addEventListener("click", () => {
+  $iconFluo.style.border = "2px solid #2D2D2D";
+  $iconHydro.style.border = "2px solid #0075FF";
+  $iconBasic.style.border = "2px solid #2D2D2D";
+});
+$iconFluoArea.addEventListener("click", () => {
+  $iconFluo.style.border = "2px solid #FFC700";
+  $iconHydro.style.border = "2px solid #2D2D2D";
+  $iconBasic.style.border = "2px solid #2D2D2D";
+});
+
 for (let i = 0; i < $cardBtn.length; i++) {
   const element = $cardBtn[i];
   element.addEventListener("click", () => {
