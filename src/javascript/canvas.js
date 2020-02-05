@@ -108,7 +108,7 @@ const showingCanvas = () => {
   });
   fluoInk.addEventListener("click", () => {
     shadowColor = "#F82155";
-    inkWidth = 5;
+    inkWidth = 2;
     blurWidth = inkWidth;
     inkWidth = 0;
     body.classList.add("dark-mode");
