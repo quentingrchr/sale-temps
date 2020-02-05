@@ -9,24 +9,28 @@ body {
     background-color: $color-neutral-dark;
     color: $color-neutral-light;
 
-    & .canvas__body {
+    .header-mobile {
       background-color: $color-neutral-dark;
     }
 
-    & .logo--dark-mode {
+    .canvas__body {
+      background-color: $color-neutral-dark;
+    }
+
+    .logo--dark-mode {
       display: block;
     }
-    & .logo--light-mode {
+    .logo--light-mode {
       display: none;
     }
 
-    & .header {
+    .header {
       svg path {
         fill: $color-neutral-light;
       }
     }
 
-    & .card {
+    .card {
       background-color: $color-neutral-dark;
       &:hover {
         .card__icon svg path {
@@ -38,7 +42,7 @@ body {
       }
     }
 
-    & .liquids {
+    .liquids {
       background-color: $color-neutral-dark;
       &__content__type__icon {
         border: 1px solid $color-neutral-light;
