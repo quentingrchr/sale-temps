@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
+  margin-top: 40px;
 }
 .ig-container .card {
   display: flex;
@@ -18,6 +19,7 @@
     height: 243px;
   }
   &__user {
+    margin-top: 15px;
     &:hover {
       cursor: pointer;
       color: $color-primary;
@@ -30,19 +32,19 @@
 }
 
 .card__photo--1 {
-  background-color: $color-primary;
+  background-image: url("../assets/ex-hydro.png");
 }
 
 .card__photo--2 {
-  background-color: $color-secondary;
+  background-image: url("../assets/ex-fluo.png");
 }
 
 .card__photo--3 {
-  background-color: $color-tertiary;
+  background-image: url("../assets/insta3.png");
 }
 
 .card__photo--4 {
-  background-color: $color-primary;
+  background-image: url("../assets/insta4.png");
 }
 
 @include respond-below(md) {
@@ -75,4 +77,29 @@
       margin-bottom: 40px;
     }
   }
+}
+
+.ig__titles {
+  @include flex__column;
+  justify-content: center;
+  padding-left: 0px;
+  height: 90px;
+  .ig__title {
+    font-size: 24px;
+    font-family: "Poppins";
+    font-weight: 500;
+    margin-left: 2%;
+  }
+  .ig__subtitle {
+    font-size: 26px;
+    font-family: "Cedarville Cursive";
+    margin-left: 2%;
+  }
+  @include respond-below(sm) {
+    align-items: center;
+  }
+}
+
+.ig {
+  margin-top: 0px;
 }
