@@ -11,11 +11,11 @@
     display: none;
   }
 }
-// #canvas__acces {
-//   @include respond-below(md) {
-//     display: none;
-//   }
-// }
+#canvas__acces {
+  @include respond-below(md) {
+    display: none;
+  }
+}
 
 .canvas-is-closed {
   width: 0%;
