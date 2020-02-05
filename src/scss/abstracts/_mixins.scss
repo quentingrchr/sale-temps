@@ -66,6 +66,8 @@
 
   &__icon {
     width: 56px;
+    display: flex;
+    justify-content: center;
 
     & svg {
       fill: $color-neutral;
@@ -233,6 +235,9 @@
     border-bottom-color: transparent;
     border-right: transparent;
     transition: all 1s;
+    @include respond-below(sm) {
+      display: none;
+    }
   }
   &::after {
     content: "";
@@ -245,6 +250,9 @@
     border-top-color: transparent;
     border-left: transparent;
     transition: all 1s;
+    @include respond-below(sm) {
+      display: none;
+    }
   }
   &:hover::before {
     width: 104%;
