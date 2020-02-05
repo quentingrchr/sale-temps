@@ -270,7 +270,7 @@ canvasClose.addEventListener("click", () => {
 });
 body.addEventListener("click", () => {
   showing = false;
-  body.style.overflow = "auto";
+  body.style.overflowY = "auto";
   canvasBody.classList.remove("canvas-is-open");
   canvasBody.classList.add("canvas-is-closed");
 });

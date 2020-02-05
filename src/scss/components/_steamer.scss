@@ -16,3 +16,9 @@
 .steamer--active {
   height: 40px;
 }
+
+.steamer {
+  @include respond-below(sm) {
+    display: none;
+  }
+}

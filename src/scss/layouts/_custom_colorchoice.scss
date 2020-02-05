@@ -201,6 +201,9 @@ body {
     position: static;
     opacity: 1;
     transform: translateY(0px);
+    @include respond-below(sm-md) {
+      transform: translateY(0px);
+    }
   }
 }
 
@@ -319,7 +322,7 @@ body {
     }
     .order__ink {
       display: flex;
-      width: 1500px;
+      width: 600px;
       align-items: center;
       p {
         padding-right: 20px;
@@ -397,4 +400,115 @@ body {
   justify-content: flex-end;
   align-items: center;
   margin-top: 5%;
+}
+@include respond-below(sm-md) {
+  .custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 140vh;
+    overflow: visible;
+    a {
+      position: static;
+    }
+    .steper {
+      display: none;
+    }
+    .section-custom {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      &__form {
+        width: 80%;
+        align-items: center;
+        &__color {
+          height: 80%;
+          &__input {
+            margin-top: 20px;
+          }
+        }
+      }
+      .form__color__inputs {
+        width: 35%;
+        height: 100px;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        margin: top;
+      }
+      &__form__size {
+        text-align: center;
+        width: 350px;
+      }
+      &__form--2 {
+        overflow: hidden;
+        height: 0;
+        width: 0;
+        &.visible {
+          height: 50%;
+          width: 100%;
+        }
+        &__form__ink {
+          height: 80%;
+        }
+        .form__ink_inputs {
+          width: 100%;
+        }
+        .form__ink__input {
+          opacity: 1;
+        }
+        .form__ink__info,
+        .form__ink__label {
+          text-align: center;
+        }
+      }
+
+      &__btn {
+        margin-bottom: 50px;
+      }
+    }
+    .recap {
+      width: 0px;
+      height: 0px;
+      text-align: center;
+      &.visible {
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        transform: translateY(0px);
+      }
+
+      &__details {
+        justify-content: center;
+      }
+      &__ink {
+        justify-content: center;
+      }
+    }
+  }
+  .recap__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    &.price__euro {
+      text-align: start;
+    }
+    label {
+      text-align: start;
+    }
+  }
+  .recap__order .order__details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .recap__btn__container {
+    margin-top: 60px;
+    width: 70vw;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
