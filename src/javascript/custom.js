@@ -18,7 +18,7 @@ const $colorRecap = document.querySelector("#circle__color");
 const $sizeRecap = document.querySelector("#circle__size");
 const $inkRecap = document.querySelector("#inkRecap");
 const $inkImage = document.querySelector("#inkImage");
-
+const $btnAddBasket = document.querySelector("#btn-add-to-basket");
 let hydroinksrc = require("../assets/ink-input-hydro.png");
 let basicinksrc = require("../assets/ink-input-basic.png");
 let fluoinksrc = require("../assets/ink-input-fluo.png");
@@ -246,3 +246,7 @@ function checkStep() {
 }
 
 $steper[0].classList.add("visible-step");
+
+$btnAddBasket.addEventListener("click", () => {
+  window.sessionStorage.setItem("ordered", "true");
+});

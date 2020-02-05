@@ -183,3 +183,16 @@
   opacity: 0;
   transform: translateX(-1000px);
 }
+
+@keyframes steamer-movin {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(1800px);
+  }
+}
+
+.steamer-movin {
+  animation: steamer-movin 30s ease alternate infinite;
+}
