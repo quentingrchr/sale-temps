@@ -147,5 +147,10 @@ function stopRain() {
 if (window.sessionStorage.getItem("ordered") === "true") {
   $steamer.classList.add("steamer--active");
   $steamer.querySelector("p").classList.add("steamer-movin");
+  setTimeout(() => {
+    $steamer.classList.remove("steamer--active");
+    $steamer.classList.add("steamer-closin");
+    console.log("pute");
+  }, 15000);
   window.sessionStorage.setItem("ordered", false);
 }

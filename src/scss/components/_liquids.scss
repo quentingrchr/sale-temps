@@ -57,8 +57,22 @@
         transform: scale(1.1);
         & .liquids__content__type__text {
           &::after {
-            background-color: $color-primary;
             width: 20%;
+          }
+        }
+        & .liquids__content__type__text--primary {
+          &::after {
+            background-color: $color-primary;
+          }
+        }
+        & .liquids__content__type__text--secondary {
+          &::after {
+            background-color: $color-secondary;
+          }
+        }
+        & .liquids__content__type__text--tertiary {
+          &::after {
+            background-color: $color-tertiary;
           }
         }
       }
@@ -220,4 +234,8 @@
       }
     }
   }
+}
+
+.liquids__content__type__icon--tertiary {
+  border: 2px solid $color-tertiary;
 }

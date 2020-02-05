@@ -5,7 +5,7 @@
   background-color: $color-neutral-light;
   width: 100%;
   margin: auto;
-  height: 100px;
+  height: 60px;
   display: flex;
   justify-content: flex-start;
   position: fixed;
@@ -75,7 +75,7 @@
   &__icon {
     position: fixed;
     z-index: 11;
-    top: 40px;
+    top: 25px;
     right: 5rem;
     position: fixed;
     width: 40px;

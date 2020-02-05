@@ -1,4 +1,7 @@
 .header {
+  @include respond-below(sm) {
+    height: 60px;
+  }
   width: 80%;
   margin: auto;
   height: 100px;
