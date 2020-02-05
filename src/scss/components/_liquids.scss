@@ -69,10 +69,6 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        animation-name: droplet;
-        animation-iteration-count: infinite;
-        animation-direction: alternate-reverse;
-        animation-duration: 2s;
       }
       &__text {
         width: 50%;
@@ -223,14 +219,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes droplet {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.3);
   }
 }
