@@ -69,8 +69,11 @@
     display: flex;
     justify-content: center;
 
-    & svg {
+    & svg path {
       fill: $color-neutral;
+      @include respond-below(xs) {
+        fill: $color-neutral-dark;
+      }
       width: 56px;
       @include respond-below(xs) {
         width: 36px;
@@ -82,6 +85,9 @@
   }
   &__text {
     color: $color-neutral;
+    @include respond-below(xs) {
+      color: $color-neutral-dark;
+    }
     display: flex;
     flex-direction: column;
     transition: color 0.3s ease;
@@ -323,6 +329,7 @@
     }
   }
 }
+
 @mixin canvasTypeHoverOrVisible {
   opacity: 1;
   &.canvas__liquids__content__type--fluo {

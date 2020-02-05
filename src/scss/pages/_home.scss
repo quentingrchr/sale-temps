@@ -8,6 +8,9 @@ body {
   &.dark-mode {
     background-color: $color-neutral-dark;
     color: $color-neutral-light;
+    .link {
+      border-bottom: 1px solid $color-neutral-light;
+    }
 
     .header-mobile {
       background-color: $color-neutral-dark;
