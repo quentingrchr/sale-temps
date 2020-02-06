@@ -39,9 +39,8 @@ window.addEventListener("resize", () => {
   $tacheYellow.style.left = `${window.innerWidth - 200}px`;
   if (window.innerWidth < 900) {
     $tacheYellow.style.display = "none";
-  } else {
-    $tacheYellow.style.display = "block";
-  }
+  } 
+ 
 });
 $iconBasicArea.addEventListener("click", () => {
   $iconBasic.style.border = "2px solid #F82155";
