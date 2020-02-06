@@ -18,6 +18,11 @@ body {
 
     .canvas__body {
       background-color: $color-neutral-dark;
+      .eraser {
+        background-color: $color-neutral-dark;
+        color: $color-neutral-light;
+        border: 2px solid $color-neutral-light;
+      }
     }
 
     .logo--dark-mode {

@@ -65,17 +65,35 @@ body {
   }
 }
 
+// END OF STEPER
+
 .section-custom {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin-top: 100px;
+  height: 400px;
+  border: 2px solid black;
+  margin-top: 24px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0px;
+  overflow: hidden;
   &__image {
-    width: 318px;
+    width: 50%;
     position: relative;
+    top: 0;
+    left: 0;
+    border: 2px solid red;
+    &__white {
+      position: absolute;
+      left: 12.5%;
+      top: 0;
+    }
+    &__black {
+      position: absolute;
+      right: 12.5%;
+      top: 0;
+    }
     .custom__svg {
       transition: opacity 0.5s;
       stroke: $color-tertiary;
@@ -89,14 +107,16 @@ body {
     }
   }
   &__form {
+    border: 2px solid blue;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 280px;
+    justify-content: flex-start;
+    height: 100%;
     width: 50%;
-    p {
+    h3 {
       font-size: 24px;
       font-weight: 400;
+      margin-top: 24px;
       .dots_three {
         margin-left: 10px;
       }
@@ -107,6 +127,32 @@ body {
   }
 }
 
+#form1 {
+  position: relative;
+  right: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+.container__sizeColor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 14;
+}
+.container__ink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(40%);
+  z-index: 13;
+}
+.container__recap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
+}
 .form__color {
   &__inputs {
     display: flex;
@@ -210,8 +256,10 @@ body {
   }
 }
 
+// INK
+
 .form__ink {
-  &__label {
+  b &__label {
     em {
       font-weight: 600;
     }
@@ -226,19 +274,16 @@ body {
   &__inputs {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-  }
-  &__input {
+    width: 400px;
+    border: 2px solid red;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    width: 175px;
     height: 225px;
     transition: opacity 0.5s, box-shadow 0.5s, transform 0.2s,
       border-radius 0.5s;
     opacity: 0.5;
-
     & h3 {
       font-style: normal;
       font-weight: normal;
@@ -402,7 +447,6 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 5%;
 }
 @include respond-below(sm-md) {
   .custom {
@@ -477,7 +521,7 @@ body {
 
       &__btn {
         margin-bottom: 50px;
-        margin-top: 60px;
+        margin-top: 0px;
       }
     }
     .recap {
