@@ -7,6 +7,11 @@
   height: 500px;
   font-family: "Poppins";
 
+  &__tache {
+    position: absolute;
+    top: 2800.58px;
+  }
+
   &__img {
     grid-area: 1 / 1 / 4 / 2;
     background-color: $color-tertiary;

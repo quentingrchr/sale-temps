@@ -18,6 +18,7 @@ const $iconHydroArea = document.getElementById("icon__hydro__area");
 const $iconFluoArea = document.getElementById("icon__fluo__area");
 
 const $arrowTop = document.querySelector(".arrowTop");
+const $tacheYellow = document.querySelector(".starter-pack__tache");
 
 $arrowTop.addEventListener("click", () => {
   console.log("button work");
@@ -28,8 +29,20 @@ $arrowTop.addEventListener("click", () => {
   });
 });
 
-console.log($body.clientHeight);
+$tacheYellow.style.left = `${window.innerWidth - 200}px`;
 
+if (window.innerWidth < 900) {
+  $tacheYellow.style.display = "none";
+}
+
+window.addEventListener("resize", () => {
+  $tacheYellow.style.left = `${window.innerWidth - 200}px`;
+  if (window.innerWidth < 900) {
+    $tacheYellow.style.display = "none";
+  } else {
+    $tacheYellow.style.display = "block";
+  }
+});
 $iconBasicArea.addEventListener("click", () => {
   $iconBasic.style.border = "2px solid #F82155";
   $iconHydro.style.border = "2px solid #2D2D2D";
