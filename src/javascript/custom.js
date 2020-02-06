@@ -19,6 +19,7 @@ const $sizeRecap = document.querySelector("#circle__size");
 const $inkRecap = document.querySelector("#inkRecap");
 const $inkImage = document.querySelector("#inkImage");
 const $btnAddBasket = document.querySelector("#btn-add-to-basket");
+
 let hydroinksrc = require("../assets/ink-input-hydro.png");
 let basicinksrc = require("../assets/ink-input-basic.png");
 let fluoinksrc = require("../assets/ink-input-fluo.png");
@@ -168,19 +169,19 @@ function checkIfStepReady(step) {
 }
 
 function displayEl(el) {
-  console.log(order);
   el.style.visibility = "visible";
 }
 
 $btnJacket.addEventListener("click", () => {
   // SUBMIT BUTTON (JUMP TO 2ND STEP)
   $form1.style.display = "none";
-  $form2.classList.toggle("visible");
+  $form2.classList.toggle("visible-step2");
   $btnJacket.style.visibility = "hidden";
+  $btnJacket.style.position = "absolute";
+  $btnJacket.style.bottom = "-850px";
   $steper[step].classList.remove("visible-step");
   checkStep();
   $steper[step].classList.add("visible-step");
-
   if (order.size && order.color && order.ink) {
     // STEP 1 AND 2 ARE VALIDATED (JUMP TO RECAP)
     let { size } = order;
@@ -211,7 +212,6 @@ function createRain() {
     let dropLeft = randRange(0, 1600);
     let dropTop = randRange(-600, 600);
     $(".rain").append('<div class="drop" id="drop' + i + '"></div>');
-    console.log(document.querySelector(".drop"));
     $("#drop" + i).css("left", dropLeft);
     $("#drop" + i).css("top", dropTop);
   }
@@ -245,6 +245,8 @@ function checkStep() {
     step = 2;
   }
 }
+
+console.log(step);
 
 $steper[0].classList.add("visible-step");
 

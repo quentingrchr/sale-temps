@@ -125,6 +125,11 @@ body {
   &__btn {
     visibility: hidden;
   }
+  &#btnJacket {
+    .visible-step2 {
+      visibility: visible;
+    }
+  }
 }
 
 #form1 {
@@ -245,8 +250,9 @@ body {
   transition: opacity 0.5s ease, transform 0.5s;
   transform: translateY(1000px);
 
-  &.visible {
+  &.visible-step2 {
     visibility: visible;
+    overflow: visible;
     position: static;
     opacity: 1;
     transform: translateY(0px);
@@ -500,7 +506,8 @@ body {
         overflow: hidden;
         height: 0;
         width: 0;
-        &.visible {
+        &.visible-step2 {
+          overflow: visible;
           height: 50%;
           width: 100%;
         }
@@ -562,5 +569,48 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+@include respond-below(xs) {
+  .custom {
+    height: 150vh;
+    .custom .section-custom__form--2 {
+      overflow: visible;
+    }
+    .section-custom {
+      .form__color__inputs {
+        width: 60%;
+      }
+      .form__ink__inputs {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+      }
+      .order {
+        height: 60%;
+        &__details,
+        &__ink {
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        &__details {
+          height: 70px;
+        }
+        &__ink {
+          width: 100%;
+        }
+      }
+    }
+    .section__custom__container {
+      &a.visible-step2 {
+        position: absolute;
+        bottom: -800px;
+        visibility: visible;
+      }
+    }
+  }
+  .recap__btn__container {
+    width: 65vw;
   }
 }
