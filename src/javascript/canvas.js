@@ -6,6 +6,8 @@ const canvasAcces = document.querySelector(".canvas__acces");
 const canvasClose = document.querySelector(".canvas__close");
 const canvasBody = document.querySelector(".canvas__body");
 
+const restart = document.querySelector(".restart");
+
 let showing;
 
 const showingCanvas = () => {
@@ -111,6 +113,9 @@ const showingCanvas = () => {
     body.classList.add("dark-mode");
   });
 
+  restart.addEventListener("click", () => {
+    cdraw.clearRect(0, 0, canvasdraw.width, canvasdraw.height);
+  });
   // Functions
 
   function startPosition() {
