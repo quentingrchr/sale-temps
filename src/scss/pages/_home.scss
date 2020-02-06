@@ -8,6 +8,7 @@ body {
   &.dark-mode {
     background-color: $color-neutral-dark;
     color: $color-neutral-light;
+
     .link {
       border-bottom: 1px solid $color-neutral-light;
     }
@@ -68,6 +69,30 @@ body {
       background-color: $color-neutral-dark;
       svg path {
         fill: $color-neutral-light;
+      }
+    }
+    .canvas__basic__container {
+      .canvas__basic {
+        border-color: $color-neutral-light;
+        svg path {
+          fill: $color-neutral-light;
+        }
+      }
+    }
+    .canvas__hydro__container {
+      .canvas__hydro {
+        border-color: $color-neutral-light;
+        svg path {
+          fill: $color-neutral-light;
+        }
+      }
+    }
+    .canvas__fluo__container {
+      .canvas__fluo {
+        border-color: $color-neutral-light;
+        svg path {
+          fill: $color-neutral-light;
+        }
       }
     }
   }
