@@ -52,12 +52,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   & h2 {
     width: 100%;
     height: 24px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
 }
@@ -76,7 +76,7 @@
   width: 36px;
   height: 36px;
   border-radius: 20px;
-  margin-top: 4px;
+  margin-top: 16px;
   &__title {
     width: 80%;
     font-family: "Poppins";
@@ -98,11 +98,12 @@
 }
 
 .color__title {
-  width: 80%;
+  width: 100%;
   font-family: "Poppins";
   font-size: 24px;
-  margin-top: 48px;
-  margin-left: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /* SIZE */
@@ -112,15 +113,18 @@
   height: 30px;
   font-family: "Poppins";
   font-size: 24px;
-  margin-top: 8px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .size {
   width: 100%;
   height: 80px;
 
-  @include flex__center;
-  justify-content: space-around;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-top: 4px;
   &__small {
     width: 36px;
@@ -129,6 +133,8 @@
     border-radius: 50%;
     background-color: $color-neutral-light;
     color: $color-neutral-dark;
+    @include flex__center;
+    margin-left: 4px;
 
     &:hover {
       cursor: pointer;
@@ -144,6 +150,8 @@
     border: 2px solid $color-neutral-dark;
     background-color: $color-neutral-light;
     color: $color-neutral-dark;
+    @include flex__center;
+    margin-left: 4px;
 
     &:hover {
       cursor: pointer;
@@ -159,7 +167,8 @@
     border: 2px solid $color-neutral-dark;
     background-color: $color-neutral-light;
     color: $color-neutral-dark;
-
+    @include flex__center;
+    margin-left: 4px;
     &:hover {
       cursor: pointer;
       background: $color-neutral-dark;
@@ -171,19 +180,20 @@
 // KOLOROS
 
 .canvas__koloros {
-  width: 80%;
+  width: 100%;
   height: 250px;
-  @include flex__column;
-  align-items: flex-end;
-  justify-content: center;
-  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   .canvas__basic__container {
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    margin-top: 16px;
     &:hover {
       cursor: pointer;
     }
@@ -197,14 +207,16 @@
     .canvas__basic__text {
       font-family: "Poppins";
       font-size: 20px;
+      margin-left: 8px;
     }
   }
   .canvas__hydro__container {
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    margin-top: 16px;
     &:hover {
       cursor: pointer;
     }
@@ -218,14 +230,16 @@
     .canvas__hydro__text {
       font-family: "Poppins";
       font-size: 20px;
+      margin-left: 8px;
     }
   }
   .canvas__fluo__container {
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    margin-top: 16px;
     &:hover {
       cursor: pointer;
     }
@@ -239,6 +253,7 @@
     .canvas__fluo__text {
       font-family: "Poppins";
       font-size: 20px;
+      margin-left: 8px;
     }
   }
 }
