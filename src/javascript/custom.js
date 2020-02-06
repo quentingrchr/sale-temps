@@ -177,8 +177,10 @@ $btnJacket.addEventListener("click", () => {
   $form1.style.display = "none";
   $form2.classList.toggle("visible-step2");
   $btnJacket.style.visibility = "hidden";
-  $btnJacket.style.position = "absolute";
-  $btnJacket.style.bottom = "-850px";
+  if (window.innerWidth < 600) {
+    $btnJacket.style.position = "absolute";
+    $btnJacket.style.bottom = "-850px";
+  }
   $steper[step].classList.remove("visible-step");
   checkStep();
   $steper[step].classList.add("visible-step");
