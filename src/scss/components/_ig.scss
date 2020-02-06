@@ -119,3 +119,16 @@
 .ig {
   margin-top: 0px;
 }
+
+// tache
+
+#tache-red {
+  position: absolute;
+  left: -66.36px;
+  top: 3268px;
+}
+@include respond-below(sm-md) {
+  #tache-red {
+    display: none;
+  }
+}
