@@ -126,6 +126,7 @@
   position: absolute;
   left: -66.36px;
   top: 3268px;
+  z-index: -5;
 }
 @include respond-below(sm-md) {
   #tache-red {
