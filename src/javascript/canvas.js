@@ -72,7 +72,7 @@ const showingCanvas = () => {
   buttonRed.addEventListener("click", () => {
     erasing = false;
     color = "#F82155";
-    shadowColor = color;
+    shadowColor = "F58B8B";
     cursor.style.background = "#F82155";
     buttonRed.style.border = "2px solid black";
     buttonBlue.style.border = "none";
@@ -81,7 +81,7 @@ const showingCanvas = () => {
   buttonBlue.addEventListener("click", () => {
     erasing = false;
     color = "#0075FF";
-    shadowColor = color;
+    shadowColor = "#9DF3FF";
     cursor.style.background = "#0075FF";
     buttonRed.style.border = "none";
     buttonBlue.style.border = "2px solid black";
@@ -90,7 +90,7 @@ const showingCanvas = () => {
   buttonYellow.addEventListener("click", () => {
     erasing = false;
     color = "#FFC700";
-    shadowColor = color;
+    shadowColor = "#FFFC29";
     cursor.style.background = "#FFC700";
     buttonRed.style.border = "none";
     buttonBlue.style.border = "none";
@@ -106,10 +106,23 @@ const showingCanvas = () => {
     body.classList.remove("dark-mode");
   });
   fluoInk.addEventListener("click", () => {
-    shadowColor = "#F82155";
-    inkWidth = 2;
-    blurWidth = inkWidth;
-    inkWidth = 0;
+    blurWidth = 4;
+
+    // bind event handle
+
+    if (color == "#F82155") {
+      shadowColor = "#FF9E96";
+      color = "#FF9E96";
+      blurWidth = 2;
+    }
+    if (color == "#0075FF") {
+      shadowColor = "#9DF3FF";
+      color = "#9DF3FF";
+    }
+    if (color == "#FFC700") {
+      shadowColor = "#FFFC29";
+      color = "#FFFC29";
+    }
     body.classList.add("dark-mode");
   });
 
