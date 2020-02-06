@@ -12,7 +12,7 @@ let showing;
 
 const showingCanvas = () => {
   if (!showing) return;
-  body.style.overflow = "hidden";
+  body.style.overflowY = "hidden";
   const canvas = document.getElementById("canvas__left");
   const c = canvas.getContext("2d");
 
@@ -165,11 +165,11 @@ const showingCanvas = () => {
   window.addEventListener("resize", () => {
     if (showing) {
       showing = false;
-      body.style.overflow = "auto";
+      body.style.overflowY = "auto";
       canvasBody.classList.remove("canvas-is-open");
       canvasBody.classList.add("canvas-is-closed");
       if ((canvasBody.style.display = "none")) {
-        body.style.overflow = "auto";
+        body.style.overflowY = "auto";
       }
     }
   });
@@ -268,7 +268,7 @@ canvasAcces.addEventListener("click", event => {
 });
 canvasClose.addEventListener("click", () => {
   showing = false;
-  body.style.overflow = "auto";
+  body.style.overflowY = "auto";
   // canvasBody.classList.remove("canvas__body--slide");
   canvasBody.classList.remove("canvas-is-open");
   canvasBody.classList.add("canvas-is-closed");
