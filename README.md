@@ -16,7 +16,7 @@ Go to [https://sale-temps.netlify.com/](https://sale-temps.netlify.com/) or just
 
 ## How to run the website on my computer ?
 
-Just clone the repository and after installing all the packages run this command in the terminal
+Just clone the repository and after installing all the packages run this command in the terminal.
 
 ```shell
 npm run build
